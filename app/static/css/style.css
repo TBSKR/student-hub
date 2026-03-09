@@ -1,11 +1,25 @@
 :root {
+    /* HvA hoofdkleuren */
     --hva-paars: #25167a;
+    --hva-marine: #351fb7;
+    --hva-deep-sea: #1e1649;
+
+    /* Accentkleuren */
+    --hva-fresh: #02857d;
+    --hva-sweet: #f35279;
+    --hva-blauw: #0146fd;
+    --hva-cyan: #08ffc6;
+    --hva-rood: #eb0006;
+
+    /* Neutralen */
     --hva-wit: #ffffff;
     --hva-zwart: #0a0a0a;
-    --hva-marine: #351fb7;
     --hva-grijs: #f1f3f8;
-    --hva-tekst: #1e1649;
     --hva-border: #d9deec;
+
+    /* Tekst */
+    --hva-tekst: #1e1649;
+    --hva-tekst-licht: #4f5b73;
 }
 
 * {
@@ -17,8 +31,45 @@
 html {
     height: 100%;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    color: var(--hva-zwart);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--hva-tekst);
     background-color: var(--hva-wit);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--hva-deep-sea);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+h6 {
+    font-size: 0.875rem;
+    font-weight: 700;
 }
 
 body {
