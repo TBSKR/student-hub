@@ -9,13 +9,40 @@
 
   <body>
     <nav>
-      <ul>
+      <div class="nav-container">
+        <a href="{{ url_for('main.index') }}" class="nav-logo">
+          <img src="{{ url_for('static', filename='img/logoHva.png') }}" alt="Hogeschool van Amsterdam" height="32">
+        </a>
+
+        <button class="menu-button" id="menu-open">
+          &#9776;
+        </button>
+
+        <ul class="nav-links">
+          <li><a href="{{ url_for('main.index') }}" class="{{ 'active' if active_page == 'home' }}">Home</a></li>
+          <li><a href="/tools" class="{{ 'active' if active_page == 'tools' }}">Tools</a></li>
+          <li><a href="/journey" class="{{ 'active' if active_page == 'journey' }}">Journey</a></li>
+          <li><a href="/help" class="{{ 'active' if active_page == 'help' }}">Help</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Mobiel menu -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <div class="mobile-drawer" id="mobile-drawer">
+      <div class="drawer-header">
+        <img src="{{ url_for('static', filename='img/logoHva.png') }}" alt="Hogeschool van Amsterdam" height="28">
+        <button class="menu-button" id="menu-close">
+          &#10005;
+        </button>
+      </div>
+      <ul class="drawer-links">
         <li><a href="{{ url_for('main.index') }}" class="{{ 'active' if active_page == 'home' }}">Home</a></li>
         <li><a href="/tools" class="{{ 'active' if active_page == 'tools' }}">Tools</a></li>
         <li><a href="/journey" class="{{ 'active' if active_page == 'journey' }}">Journey</a></li>
         <li><a href="/help" class="{{ 'active' if active_page == 'help' }}">Help</a></li>
       </ul>
-    </nav>
+    </div>
 
     <main>
       {% block content %}{% endblock %}
@@ -24,5 +51,7 @@
     <footer>
       <p>Hogeschool van Amsterdam — Creating Tomorrow</p>
     </footer>
+
+    <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
   </body>
 </html>
