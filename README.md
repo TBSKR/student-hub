@@ -1,42 +1,66 @@
-# De Opdracht Semester 2 HBO-ICT BIM
+# Student HUB — HvA
 
-![De-opdracht](de-opdracht.png)
+Webapplicatie voor nieuwe HvA-studenten om digitale tools te vinden en hun onboarding te doorlopen.
 
-## Hoe is deze repository ingericht
+## Installatie
 
-- Story-board. Bij Plan > Issues komen de  userstories te staan. Learning stories kopieer via de DLO naar je persoonlijke Learning Journey.
-- Broncode in de map `app`. Dit is een kale Flask webapplicatie. Deze moet jij aanpassen.
-- Documentatie in de map `docs`. In de docs vindt je alle informatie en hou je jouw portfolio bij dit project.
-- Tests in de map `tests`. Hier schrijf jij jouw units-tests
-- De `Dockerfile` en `docker-compose.yml` kan je gebruiken om een image van je applicatie te maken.
-- Voor Deploying kan je gebruik maken van de `.gitlab-ci.yml` file.
+```bash
+# Clone de repository
+git clone <repository-url>
+cd "PB3-Team B103 2"
 
-## Installatie checklist
+# Maak een virtual environment aan
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
-Volg zonodig de [set up](https://knowledgebase.hbo-ict-hva.nl/3_onderwijs/bim/). Vragen? Stel ze elkaar, vraag pas de studentenmentor als je er niet uitkomt en als die niet beschikbaar is een docent.
+# Installeer dependencies
+pip install -r requirements.txt
 
-_Je kunt de applicatie pas starten nadat je de installatie geheel hebt doorlopen!_
-
-- Opdracht omschrijving lezen
-- VS-code installeren
-- Python installeren
-- Git installeren
-- SSH-key toevoegen op Gitlab
-- Project clonen vanaf Gitlab
-- Virtual enviroment maken
-- Database optuigen
-- Docker installeren
-- Opstarten applicatie
-
-
-### Unit tests
-
-Run tests met
-
-```code
-$ pytest
+# Kopieer de environment variabelen
+cp .env.example .env
+# Pas de waarden in .env aan
 ```
 
-## Studiehandleiding
+## Applicatie starten
 
-In de Studiehandleiding op de DLO staat beschreven welke competenties je gaat ontwikkelen en wat de leeruitkomsten zijn voor dit blok.
+```bash
+flask run
+```
+
+Of via het wsgi entry point:
+
+```bash
+python wsgi.py
+```
+
+De applicatie draait op `http://localhost:5000`.
+
+## Tests draaien
+
+```bash
+pytest
+```
+
+## Projectstructuur
+
+```
+app/
+  __init__.py       # App factory (create_app)
+  config.py         # Configuratie (dev/test/prod)
+  db.py             # Database connectie
+  main/             # Hoofdpagina
+  tools/            # Tools overzicht
+  journey/          # Student journey
+  help/             # Hulp pagina
+  api/              # REST API endpoints
+  templates/        # HTML templates
+  static/           # CSS, afbeeldingen
+tests/              # Unit tests
+wsgi.py             # WSGI entry point
+```
+
+## Docker
+
+```bash
+docker-compose up --build
+```

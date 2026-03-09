@@ -1,20 +1,29 @@
-"""Entry point for Flask application"""
+import os
 
 from flask import Flask
 
-from app.events import bp as events_bp
-from app.main import bp as main_bp
+from app.config import config
 
 
-def create_app():
+def create_app(config_name=None):
     app = Flask(__name__)
-    app.config["FLASK_ADMIN_FLUID_LAYOUT"] = True
-    app.config["SECRET_KEY"] = "DokkiePythoniAXRvULKWuFyfURRrG0YTOOTXswLJWpU"
 
-    app.config.from_pyfile("settings.py")
+    env = config_name or os.environ.get('FLASK_ENV', 'development')
+    app.config.from_object(config[env])
 
+    from app.main import bp as main_bp
     app.register_blueprint(main_bp)
 
-    app.register_blueprint(events_bp, url_prefix="/events")
+    from app.tools import bp as tools_bp
+    app.register_blueprint(tools_bp)
+
+    from app.journey import bp as journey_bp
+    app.register_blueprint(journey_bp)
+
+    from app.help import bp as help_bp
+    app.register_blueprint(help_bp)
+
+    from app.api import bp as api_bp
+    app.register_blueprint(api_bp)
 
     return app
