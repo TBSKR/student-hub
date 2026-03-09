@@ -1,6 +1,30 @@
 {% extends "base.html" %}
 {% block title %}Tools{% endblock %}
 {% block content %}
-  <h1>Tools</h1>
-  <p>Komt binnenkort.</p>
+  <div class="tools-header">
+    <h1>Tools</h1>
+    <p class="tools-count">{{ tools|length }} tools beschikbaar</p>
+  </div>
+
+  {% for categorie_key, categorie_tools in tools_per_categorie.items() %}
+  <section class="tools-categorie">
+    <h2>{{ categorieen.get(categorie_key, categorie_key) }}</h2>
+    <div class="tools-grid">
+      {% for tool in categorie_tools %}
+      <div class="tool-card">
+        <div class="tool-card-icon">
+          <i data-lucide="{{ tool.icon }}"></i>
+        </div>
+        <div class="tool-card-info">
+          <h3>{{ tool.name }}</h3>
+          <span class="tool-card-categorie">{{ categorieen.get(tool.category, tool.category) }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
 {% endblock %}
