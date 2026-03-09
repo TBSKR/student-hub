@@ -3,8 +3,12 @@
     --hva-donkerblauw: #1b1456;
     --hva-wit: #ffffff;
     --hva-zwart: #0a0a0a;
-    --hva-grijs: #f5f5f5;
+    --hva-marine: #351fb7;
+    --hva-grijs: #f1f3f8;
     --hva-grijs-donker: #333333;
+    --hva-tekst: #1e1649;
+    --hva-tekst-licht: #4f5b73;
+    --hva-border: #d9deec;
 }
 
 * {
@@ -41,4 +45,53 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+
+nav {
+    background-color: var(--hva-wit);
+    border-bottom: 1px solid var(--hva-border);
+    padding: 0 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0.25rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 72px;
+    align-items: center;
+}
+
+nav a {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: var(--hva-tekst);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+}
+
+nav a:hover {
+    background-color: #f4f6fc;
+    text-decoration: none;
+}
+
+nav a.active {
+    background-color: #eef2ff;
+    color: var(--hva-marine);
+}
+
+
+footer {
+    background-color: var(--hva-grijs);
+    border-top: 1px solid var(--hva-border);
+    color: var(--hva-tekst);
+    text-align: center;
+    padding: 3rem 1rem;
+    font-size: 0.9rem;
 }
