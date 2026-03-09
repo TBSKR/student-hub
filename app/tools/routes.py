@@ -1,6 +1,8 @@
+from flask import render_template
+
 from app.tools import bp
 
 
 @bp.route("/tools")
 def index():
-    return "<h1>Tools</h1><p>Komt binnenkort.</p>"
+    return render_template("tools/index.html", active_page="tools")

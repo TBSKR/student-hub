@@ -1,6 +1,8 @@
+from flask import render_template
+
 from app.journey import bp
 
 
 @bp.route("/journey")
 def index():
-    return "<h1>Journey</h1><p>Komt binnenkort.</p>"
+    return render_template("journey/index.html", active_page="journey")

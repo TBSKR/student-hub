@@ -10,10 +10,10 @@
   <body>
     <nav>
       <ul>
-        <li><a href="{{ url_for('main.index') }}">Home</a></li>
-        <li><a href="/tools">Tools</a></li>
-        <li><a href="/journey">Journey</a></li>
-        <li><a href="/help">Help</a></li>
+        <li><a href="{{ url_for('main.index') }}" class="{{ 'active' if active_page == 'home' }}">Home</a></li>
+        <li><a href="/tools" class="{{ 'active' if active_page == 'tools' }}">Tools</a></li>
+        <li><a href="/journey" class="{{ 'active' if active_page == 'journey' }}">Journey</a></li>
+        <li><a href="/help" class="{{ 'active' if active_page == 'help' }}">Help</a></li>
       </ul>
     </nav>
 
