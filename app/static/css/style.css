@@ -80,10 +80,16 @@ body {
 
 main {
     flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-content {
+    position: relative;
+    z-index: 1;
     padding: 2rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
-    width: 100%;
 }
 
 a {
@@ -227,6 +233,66 @@ footer {
     text-align: center;
     padding: 3rem 1rem;
     font-size: 0.9rem;
+}
+
+/* HvA driehoeken */
+.hva-triangles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* Liggende driehoek: wijst naar rechts */
+.hva-triangle {
+    position: absolute;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
+
+/* Variant: wijst naar links */
+.hva-triangle--links {
+    clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
+}
+
+/* Grootte: 50% reductie per stap (rastersysteem) */
+.hva-triangle--groot {
+    height: 320px;
+    width: 277px;
+}
+
+.hva-triangle--midden {
+    height: 160px;
+    width: 139px;
+}
+
+.hva-triangle--klein {
+    height: 80px;
+    width: 69px;
+}
+
+/* Kleuren */
+.hva-triangle--paars {
+    background-color: var(--hva-paars);
+    opacity: 0.12;
+}
+
+.hva-triangle--zwart {
+    background-color: var(--hva-zwart);
+    opacity: 0.06;
+}
+
+.hva-triangle--accent {
+    background-color: var(--hva-sweet);
+    opacity: 0.15;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hva-triangle--midden,
+    .hva-triangle--klein {
+        display: none;
+    }
 }
 
 /* Responsive */
