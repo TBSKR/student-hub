@@ -1,27 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
   <head>
-    <title>{% block title %}De opdracht{% endblock %}</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{url_for('static', filename='css/style.css')}}"
-    />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Student HUB{% endblock %} — HvA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
 
   <body>
     <nav>
-      <ul>
-        <li><a href="{{ url_for('main.index') }}">Home</a></li>
-        <li><a href="/tools">Tools</a></li>
-        <li><a href="/journey">Journey</a></li>
-        <li><a href="/help">Help</a></li>
-      </ul>
+      <div class="nav-container">
+        <a href="{{ url_for('main.index') }}" class="nav-logo">
+          <img src="{{ url_for('static', filename='img/logoHva.png') }}" alt="Hogeschool van Amsterdam" height="32">
+        </a>
+
+        <button class="menu-button" id="menu-open">
+          &#9776;
+        </button>
+
+        <ul class="nav-links">
+          <li><a href="{{ url_for('main.index') }}" class="{{ 'active' if active_page == 'home' }}">Home</a></li>
+          <li><a href="/tools" class="{{ 'active' if active_page == 'tools' }}">Tools</a></li>
+          <li><a href="/journey" class="{{ 'active' if active_page == 'journey' }}">Journey</a></li>
+          <li><a href="/help" class="{{ 'active' if active_page == 'help' }}">Help</a></li>
+        </ul>
+      </div>
     </nav>
-    <div class="main">
-      <header>{% block header %}{% endblock %}</header>
-      <div>{% block content %}{% endblock %}</div>
+
+    <!-- Mobiel menu -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <div class="mobile-drawer" id="mobile-drawer">
+      <div class="drawer-header">
+        <img src="{{ url_for('static', filename='img/logoHva.png') }}" alt="Hogeschool van Amsterdam" height="28">
+        <button class="menu-button" id="menu-close">
+          &#10005;
+        </button>
+      </div>
+      <ul class="drawer-links">
+        <li><a href="{{ url_for('main.index') }}" class="{{ 'active' if active_page == 'home' }}">Home</a></li>
+        <li><a href="/tools" class="{{ 'active' if active_page == 'tools' }}">Tools</a></li>
+        <li><a href="/journey" class="{{ 'active' if active_page == 'journey' }}">Journey</a></li>
+        <li><a href="/help" class="{{ 'active' if active_page == 'help' }}">Help</a></li>
+      </ul>
     </div>
-    <footer>Developed with ♥️ in Python and Flask</footer>
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+      <p>Hogeschool van Amsterdam — Creating Tomorrow</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
   </body>
 </html>
