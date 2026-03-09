@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
   <head>
-    <title>{% block title %}De opdracht{% endblock %}</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{url_for('static', filename='css/style.css')}}"
-    />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Student HUB{% endblock %} — HvA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
 
   <body>
@@ -18,10 +16,13 @@
         <li><a href="/help">Help</a></li>
       </ul>
     </nav>
-    <div class="main">
-      <header>{% block header %}{% endblock %}</header>
-      <div>{% block content %}{% endblock %}</div>
-    </div>
-    <footer>Developed with ♥️ in Python and Flask</footer>
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+      <p>Hogeschool van Amsterdam — Creating Tomorrow</p>
+    </footer>
   </body>
 </html>
