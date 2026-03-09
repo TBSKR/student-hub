@@ -82,15 +82,14 @@ main {
     flex: 1;
     position: relative;
     overflow: hidden;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
 }
 
 .main-content {
     position: relative;
     z-index: 1;
     padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 a {
@@ -245,29 +244,31 @@ footer {
     z-index: 0;
 }
 
+/* Liggende driehoek: wijst naar rechts */
 .hva-triangle {
     position: absolute;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
 }
 
-.hva-triangle--omlaag {
-    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+/* Variant: wijst naar links */
+.hva-triangle--links {
+    clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
 }
 
 /* Grootte: 50% reductie per stap (rastersysteem) */
 .hva-triangle--groot {
-    width: 320px;
-    height: 277px;
+    height: 320px;
+    width: 277px;
 }
 
 .hva-triangle--midden {
-    width: 160px;
-    height: 139px;
+    height: 160px;
+    width: 139px;
 }
 
 .hva-triangle--klein {
-    width: 80px;
-    height: 69px;
+    height: 80px;
+    width: 69px;
 }
 
 /* Kleuren */
@@ -287,7 +288,7 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 1023px) {
+@media (max-width: 768px) {
     .hva-triangle--midden,
     .hva-triangle--klein {
         display: none;
