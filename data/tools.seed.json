@@ -1,0 +1,461 @@
+[
+  {
+    "id": "hva-account",
+    "name": "HvA-account",
+    "category": "overig",
+    "icon": "key-round",
+    "what": "Je persoonlijke HvA-ID waarmee je overal inlogt.",
+    "when": "Eenmalig — activeer voor je eerste dag.",
+    "whatExtended": "Je HvA-account is de sleutel tot alle digitale systemen van de Hogeschool van Amsterdam. Met dit account log je in op Brightspace, Teams, Outlook, SIS en alle andere tools. Het werkt via Single Sign-On (SSO): je hoeft maar een keer in te loggen en hebt daarna overal toegang. Je HvA-ID bestaat uit je studentnummer en een wachtwoord dat je zelf instelt.",
+    "gettingStarted": [
+      "Open je browser en ga naar mijnhva.nl/student.",
+      "Klik op 'Account activeren' en vul je studentnummer in (staat in je toelatingsbericht).",
+      "Stel een sterk wachtwoord in en sla dit veilig op.",
+      "Log in om te controleren of alles werkt — je bent klaar!"
+    ],
+    "tips": [
+      "Bewaar je studentnummer en wachtwoord op een veilige plek (bijv. een wachtwoordmanager).",
+      "Gebruik altijd je volledige HvA-emailadres om in te loggen: voornaam.achternaam@hva.nl.",
+      "Stel tweestapsverificatie (MFA) in voor extra beveiliging — dit wordt gevraagd bij de eerste login."
+    ],
+    "relatedTools": ["eduroam", "outlook", "brightspace"],
+    "platform": ["web"],
+    "required": true,
+    "week1": true,
+    "recommended": false,
+    "openUrl": "#",
+    "guideUrl": "#"
+  },
+  {
+    "id": "eduroam",
+    "name": "Eduroam Wi-Fi",
+    "category": "overig",
+    "icon": "wifi",
+    "what": "Draadloos internet op alle HvA-locaties en andere hogescholen.",
+    "when": "Eenmalig instellen — daarna automatisch verbonden.",
+    "whatExtended": "Eduroam is een internationaal Wi-Fi-netwerk dat beschikbaar is op alle HvA-locaties, maar ook op andere universiteiten en hogescholen wereldwijd. Na eenmalige instelling verbindt je apparaat automatisch wanneer je op een locatie met Eduroam bent. Het is sneller en veiliger dan openbaar Wi-Fi.",
+    "gettingStarted": [
+      "Ga naar cat.eduroam.org op je laptop of telefoon.",
+      "Kies 'Hogeschool van Amsterdam' uit de lijst.",
+      "Download en installeer het configuratieprofiel.",
+      "Log in met je HvA-emailadres en wachtwoord — je bent verbonden!"
+    ],
+    "tips": [
+      "Installeer Eduroam op zowel je laptop als je telefoon.",
+      "Werkt het niet? Verwijder het oude profiel en installeer opnieuw via cat.eduroam.org.",
+      "Eduroam werkt ook bij andere universiteiten in Nederland en Europa — handig bij excursies."
+    ],
+    "relatedTools": ["hva-account", "apps-hva"],
+    "platform": ["web", "ios", "android"],
+    "required": true,
+    "week1": true,
+    "recommended": false,
+    "openUrl": "#",
+    "guideUrl": "#"
+  },
+  {
+    "id": "brightspace",
+    "name": "Brightspace",
+    "category": "schrijven",
+    "icon": "book-open",
+    "what": "Centrale leeromgeving voor materiaal, opdrachten en deadlines.",
+    "when": "Dagelijks — voor al je vakken en opdrachten.",
+    "whatExtended": "Brightspace is de digitale leeromgeving van de HvA waar al je vakken, studiemateriaal, opdrachten en deadlines te vinden zijn. Docenten plaatsen hier colleges, readers, video's en aankondigingen. Je levert hier ook opdrachten in en bekijkt je feedback en cijfers. Het is de belangrijkste tool die je dagelijks zult gebruiken.",
+    "gettingStarted": [
+      "Ga naar brightspace.hva.nl en log in met je HvA-account.",
+      "Controleer of je vakken zichtbaar zijn op je dashboard (My Courses).",
+      "Open een vak en bekijk de 'Content' tab voor materiaal en de 'Assignments' tab voor opdrachten.",
+      "Stel notificaties in zodat je geen deadlines mist (via Settings > Notifications)."
+    ],
+    "tips": [
+      "Check Brightspace elke dag — docenten posten regelmatig updates en aankondigingen.",
+      "Gebruik de Brightspace Pulse app op je telefoon voor meldingen onderweg.",
+      "Lever opdrachten altijd ruim voor de deadline in — technische problemen op het laatste moment worden niet geaccepteerd."
+    ],
+    "relatedTools": ["teams", "onedrive", "office365"],
+    "platform": ["web", "ios", "android"],
+    "required": true,
+    "week1": true,
+    "recommended": true,
+    "openUrl": "#",
+    "guideUrl": "#"
+  },
+  {
+    "id": "teams",
+    "name": "Microsoft Teams",
+    "category": "samenwerken",
+    "icon": "message-square",
+    "what": "Chat, videobellen en samenwerken met je groep en docenten.",
+    "when": "Dagelijks — voor communicatie en groepswerk.",
+    "whatExtended": "Microsoft Teams is het communicatieplatform van de HvA. Je gebruikt het voor chat met medestudenten, videobellen met docenten, online colleges bijwonen en samenwerken in groepsprojecten. Elk vak of project kan een eigen Team hebben met kanalen voor verschillende onderwerpen. Je kunt bestanden delen, samen aan documenten werken en afspraken plannen.",
+    "gettingStarted": [
+      "Download Microsoft Teams via teams.microsoft.com of de app store.",
+      "Log in met je HvA-account (voornaam.achternaam@hva.nl).",
+      "Accepteer uitnodigingen voor Teams van je vakken en projectgroepen.",
+      "Stel je profiel en notificatievoorkeuren in via Settings."
+    ],
+    "tips": [
+      "Pin belangrijke teams bovenaan je lijst zodat je ze snel terugvindt.",
+      "Gebruik @mentions om iemand specifiek te notificeren in een groepschat.",
+      "Teams integreert met OneDrive en SharePoint — je kunt direct bestanden delen en samen bewerken."
+    ],
+    "relatedTools": ["outlook", "onedrive", "sharepoint"],
+    "platform": ["web", "ios", "android"],
+    "required": true,
+    "week1": true,
+    "recommended": true,
+    "openUrl": "#",
+    "guideUrl": "#"
+  },
+  {
+    "id": "onedrive",
+    "name": "OneDrive",
+    "category": "samenwerken",
+    "icon": "cloud",
+    "what": "Cloudopslag voor al je bestanden — automatisch gesynchroniseerd.",
+    "when": "Dagelijks — voor opslaan en delen van bestanden.",
+    "whatExtended": "OneDrive is je persoonlijke cloudopslag van Microsoft. Je krijgt als HvA-student 1TB opslagruimte om al je studiebestanden op te slaan. Bestanden worden automatisch gesynchroniseerd tussen je apparaten, zodat je overal toegang hebt. Je kunt mappen en bestanden delen met medestudenten voor groepsprojecten.",
+    "gettingStarted": [
+      "Open onedrive.com en log in met je HvA-account.",
+      "Installeer de OneDrive-app op je laptop voor automatische synchronisatie.",
+      "Maak een mappenstructuur aan per vak of project.",
+      "Sleep bestanden naar je OneDrive-map — ze worden automatisch geupload."
+    ],
+    "tips": [
+      "Maak mappen per vak en per periode aan zodat je bestanden overzichtelijk blijven.",
+      "Deel mappen met je projectgroep via de 'Delen' knop — iedereen kan dan samenwerken.",
+      "OneDrive heeft een prullenbak: per ongeluk verwijderde bestanden kun je 30 dagen lang herstellen."
+    ],
+    "relatedTools": ["sharepoint", "teams", "office365"],
+    "platform": ["web", "ios", "android"],
+    "required": true,
+    "week1": true,
+    "recommended": true,
+    "openUrl": "#",
+    "guideUrl": "#"
+  },
+  {
+    "id": "outlook",
+    "name": "Outlook (HvA Mail)",
+    "category": "samenwerken",
+    "icon": "mail",
+    "what": "Je officiele HvA-email voor communicatie met de hogeschool.",
+    "when": "Regelmatig — check minstens wekelijks.",
+    "whatExtended": "Outlook is je officiele HvA-mailbox. Alle communicatie van de hogeschool — van docenten, de administratie, de examencommissie en andere afdelingen — komt hier binnen. Het is belangrijk om deze mail regelmatig te checken, want je mist anders belangrijke mededelingen over tentamens, deadlines en wijzigingen in je rooster.",
+    "gettingStarted": [
+      "Ga naar outlook.office365.com en log in met je HvA-account.",
+      "Stel Outlook in op je telefoon via de Outlook-app voor meldingen.",
+      "Controleer je inbox en bekijk of er welkomstberichten van de HvA staan.",
+      "Maak mappen aan voor verschillende vakken om je mail te organiseren."
+    ],
+    "tips": [
+      "Stel een e-mailhandtekening in met je naam, studentnummer en opleiding.",
+      "Gebruik de Outlook-app op je telefoon zodat je belangrijke berichten direct ziet.",
+      "Stuur nooit opdrachten via e-mail in tenzij een docent dit expliciet vraagt — gebruik Brightspace."
+    ],
+    "relatedTools": ["teams", "hva-account", "rooster"],
+    "platform": ["web", "ios", "android"],
+    "required": true,
+    "week1": true,
+    "recommended": false,
+    "openUrl": "#",
+    "guideUrl": "#"
+  },
+  {
+    "id": "sis",
+    "name": "SIS (Studenten Info)",
+    "category": "overig",
+    "icon": "graduation-cap",
+    "what": "Inschrijven voor vakken, tentamens en je studievoortgang bekijken.",
+    "when": "Periodiek — bij inschrijvingen en resultaten.",
+    "whatExtended": "Het Studenten Informatie Systeem (SIS) is waar je je inschrijft voor vakken en tentamens, je studievoortgang bekijkt en je cijfers ziet. Je vindt hier ook informatie over je inschrijving, collegegeld en persoonlijke gegevens. Het is essentieel om je op tijd in te schrijven voor vakken en tentamens, anders kun je niet deelnemen.",
+    "gettingStarted": [
+      "Ga naar sis.hva.nl en log in met je HvA-account.",
+      "Controleer of je ingeschreven staat voor de juiste opleiding en vakken.",
+      "Bekijk het tabblad 'Resultaten' voor je studievoortgang.",
+      "Schrijf je in voor tentamens zodra de inschrijvingsperiode opent."
+    ],
+    "tips": [
+      "Schrijf je altijd op tijd in voor tentamens — de inschrijfperiode sluit meestal 2 weken voor het tentamen.",
+      "Controleer aan het begin van elke periode of je vakinschrijvingen kloppen.",
+      "In SIS kun je ook je BSA-voortgang (Bindend Studieadvies) bekijken."
+    ],
+    "relatedTools": ["brightspace", "rooster", "hva-account"],
+    "platform": ["web"],
+    "required": true,
+    "week1": true,
+    "recommended": false,
+    "openUrl": "#",
+    "guideUrl": "#"
+  },
+  {
+    "id": "rooster",
+    "name": "Rooster (MyTimetable)",
+    "category": "overig",
+    "icon": "calendar",
+    "what": "Je persoonlijke lesrooster — altijd up-to-date.",
+    "when": "Dagelijks — check je rooster elke ochtend.",
+    "whatExtended": "MyTimetable toont je persoonlijke lesrooster met alle colleges, werkgroepen en tentamens. Het rooster wordt automatisch bijgewerkt, dus je ziet altijd de laatste wijzigingen. Je kunt je rooster synchroniseren met je telefoonagenda (Google Calendar, Apple Calendar) zodat je altijd weet waar je moet zijn.",
+    "gettingStarted": [
+      "Ga naar rooster.hva.nl en log in met je HvA-account.",
+      "Controleer of je vakken en groepen correct worden weergegeven.",
+      "Klik op 'Synchroniseren' en voeg het rooster toe aan je telefoonagenda.",
+      "Check elke ochtend je rooster — wijzigingen komen soms laat binnen."
+    ],
+    "tips": [
+      "Synchroniseer je rooster met je telefoonagenda zodat je ook offline je rooster kunt zien.",
+      "Let op de locatie bij elk college — de HvA heeft meerdere gebouwen.",
+      "Klopt je rooster niet? Controleer eerst in SIS of je voor de juiste vakken en groepen staat ingeschreven."
+    ],
+    "relatedTools": ["sis", "brightspace", "teams"],
+    "platform": ["web", "ios", "android"],
+    "required": true,
+    "week1": true,
+    "recommended": false,
+    "openUrl": "#",
+    "guideUrl": "#"
+  },
+  {
+    "id": "office365",
+    "name": "Microsoft 365",
+    "category": "schrijven",
+    "icon": "file-text",
+    "what": "Word, Excel, PowerPoint — gratis zolang je studeert.",
+    "when": "Regelmatig — voor verslagen, presentaties en spreadsheets.",
+    "whatExtended": "Als HvA-student krijg je gratis toegang tot het volledige Microsoft 365-pakket: Word, Excel, PowerPoint, OneNote en meer. Je kunt de apps zowel online gebruiken als downloaden op maximaal 5 apparaten. Bestanden worden automatisch opgeslagen in OneDrive, zodat je nooit werk kwijtraakt. Je kunt ook realtime samenwerken aan documenten.",
+    "gettingStarted": [
+      "Ga naar office.com en log in met je HvA-account.",
+      "Klik op 'Office installeren' rechtsboven om de desktop-apps te downloaden.",
+      "Na installatie, log in de apps in met je HvA-account voor volledige toegang.",
+      "Sla bestanden op in OneDrive zodat ze automatisch worden gesynchroniseerd."
+    ],
+    "tips": [
+      "Gebruik de online versie van Office als je op een gedeelde computer werkt.",
+      "Schakel 'Automatisch opslaan' in zodat je nooit meer werk kwijtraakt.",
+      "Je kunt Microsoft 365 op maximaal 5 apparaten tegelijk installeren — laptop, tablet en telefoon."
+    ],
+    "relatedTools": ["onedrive", "teams", "excel"],
+    "platform": ["web", "ios", "android"],
+    "required": true,
+    "week1": false,
+    "recommended": false,
+    "openUrl": "#",
+    "guideUrl": "#"
+  },
+  {
+    "id": "sharepoint",
+    "name": "SharePoint",
+    "category": "samenwerken",
+    "icon": "folder-open",
+    "what": "Gedeelde documenten en bestanden per vak of projectgroep.",
+    "when": "Bij groepsprojecten — voor gezamenlijke bestanden.",
+    "whatExtended": "SharePoint is de teamopslagplaats van Microsoft 365. Terwijl OneDrive je persoonlijke bestanden bevat, wordt SharePoint gebruikt voor gedeelde bestanden binnen een team of vak. Elke Teams-groep heeft automatisch een SharePoint-site waar alle gedeelde bestanden worden opgeslagen. Docenten gebruiken SharePoint ook om cursusmateriaal te delen.",
+    "gettingStarted": [
+      "Open Microsoft Teams en ga naar een team of kanaal.",
+      "Klik op het tabblad 'Bestanden' — dit opent de SharePoint-map van dat team.",
+      "Upload bestanden of maak mappen aan voor je projectgroep.",
+      "Je kunt ook rechtstreeks naar sharepoint.com gaan en inloggen met je HvA-account."
+    ],
+    "tips": [
+      "Gebruik SharePoint voor groepsbestanden en OneDrive voor persoonlijke bestanden.",
+      "Wijzigingen in SharePoint-bestanden worden automatisch opgeslagen en gesynchroniseerd.",
+      "Je kunt SharePoint-mappen synchroniseren met je laptop via de OneDrive-app."
+    ],
+    "relatedTools": ["onedrive", "teams", "office365"],
+    "platform": ["web"],
+    "required": false,
+    "week1": false,
+    "recommended": false,
+    "openUrl": "#",
+    "guideUrl": "#"
+  },
+  {
+    "id": "excel",
+    "name": "Excel",
+    "category": "data",
+    "icon": "table",
+    "what": "Spreadsheets voor data-analyse, berekeningen en grafieken.",
+    "when": "Bij data-opdrachten en onderzoek.",
+    "whatExtended": "Excel is het standaard spreadsheetprogramma voor data-analyse, berekeningen en het maken van grafieken. Je krijgt het gratis als onderdeel van Microsoft 365. Veel vakken gebruiken Excel voor statistische analyses, budgetberekeningen of datavisualisatie. Excel is onmisbaar voor kwantitatief onderzoek.",
+    "gettingStarted": [
+      "Open Excel via Microsoft 365 of download het via office.com.",
+      "Bekijk de basisfuncties: cellen, formules (=SOM, =GEMIDDELDE), en grafieken.",
+      "Oefen met een eenvoudige dataset — maak een tabel en een grafiek.",
+      "Sla je bestand op in OneDrive zodat je er overal bij kunt."
+    ],
+    "tips": [
+      "Leer de sneltoetsen: Ctrl+C/V voor kopieren/plakken, Ctrl+Z voor ongedaan maken.",
+      "Gebruik 'Draaitabellen' (Pivot Tables) voor snelle data-analyse.",
+      "Via de online versie van Excel kun je met meerdere mensen tegelijk in een bestand werken."
+    ],
+    "relatedTools": ["spss", "powerbi", "office365"],
+    "platform": ["web", "ios", "android"],
+    "required": false,
+    "week1": false,
+    "recommended": false,
+    "openUrl": "#",
+    "guideUrl": "#"
+  },
+  {
+    "id": "spss",
+    "name": "SPSS Statistics",
+    "category": "data",
+    "icon": "bar-chart-3",
+    "what": "Statistisch analyseprogramma voor onderzoeksdata.",
+    "when": "Bij kwantitatief onderzoek (meestal vanaf jaar 2).",
+    "whatExtended": "IBM SPSS Statistics is een professioneel statistisch analyseprogramma dat veel wordt gebruikt in het hoger onderwijs. Je gebruikt het voor het analyseren van enqueteresultaten, het uitvoeren van statistische toetsen (t-toets, ANOVA, regressie) en het maken van grafieken. SPSS wordt vooral gebruikt bij onderzoeksmethoden en afstudeeronderzoek.",
+    "gettingStarted": [
+      "Download SPSS via apps.hva.nl (gratis voor HvA-studenten).",
+      "Installeer het programma en activeer met je HvA-licentie.",
+      "Open een dataset (.sav bestand) of importeer data vanuit Excel.",
+      "Begin met 'Analyze' in het menu voor statistische toetsen."
+    ],
+    "tips": [
+      "Sla je data en syntax-bestanden apart op — zo kun je analyses reproduceren.",
+      "Gebruik de 'Syntax Editor' om je analyses vast te leggen en te herhalen.",
+      "SPSS is beschikbaar op de HvA-computers als je het niet op je eigen laptop wilt installeren."
+    ],
+    "relatedTools": ["excel", "powerbi", "apps-hva"],
+    "platform": ["web"],
+    "required": false,
+    "week1": false,
+    "recommended": false,
+    "openUrl": "#",
+    "guideUrl": "#"
+  },
+  {
+    "id": "powerbi",
+    "name": "Power BI",
+    "category": "data",
+    "icon": "pie-chart",
+    "what": "Dashboards en datavisualisaties maken.",
+    "when": "Bij data-analyse opdrachten.",
+    "whatExtended": "Microsoft Power BI is een tool voor het maken van interactieve dashboards en datavisualisaties. Je kunt data uit verschillende bronnen (Excel, databases, online bronnen) combineren en omzetten in visuele rapporten. Power BI wordt steeds vaker gebruikt bij opleidingen als Business Analytics, Communicatie en Technische Informatica.",
+    "gettingStarted": [
+      "Download Power BI Desktop gratis via powerbi.microsoft.com.",
+      "Log in met je HvA-account voor toegang tot de Pro-versie.",
+      "Importeer een dataset (Excel, CSV) via 'Gegevens ophalen'.",
+      "Sleep velden naar het canvas om visualisaties te maken."
+    ],
+    "tips": [
+      "Begin met simpele visualisaties (staafdiagrammen, lijngrafieken) voordat je complexe dashboards maakt.",
+      "Publiceer je dashboard online via de Power BI Service om het te delen met je docent.",
+      "Power BI heeft een grote community — zoek op YouTube naar tutorials voor specifieke functies."
+    ],
+    "relatedTools": ["excel", "spss", "office365"],
+    "platform": ["web"],
+    "required": false,
+    "week1": false,
+    "recommended": false,
+    "openUrl": "#",
+    "guideUrl": "#"
+  },
+  {
+    "id": "figma",
+    "name": "Figma",
+    "category": "creatie",
+    "icon": "pen-tool",
+    "what": "Ontwerptool voor prototypes, wireframes en visueel design.",
+    "when": "Bij design-opdrachten (CMD, Communication).",
+    "whatExtended": "Figma is een webgebaseerde ontwerptool waarmee je wireframes, prototypes en visuele designs maakt. Het is de standaard in de design-industrie en wordt veel gebruikt bij opleidingen als Communication & Multimedia Design (CMD) en Communicatie. Figma is niet door de HvA aangeboden, maar je kunt via figma.com/education een gratis Education-licentie aanvragen met je HvA-email.",
+    "gettingStarted": [
+      "Ga naar figma.com/education en vraag een gratis Education-licentie aan met je HvA-email.",
+      "Bekijk de 'Getting Started' tutorial in Figma.",
+      "Maak een nieuw design file aan en experimenteer met frames, tekst en vormen.",
+      "Gebruik componenten en auto-layout voor efficienter ontwerpen."
+    ],
+    "tips": [
+      "Met de Education-licentie krijg je toegang tot alle Pro-functies — helemaal gratis.",
+      "Gebruik Figma Community voor gratis templates en UI-kits om sneller te starten.",
+      "Leer de sneltoetsen: R voor rechthoek, T voor tekst, V voor selectie."
+    ],
+    "relatedTools": ["gitlab", "apps-hva"],
+    "platform": ["web"],
+    "required": false,
+    "week1": false,
+    "recommended": false,
+    "openUrl": "#",
+    "guideUrl": "#"
+  },
+  {
+    "id": "gitlab",
+    "name": "GitLab",
+    "category": "dev",
+    "icon": "git-branch",
+    "what": "Code opslaan, versiebeheer en samenwerken aan software.",
+    "when": "Bij programmeerprojecten (Informatica, HBO-ICT).",
+    "whatExtended": "GitLab is het versiebeheerplatform van de HvA. Op gitlab.fdmci.hva.nl sla je je programmacode op, houd je wijzigingen bij en werk je samen met medestudenten aan softwareprojecten. Je logt in met je HvA-account. GitLab wordt gebruikt bij technische opleidingen zoals HBO-ICT, Informatica en Technische Informatica.",
+    "gettingStarted": [
+      "Ga naar gitlab.fdmci.hva.nl en log in met je HvA-account.",
+      "Installeer Git op je laptop via git-scm.com.",
+      "Maak je eerste repository (project) aan via de GitLab webinterface.",
+      "Clone het project naar je laptop en begin met coderen."
+    ],
+    "tips": [
+      "Schrijf duidelijke commit messages zodat je teamgenoten begrijpen wat je hebt veranderd.",
+      "Gebruik branches voor nieuwe features en merge ze via merge requests.",
+      "Commit en push regelmatig — zo raak je nooit werk kwijt."
+    ],
+    "relatedTools": ["figma", "apps-hva"],
+    "platform": ["web"],
+    "required": false,
+    "week1": false,
+    "recommended": false,
+    "openUrl": "#",
+    "guideUrl": "#"
+  },
+  {
+    "id": "apps-hva",
+    "name": "apps.hva.nl",
+    "category": "overig",
+    "icon": "download",
+    "what": "Software-portaal — installeer programma's die je voor je studie nodig hebt.",
+    "when": "Bij specifieke software-eisen per vak.",
+    "whatExtended": "Het HvA Software-portaal (apps.hva.nl) biedt toegang tot alle softwarepakketten die je voor je studie nodig hebt. Afhankelijk van je opleiding vind je hier programma's als SPSS, AutoCAD, Adobe Creative Cloud, Visual Studio en meer. De software is gratis of met korting beschikbaar zolang je ingeschreven staat als student.",
+    "gettingStarted": [
+      "Ga naar apps.hva.nl en log in met je HvA-account.",
+      "Zoek de software die je nodig hebt voor je opleiding.",
+      "Klik op 'Installeren' en volg de instructies.",
+      "Sommige software vereist een aparte licentie — deze wordt automatisch gekoppeld aan je HvA-account."
+    ],
+    "tips": [
+      "Installeer software die je nodig hebt voor het begin van de periode, niet op het laatste moment.",
+      "Sommige software is alleen beschikbaar op HvA-computers — check of er een laptop-versie is.",
+      "Heb je problemen met installeren? Neem contact op met de ICT Servicedesk."
+    ],
+    "relatedTools": ["office365", "spss", "hva-account"],
+    "platform": ["web"],
+    "required": false,
+    "week1": false,
+    "recommended": false,
+    "openUrl": "#",
+    "guideUrl": "#"
+  },
+  {
+    "id": "portflow",
+    "name": "Portflow",
+    "category": "schrijven",
+    "icon": "folder-heart",
+    "what": "Digitaal portfolio voor je studieloopbaan.",
+    "when": "Doorlopend — verzamel bewijs van je ontwikkeling.",
+    "whatExtended": "Portflow is het digitale portfolioplatform van de HvA. Je verzamelt hier bewijs van je ontwikkeling, zoals opdrachten, reflecties en feedback van docenten. Het portfolio groeit mee gedurende je hele studie en wordt gebruikt bij beoordelingen en voortgangsgesprekken. Portflow is gekoppeld aan Brightspace.",
+    "gettingStarted": [
+      "Open Portflow via Brightspace of ga rechtstreeks naar portflow.com.",
+      "Log in met je HvA-account.",
+      "Maak je eerste portfolio aan en voeg een item toe (bijv. een opdracht of reflectie).",
+      "Vraag feedback aan je docent of medestudent via de feedbackfunctie."
+    ],
+    "tips": [
+      "Vul je portfolio regelmatig aan — niet alles op het laatste moment.",
+      "Gebruik tags om je items te categoriseren, zo vind je alles makkelijk terug.",
+      "Bewaar ook tussenproducten en feedback — dat laat je ontwikkeling zien."
+    ],
+    "relatedTools": ["brightspace"],
+    "platform": ["web"],
+    "required": false,
+    "week1": false,
+    "recommended": false,
+    "openUrl": "#",
+    "guideUrl": "#"
+  }
+]
