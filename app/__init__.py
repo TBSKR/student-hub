@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask
+from flask import Flask, render_template
 
 from app.config import config
 
@@ -25,5 +25,9 @@ def create_app(config_name=None):
 
     from app.api import bp as api_bp
     app.register_blueprint(api_bp)
+
+    @app.errorhandler(404)
+    def pagina_niet_gevonden(e):
+        return render_template("404.html"), 404
 
     return app
