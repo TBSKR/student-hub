@@ -362,6 +362,27 @@ footer {
     border-color: var(--hva-marine);
 }
 
+/* Zoek highlight */
+.tool-card mark {
+    background-color: transparent;
+    color: var(--hva-marine);
+    font-weight: 700;
+}
+
+/* Lege state */
+.geen-resultaten {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--hva-tekst-licht);
+}
+
+.geen-resultaten p:first-child {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--hva-tekst);
+    margin-bottom: 0.5rem;
+}
+
 .tools-categorie {
     margin-bottom: 2.5rem;
 }

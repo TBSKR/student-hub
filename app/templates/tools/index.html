@@ -36,6 +36,11 @@
   </section>
   {% endfor %}
 
+  <div id="geen-resultaten" class="geen-resultaten" style="display: none;">
+    <p>Geen tools gevonden voor deze zoekopdracht.</p>
+    <p class="geen-resultaten-hint">Probeer een andere zoekterm of gebruik de snelknoppen hierboven.</p>
+  </div>
+
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>lucide.createIcons();</script>
   <script src="{{ url_for('static', filename='js/zoeken.js') }}"></script>
