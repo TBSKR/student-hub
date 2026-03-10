@@ -47,15 +47,20 @@ pytest
 app/
   __init__.py       # App factory (create_app)
   config.py         # Configuratie (dev/test/prod)
-  db.py             # Database connectie
+  db.py             # HBO-ICT.cloud API connectie
   main/             # Hoofdpagina
   tools/            # Tools overzicht
   journey/          # Student journey
   help/             # Hulp pagina
   api/              # REST API endpoints
+  models/           # Data modellen
+  repositories/     # Data ophalen via db.py
+  services/         # Bedrijfslogica
   templates/        # HTML templates
   static/           # CSS, afbeeldingen
+data/               # JSON seed-bestanden
 tests/              # Unit tests
+docs/               # Projectdocumentatie
 wsgi.py             # WSGI entry point
 ```
 
