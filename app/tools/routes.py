@@ -1,7 +1,16 @@
-from flask import render_template
+from flask import render_template, abort
 
 from app.tools import bp
-from app.data import laad_tools, laad_categorieen
+from app.data import laad_tools, laad_categorieen, zoek_tool
+
+
+@bp.route("/tools/<tool_id>")
+def detail(tool_id):
+    tool = zoek_tool(tool_id)
+    if tool is None:
+        abort(404)
+    categorieen = laad_categorieen()
+    return render_template("tools/detail.html", tool=tool, categorieen=categorieen)
 
 
 @bp.route("/tools")
