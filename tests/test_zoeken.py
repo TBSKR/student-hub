@@ -9,14 +9,11 @@ def test_zoekbalk_aanwezig(client):
     assert 'id="zoek-input"' in html
 
 
-def test_snelknoppen_aanwezig(client):
+def test_filter_pills_aanwezig(client):
     response = client.get("/tools")
     html = response.data.decode()
-    assert "Brightspace" in html
-    assert "Teams" in html
-    assert "Rooster" in html
-    assert "OneDrive" in html
-    assert "SPSS" in html
+    assert "filter-pill" in html
+    assert "Alle" in html
 
 
 def test_lege_state_aanwezig(client):

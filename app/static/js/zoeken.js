@@ -1,7 +1,6 @@
 var zoekInput = document.getElementById('zoek-input');
 var toolCards = document.querySelectorAll('.tool-card');
 var categorieSections = document.querySelectorAll('.tools-categorie');
-var snelknoppen = document.querySelectorAll('.snelknop');
 var geenResultaten = document.getElementById('geen-resultaten');
 var timer = null;
 
@@ -50,10 +49,3 @@ zoekInput.addEventListener('input', function() {
     timer = setTimeout(filterTools, 200);
 });
 
-// Snelknoppen vullen de zoekbalk in en filteren
-snelknoppen.forEach(function(knop) {
-    knop.addEventListener('click', function() {
-        zoekInput.value = knop.textContent;
-        filterTools();
-    });
-});
