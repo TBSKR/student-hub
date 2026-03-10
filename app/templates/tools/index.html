@@ -6,6 +6,10 @@
     <p class="tools-count">{{ tools|length }} tools beschikbaar</p>
   </div>
 
+  <div class="tools-zoek">
+    <input type="text" id="zoek-input" class="zoek-input" placeholder="Zoek op naam of trefwoord...">
+  </div>
+
   {% for categorie_key, categorie_tools in tools_per_categorie.items() %}
   <section class="tools-categorie">
     <h2>{{ categorieen.get(categorie_key, categorie_key) }}</h2>

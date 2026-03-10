@@ -317,6 +317,27 @@ footer {
     margin-top: 0.25rem;
 }
 
+/* Zoekbalk */
+.tools-zoek {
+    margin-bottom: 1.5rem;
+}
+
+.zoek-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid var(--hva-border);
+    border-radius: 0.5rem;
+    background: var(--hva-wit);
+    color: var(--hva-tekst);
+}
+
+.zoek-input:focus {
+    outline: none;
+    border-color: var(--hva-marine);
+}
+
 .tools-categorie {
     margin-bottom: 2.5rem;
 }
