@@ -317,6 +317,72 @@ footer {
     margin-top: 0.25rem;
 }
 
+/* Zoekbalk */
+.tools-zoek {
+    margin-bottom: 1.5rem;
+}
+
+.zoek-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid var(--hva-border);
+    border-radius: 0.5rem;
+    background: var(--hva-wit);
+    color: var(--hva-tekst);
+}
+
+.zoek-input:focus {
+    outline: none;
+    border-color: var(--hva-marine);
+}
+
+.zoek-snelknoppen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.snelknop {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.85rem;
+    font-family: inherit;
+    background-color: var(--hva-grijs);
+    color: var(--hva-tekst);
+    border: 1px solid var(--hva-border);
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.snelknop:active {
+    background-color: var(--hva-marine);
+    color: var(--hva-wit);
+    border-color: var(--hva-marine);
+}
+
+/* Zoek highlight */
+.tool-card mark {
+    background-color: transparent;
+    color: var(--hva-marine);
+    font-weight: 700;
+}
+
+/* Lege state */
+.geen-resultaten {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--hva-tekst-licht);
+}
+
+.geen-resultaten p:first-child {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--hva-tekst);
+    margin-bottom: 0.5rem;
+}
+
 .tools-categorie {
     margin-bottom: 2.5rem;
 }
