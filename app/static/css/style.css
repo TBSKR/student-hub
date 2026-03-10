@@ -292,10 +292,7 @@ footer {
     .hva-triangle--klein {
         display: none;
     }
-}
 
-/* Responsive */
-@media (max-width: 768px) {
     .nav-links {
         display: none;
     }
