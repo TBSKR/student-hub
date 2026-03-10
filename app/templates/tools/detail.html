@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}{{ tool.name }}{% endblock %}
+
+{% block content %}
+  <div class="breadcrumb-bleed">
+    <div class="breadcrumb-bleed-inner">
+      <a href="{{ url_for('main.index') }}">Home</a>
+      <span>›</span>
+      <a href="{{ url_for('tools.index') }}">Tools</a>
+      <span>›</span>
+      <span>{{ tool.name }}</span>
+    </div>
+  </div>
+
+  <div class="tool-detail">
+    <div class="tool-detail-header">
+      <div class="tool-detail-icon">
+        <img src="{{ url_for('static', filename='img/tools/' + tool.id + '.png') }}" alt="{{ tool.name }}">
+      </div>
+      <div class="tool-detail-titel">
+        <h1>{{ tool.name }}</h1>
+        <span class="categorie-badge">{{ categorieen.get(tool.category, tool.category) }}</span>
+      </div>
+    </div>
+
+    <div class="tool-detail-body">
+      <div class="tool-detail-main">
+        <section class="tool-sectie">
+          <h2>Wat is dit?</h2>
+          <p>{{ tool.whatExtended or tool.what }}</p>
+        </section>
+
+        <section class="tool-sectie">
+          <h2>Wanneer gebruik je het?</h2>
+          <p>{{ tool.when }}</p>
+        </section>
+
+        <section class="tool-sectie">
+          <h2>Platform</h2>
+          <div class="platform-badges">
+            {% for p in tool.platform %}
+            <span class="platform-badge">{{ {'web': 'Web', 'ios': 'iOS', 'android': 'Android'}.get(p, p) }}</span>
+            {% endfor %}
+          </div>
+        </section>
+      </div>
+
+      <aside class="tool-detail-side">
+        <div class="tool-acties">
+          <a href="{{ tool.openUrl }}" class="btn-primair">Openen →</a>
+          <a href="{{ tool.guideUrl }}" class="btn-secundair">Handleiding →</a>
+        </div>
+        <a href="{{ url_for('tools.index') }}" class="terug-link">← Terug naar tools</a>
+      </aside>
+    </div>
+  </div>
+{% endblock %}
