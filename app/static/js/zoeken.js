@@ -1,10 +1,13 @@
 var zoekInput = document.getElementById('zoek-input');
 var toolCards = document.querySelectorAll('.tool-card');
 var categorieSections = document.querySelectorAll('.tools-categorie');
-var filterPills = document.querySelectorAll('.filter-pill');
+var categoriePills = document.querySelectorAll('.filter-pill:not(#filter-verplicht)');
+var verplichtPill = document.getElementById('filter-verplicht');
+var toolCount = document.querySelector('.tools-count');
 var geenResultaten = document.getElementById('geen-resultaten');
 var timer = null;
 var actieveCategorie = 'alle';
+var verplichtActief = false;
 
 function filterTools() {
     var zoekterm = zoekInput.value.toLowerCase().trim();
@@ -14,11 +17,11 @@ function filterTools() {
         var naam = card.getAttribute('data-naam');
         var categorie = card.getAttribute('data-categorie');
         var matchZoek = !zoekterm || naam.includes(zoekterm) || categorie.includes(zoekterm);
-        var matchFilter = actieveCategorie === 'alle' || categorie === actieveCategorie;
-        card.style.display = (matchZoek && matchFilter) ? '' : 'none';
-        if (matchZoek && matchFilter) aantalZichtbaar++;
+        var matchCategorie = actieveCategorie === 'alle' || categorie === actieveCategorie;
+        var matchVerplicht = !verplichtActief || card.getAttribute('data-required') === 'true';
+        card.style.display = (matchZoek && matchCategorie && matchVerplicht) ? '' : 'none';
+        if (matchZoek && matchCategorie && matchVerplicht) aantalZichtbaar++;
 
-        // Highlight zoekterm in tool naam
         var h3 = card.querySelector('h3');
         var origNaam = h3.textContent;
         if (zoekterm && naam.includes(zoekterm)) {
@@ -30,19 +33,13 @@ function filterTools() {
         }
     });
 
-    // Verberg categorie als alle cards erin hidden zijn
     categorieSections.forEach(function(section) {
-        var cards = section.querySelectorAll('.tool-card');
-        var heeftZichtbaar = false;
-        cards.forEach(function(card) {
-            if (card.style.display !== 'none') {
-                heeftZichtbaar = true;
-            }
-        });
-        section.style.display = heeftZichtbaar ? '' : 'none';
+        var zichtbaar = section.querySelectorAll('.tool-card:not([style*="none"])').length > 0;
+        section.style.display = zichtbaar ? '' : 'none';
     });
 
-    geenResultaten.style.display = (aantalZichtbaar === 0 && (zoekterm || actieveCategorie !== 'alle')) ? '' : 'none';
+    toolCount.textContent = aantalZichtbaar + ' tools beschikbaar';
+    geenResultaten.style.display = (aantalZichtbaar === 0 && (zoekterm || actieveCategorie !== 'alle' || verplichtActief)) ? '' : 'none';
 }
 
 // Debounce: wacht 200ms na laatste toetsaanslag
@@ -51,11 +48,17 @@ zoekInput.addEventListener('input', function() {
     timer = setTimeout(filterTools, 200);
 });
 
-filterPills.forEach(function(pill) {
+categoriePills.forEach(function(pill) {
     pill.addEventListener('click', function() {
         actieveCategorie = pill.getAttribute('data-categorie');
-        filterPills.forEach(function(p) { p.classList.remove('active'); });
+        categoriePills.forEach(function(p) { p.classList.remove('active'); });
         pill.classList.add('active');
         filterTools();
     });
+});
+
+verplichtPill.addEventListener('click', function() {
+    verplichtActief = !verplichtActief;
+    verplichtPill.classList.toggle('active', verplichtActief);
+    filterTools();
 });
