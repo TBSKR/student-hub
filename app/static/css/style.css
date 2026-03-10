@@ -338,6 +338,30 @@ footer {
     border-color: var(--hva-marine);
 }
 
+.zoek-snelknoppen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.snelknop {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.85rem;
+    font-family: inherit;
+    background-color: var(--hva-grijs);
+    color: var(--hva-tekst);
+    border: 1px solid var(--hva-border);
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.snelknop:active {
+    background-color: var(--hva-marine);
+    color: var(--hva-wit);
+    border-color: var(--hva-marine);
+}
+
 .tools-categorie {
     margin-bottom: 2.5rem;
 }
