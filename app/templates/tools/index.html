@@ -13,6 +13,7 @@
   <div class="filter-pills">
     <button class="filter-pill active" data-categorie="alle" type="button">Alle</button>
     {% for key, label in categorieen.items() %}
+    {% if loop.last %}<button class="filter-pill" id="filter-verplicht" type="button">Verplicht</button>{% endif %}
     <button class="filter-pill" data-categorie="{{ label|lower }}" type="button">{{ label }}</button>
     {% endfor %}
   </div>
