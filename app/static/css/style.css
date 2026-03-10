@@ -432,9 +432,10 @@ footer {
     color: var(--hva-marine);
 }
 
-.tool-card-icon svg {
-    width: 20px;
-    height: 20px;
+.tool-card-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
 }
 
 .tool-card-info h3 {
