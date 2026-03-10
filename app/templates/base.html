@@ -7,14 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=2">
   </head>
 
   <body>
     <nav>
       <div class="nav-container">
         <a href="{{ url_for('main.index') }}" class="nav-logo">
-          <img src="{{ url_for('static', filename='img/logoHva.png') }}" alt="Hogeschool van Amsterdam" height="32">
+          <img src="{{ url_for('static', filename='img/brand/logoHva.png') }}" alt="Hogeschool van Amsterdam" height="32">
         </a>
 
         <button class="menu-button" id="menu-open">
@@ -34,7 +34,7 @@
     <div class="mobile-overlay" id="mobile-overlay"></div>
     <div class="mobile-drawer" id="mobile-drawer">
       <div class="drawer-header">
-        <img src="{{ url_for('static', filename='img/logoHva.png') }}" alt="Hogeschool van Amsterdam" height="28">
+        <img src="{{ url_for('static', filename='img/brand/logoHva.png') }}" alt="Hogeschool van Amsterdam" height="28">
         <button class="menu-button" id="menu-close">
           &#10005;
         </button>
