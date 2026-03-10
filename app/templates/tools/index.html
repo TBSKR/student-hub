@@ -22,7 +22,7 @@
     <h2>{{ categorieen.get(categorie_key, categorie_key) }}</h2>
     <div class="tools-grid">
       {% for tool in categorie_tools %}
-      <div class="tool-card">
+      <div class="tool-card" data-naam="{{ tool.name|lower }}" data-categorie="{{ categorieen.get(tool.category, tool.category)|lower }}">
         <div class="tool-card-icon">
           <i data-lucide="{{ tool.icon }}"></i>
         </div>
@@ -38,4 +38,5 @@
 
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>lucide.createIcons();</script>
+  <script src="{{ url_for('static', filename='js/zoeken.js') }}"></script>
 {% endblock %}
