@@ -8,13 +8,13 @@
 
   <div class="tools-zoek">
     <input type="text" id="zoek-input" class="zoek-input" placeholder="Zoek op naam of trefwoord...">
-    <div class="zoek-snelknoppen">
-      <button class="snelknop" type="button">Brightspace</button>
-      <button class="snelknop" type="button">Teams</button>
-      <button class="snelknop" type="button">Rooster</button>
-      <button class="snelknop" type="button">OneDrive</button>
-      <button class="snelknop" type="button">SPSS</button>
-    </div>
+  </div>
+
+  <div class="filter-pills">
+    <button class="filter-pill active" data-categorie="alle" type="button">Alle</button>
+    {% for key, label in categorieen.items() %}
+    <button class="filter-pill" data-categorie="{{ label|lower }}" type="button">{{ label }}</button>
+    {% endfor %}
   </div>
 
   {% for categorie_key, categorie_tools in tools_per_categorie.items() %}
@@ -38,7 +38,7 @@
 
   <div id="geen-resultaten" class="geen-resultaten" style="display: none;">
     <p>Geen tools gevonden voor deze zoekopdracht.</p>
-    <p class="geen-resultaten-hint">Probeer een andere zoekterm of gebruik de snelknoppen hierboven.</p>
+    <p class="geen-resultaten-hint">Probeer een andere zoekterm of gebruik de filters hierboven.</p>
   </div>
 
   <script src="{{ url_for('static', filename='js/zoeken.js') }}"></script>

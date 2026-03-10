@@ -337,14 +337,15 @@ footer {
     border-color: var(--hva-marine);
 }
 
-.zoek-snelknoppen {
+/* Filter pills */
+.filter-pills {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
 }
 
-.snelknop {
+.filter-pill {
     padding: 0.4rem 0.85rem;
     font-size: 0.85rem;
     font-family: inherit;
@@ -355,7 +356,7 @@ footer {
     cursor: pointer;
 }
 
-.snelknop:active {
+.filter-pill.active {
     background-color: var(--hva-marine);
     color: var(--hva-wit);
     border-color: var(--hva-marine);

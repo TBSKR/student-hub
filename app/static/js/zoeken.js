@@ -1,9 +1,10 @@
 var zoekInput = document.getElementById('zoek-input');
 var toolCards = document.querySelectorAll('.tool-card');
 var categorieSections = document.querySelectorAll('.tools-categorie');
-var snelknoppen = document.querySelectorAll('.snelknop');
+var filterPills = document.querySelectorAll('.filter-pill');
 var geenResultaten = document.getElementById('geen-resultaten');
 var timer = null;
+var actieveCategorie = 'alle';
 
 function filterTools() {
     var zoekterm = zoekInput.value.toLowerCase().trim();
@@ -12,9 +13,10 @@ function filterTools() {
     toolCards.forEach(function(card) {
         var naam = card.getAttribute('data-naam');
         var categorie = card.getAttribute('data-categorie');
-        var match = naam.includes(zoekterm) || categorie.includes(zoekterm);
-        card.style.display = match ? '' : 'none';
-        if (match) aantalZichtbaar++;
+        var matchZoek = !zoekterm || naam.includes(zoekterm) || categorie.includes(zoekterm);
+        var matchFilter = actieveCategorie === 'alle' || categorie === actieveCategorie;
+        card.style.display = (matchZoek && matchFilter) ? '' : 'none';
+        if (matchZoek && matchFilter) aantalZichtbaar++;
 
         // Highlight zoekterm in tool naam
         var h3 = card.querySelector('h3');
@@ -40,8 +42,7 @@ function filterTools() {
         section.style.display = heeftZichtbaar ? '' : 'none';
     });
 
-    // Lege state tonen als er niks gevonden is
-    geenResultaten.style.display = (zoekterm && aantalZichtbaar === 0) ? '' : 'none';
+    geenResultaten.style.display = (aantalZichtbaar === 0 && (zoekterm || actieveCategorie !== 'alle')) ? '' : 'none';
 }
 
 // Debounce: wacht 200ms na laatste toetsaanslag
@@ -50,10 +51,11 @@ zoekInput.addEventListener('input', function() {
     timer = setTimeout(filterTools, 200);
 });
 
-// Snelknoppen vullen de zoekbalk in en filteren
-snelknoppen.forEach(function(knop) {
-    knop.addEventListener('click', function() {
-        zoekInput.value = knop.textContent;
+filterPills.forEach(function(pill) {
+    pill.addEventListener('click', function() {
+        actieveCategorie = pill.getAttribute('data-categorie');
+        filterPills.forEach(function(p) { p.classList.remove('active'); });
+        pill.classList.add('active');
         filterTools();
     });
 });
