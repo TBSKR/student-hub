@@ -3,7 +3,7 @@ from pathlib import Path
 
 from app.models.tool import Tool
 
-DATA_DIR = Path(__file__).parent.parent.parent / "data"
+DATA_DIR = Path(__file__).parent.parent / "data"
 
 
 def laad_tools():
@@ -13,8 +13,7 @@ def laad_tools():
 
 
 def zoek_tool(tool_id):
-    tools = laad_tools()
-    for tool in tools:
+    for tool in laad_tools():
         if tool.id == tool_id:
             return tool
     return None
