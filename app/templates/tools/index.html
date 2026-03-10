@@ -24,7 +24,7 @@
       {% for tool in categorie_tools %}
       <div class="tool-card" data-naam="{{ tool.name|lower }}" data-categorie="{{ categorieen.get(tool.category, tool.category)|lower }}">
         <div class="tool-card-icon">
-          <i data-lucide="{{ tool.icon }}"></i>
+          <img src="{{ url_for('static', filename='img/tools/' + tool.id + '.png') }}" alt="{{ tool.name }}">
         </div>
         <div class="tool-card-info">
           <h3>{{ tool.name }}</h3>
@@ -41,7 +41,5 @@
     <p class="geen-resultaten-hint">Probeer een andere zoekterm of gebruik de snelknoppen hierboven.</p>
   </div>
 
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>lucide.createIcons();</script>
   <script src="{{ url_for('static', filename='js/zoeken.js') }}"></script>
 {% endblock %}
