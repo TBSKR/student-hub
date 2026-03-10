@@ -415,6 +415,13 @@ footer {
     border: 1px solid var(--hva-border);
     border-radius: 0.5rem;
     background: var(--hva-wit);
+    color: var(--hva-tekst);
+    text-decoration: none;
+}
+
+.tool-card:hover {
+    border-color: var(--hva-marine);
+    text-decoration: none;
 }
 
 .tool-card-icon {

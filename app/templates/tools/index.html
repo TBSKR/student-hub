@@ -23,7 +23,7 @@
     <h2>{{ categorieen.get(categorie_key, categorie_key) }}</h2>
     <div class="tools-grid">
       {% for tool in categorie_tools %}
-      <div class="tool-card" data-naam="{{ tool.name|lower }}" data-categorie="{{ categorieen.get(tool.category, tool.category)|lower }}" data-required="{{ 'true' if tool.required else 'false' }}">
+      <a href="{{ url_for('tools.detail', tool_id=tool.id) }}" class="tool-card" data-naam="{{ tool.name|lower }}" data-categorie="{{ categorieen.get(tool.category, tool.category)|lower }}" data-required="{{ 'true' if tool.required else 'false' }}">
         <div class="tool-card-icon">
           <img src="{{ url_for('static', filename='img/tools/' + tool.id + '.png') }}" alt="{{ tool.name }}">
         </div>
@@ -31,7 +31,7 @@
           <h3>{{ tool.name }}</h3>
           <span class="tool-card-categorie">{{ categorieen.get(tool.category, tool.category) }}</span>
         </div>
-      </div>
+      </a>
       {% endfor %}
     </div>
   </section>
