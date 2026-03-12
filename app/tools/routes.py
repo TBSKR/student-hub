@@ -10,7 +10,12 @@ def detail(tool_id):
     if tool is None:
         abort(404)
     categorieen = laad_categorieen()
-    return render_template("tools/detail.html", tool=tool, categorieen=categorieen)
+
+    # Gerelateerde tools ophalen
+    tools_map = {t.id: t for t in laad_tools()}
+    gerelateerde = [tools_map[rid] for rid in tool.relatedTools if rid in tools_map]
+
+    return render_template("tools/detail.html", tool=tool, categorieen=categorieen, gerelateerde=gerelateerde)
 
 
 @bp.route("/tools")

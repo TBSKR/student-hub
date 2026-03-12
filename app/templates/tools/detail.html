@@ -65,6 +65,25 @@
           </ul>
         </section>
         {% endif %}
+
+        {% if gerelateerde %}
+        <section class="tool-sectie">
+          <h2>Gerelateerde tools</h2>
+          <div class="gerelateerde-grid">
+            {% for rel in gerelateerde %}
+            <a href="{{ url_for('tools.detail', tool_id=rel.id) }}" class="tool-card">
+              <div class="tool-card-icon">
+                <img src="{{ url_for('static', filename='img/tools/' + rel.id + '.png') }}" alt="{{ rel.name }}">
+              </div>
+              <div class="tool-card-info">
+                <h3>{{ rel.name }}</h3>
+                <span class="tool-card-categorie">{{ categorieen.get(rel.category, rel.category) }}</span>
+              </div>
+            </a>
+            {% endfor %}
+          </div>
+        </section>
+        {% endif %}
       </div>
 
       <aside class="tool-detail-side">
