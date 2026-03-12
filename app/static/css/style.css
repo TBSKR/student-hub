@@ -553,6 +553,18 @@ footer {
     line-height: 1.6;
 }
 
+.stappen-lijst,
+.tips-lijst {
+    color: var(--hva-tekst-licht);
+    line-height: 1.8;
+    padding-left: 1.25rem;
+}
+
+.stappen-lijst li,
+.tips-lijst li {
+    padding-left: 0.25rem;
+}
+
 .platform-badges {
     display: flex;
     gap: 0.5rem;
