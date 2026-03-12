@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 235" width="400" height="235">
+  <!-- === LAYER 1: Backpack (behind everything) === -->
+  <rect x="166" y="122" width="18" height="44" rx="6" fill="#f1f3f8" stroke="#25167a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="216" y="122" width="18" height="44" rx="6" fill="#f1f3f8" stroke="#25167a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Backpack pocket details -->
+  <line x1="171" y1="144" x2="179" y2="144" stroke="#25167a" stroke-width="1.3" stroke-linecap="round" opacity="0.5"/>
+  <line x1="221" y1="144" x2="229" y2="144" stroke="#25167a" stroke-width="1.3" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- === LAYER 2: Legs (behind torso overlap) === -->
+  <rect x="182" y="164" width="17" height="54" rx="6" fill="#f1f3f8" stroke="#25167a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="201" y="164" width="17" height="54" rx="6" fill="#f1f3f8" stroke="#25167a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Shoes -->
+  <path d="M180 216 Q180 224 191 224 Q202 224 200 216" fill="#f1f3f8" stroke="#25167a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M200 216 Q200 224 210 224 Q221 224 220 216" fill="#f1f3f8" stroke="#25167a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- === LAYER 3: Torso === -->
+  <rect x="178" y="114" width="44" height="56" rx="7" fill="#f1f3f8" stroke="#25167a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Backpack straps over shoulders -->
+  <path d="M184 114 Q180 120 178 130" fill="none" stroke="#25167a" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M216 114 Q220 120 222 130" fill="none" stroke="#25167a" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Collar detail -->
+  <path d="M190 116 L200 122 L210 116" fill="none" stroke="#25167a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+
+  <!-- === LAYER 4: Neck === -->
+  <rect x="193" y="104" width="14" height="14" rx="4" fill="#f1f3f8" stroke="#25167a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- === LAYER 5: Head === -->
+  <ellipse cx="200" cy="80" rx="27" ry="28" fill="#f1f3f8" stroke="#25167a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Hair -->
+  <path d="M173 76 Q173 50 200 48 Q227 50 227 76" fill="#f1f3f8" stroke="#25167a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Hair texture lines -->
+  <path d="M173 76 Q170 65 177 58" fill="none" stroke="#25167a" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M227 76 Q230 65 223 58" fill="none" stroke="#25167a" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Hair tufts on top -->
+  <path d="M192 49 Q196 41 200 48" fill="none" stroke="#25167a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M200 48 Q204 40 208 49" fill="none" stroke="#25167a" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Eyes (looking downward toward map) -->
+  <ellipse cx="189" cy="82" rx="3.2" ry="4" fill="#25167a"/>
+  <ellipse cx="211" cy="82" rx="3.2" ry="4" fill="#25167a"/>
+  <!-- Eye highlights -->
+  <circle cx="190.5" cy="80.5" r="1.2" fill="#f1f3f8"/>
+  <circle cx="212.5" cy="80.5" r="1.2" fill="#f1f3f8"/>
+
+  <!-- Eyebrows (raised inner, confused) -->
+  <path d="M182 73 Q189 68 196 72" fill="none" stroke="#25167a" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M204 72 Q211 68 218 73" fill="none" stroke="#25167a" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- Mouth (wavy confused line) -->
+  <path d="M193 94 Q196 91 200 93 Q204 95 207 92" fill="none" stroke="#25167a" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- === LAYER 6: Arms holding map (in front of body) === -->
+  <!-- Left arm -->
+  <path d="M178 126 Q160 138 155 155 Q152 165 158 172" fill="none" stroke="#25167a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right arm -->
+  <path d="M222 126 Q240 138 245 155 Q248 165 242 172" fill="none" stroke="#25167a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- === LAYER 7: Crumpled map === -->
+  <path d="M156 168 L170 161 L185 166 L200 159 L215 166 L230 161 L244 168 L237 180 L220 175 L200 182 L180 175 L163 180 Z" fill="#f1f3f8" stroke="#25167a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Map crease lines -->
+  <line x1="185" y1="166" x2="180" y2="175" stroke="#25167a" stroke-width="1.1" stroke-linecap="round" opacity="0.45"/>
+  <line x1="200" y1="159" x2="200" y2="182" stroke="#25167a" stroke-width="1.1" stroke-linecap="round" opacity="0.45"/>
+  <line x1="215" y1="166" x2="220" y2="175" stroke="#25167a" stroke-width="1.1" stroke-linecap="round" opacity="0.45"/>
+  <!-- Tiny map path markings -->
+  <path d="M190 168 L194 171 L192 174" fill="none" stroke="#25167a" stroke-width="0.9" stroke-linecap="round" opacity="0.35"/>
+  <path d="M206 168 L210 171 L208 174" fill="none" stroke="#25167a" stroke-width="0.9" stroke-linecap="round" opacity="0.35"/>
+  <circle cx="200" cy="172" r="1.5" fill="none" stroke="#25167a" stroke-width="0.9" opacity="0.35"/>
+
+  <!-- Hands (on top of map edges) -->
+  <circle cx="158" cy="172" r="5.5" fill="#f1f3f8" stroke="#25167a" stroke-width="2"/>
+  <circle cx="242" cy="172" r="5.5" fill="#f1f3f8" stroke="#25167a" stroke-width="2"/>
+  <!-- Finger hints -->
+  <path d="M155 168 L157 165" fill="none" stroke="#25167a" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M245 168 L243 165" fill="none" stroke="#25167a" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- === LAYER 8: Confusion indicators (question marks as paths, no text) === -->
+  <!-- Large question mark (right side) -->
+  <g opacity="0.5" transform="translate(222, 28)">
+    <path d="M0 0 Q0 -6 4 -9 Q8 -12 12 -9 Q16 -6 12 -1 Q10 2 10 5" fill="none" stroke="#25167a" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="10" cy="9" r="1.5" fill="#25167a"/>
+  </g>
+  <!-- Small question mark (left side) -->
+  <g opacity="0.35" transform="translate(165, 36) scale(0.7)">
+    <path d="M0 0 Q0 -6 4 -9 Q8 -12 12 -9 Q16 -6 12 -1 Q10 2 10 5" fill="none" stroke="#25167a" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="10" cy="9" r="1.8" fill="#25167a"/>
+  </g>
+
+  <!-- Subtle confusion swirl accents -->
+  <path d="M238 42 Q244 38 242 32" fill="none" stroke="#25167a" stroke-width="1.4" stroke-linecap="round" opacity="0.3"/>
+  <path d="M162 46 Q156 42 158 36" fill="none" stroke="#25167a" stroke-width="1.2" stroke-linecap="round" opacity="0.25"/>
+</svg>

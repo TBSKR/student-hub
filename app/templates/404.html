@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Pagina niet gevonden{% endblock %}
+
+{% block content %}
+  <div class="fout-pagina">
+    <img src="{{ url_for('static', filename='img/404.svg') }}" alt="Verdwaalde student" class="fout-illustratie">
+    <h1>Oeps, deze pagina bestaat niet (meer).</h1>
+    <p>Misschien een tikfout in de URL? Ga terug naar het tools overzicht.</p>
+    <a href="{{ url_for('tools.index') }}" class="btn-primair">Terug naar tools overzicht</a>
+  </div>
+{% endblock %}

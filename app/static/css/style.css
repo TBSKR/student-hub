@@ -625,3 +625,29 @@ footer {
         position: static;
     }
 }
+
+/* 404 pagina */
+.fout-pagina {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.fout-illustratie {
+    width: 600px;
+    height: auto;
+    margin-bottom: 0.25rem;
+}
+
+.fout-pagina h1 {
+    margin-bottom: 0.75rem;
+}
+
+.fout-pagina p {
+    color: var(--hva-tekst-licht);
+    margin-bottom: 2rem;
+}
+
+.fout-pagina .btn-primair {
+    display: inline-block;
+    width: auto;
+}
