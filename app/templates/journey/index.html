@@ -1,9 +1,16 @@
 {% extends "base.html" %}
 {% block title %}Journey{% endblock %}
 {% block main %}
-  {% include 'partials/hva_triangles.html' %}
 
   <section class="journey-hero">
+    <div class="hva-triangles">
+      <div class="hva-triangle hva-triangle--groot hva-triangle--wit"
+           style="top: -50px; left: -40px;"></div>
+      <div class="hva-triangle hva-triangle--midden hva-triangle--links hva-triangle--wit"
+           style="bottom: 10%; right: 8%;"></div>
+      <div class="hva-triangle hva-triangle--klein hva-triangle--wit"
+           style="top: 15%; right: 20%;"></div>
+    </div>
     <h1>Start je digitale journey</h1>
     <p class="journey-hero-sub">Alles wat je nodig hebt om digitaal te starten bij de HvA, stap voor stap.</p>
     <p class="journey-hero-hint">Je hoeft niet alles in een keer te doen.</p>
@@ -62,6 +69,13 @@
         <span class="journey-stap-tekst">Je lesrooster bekijken</span>
       </a>
     </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="journey-cta">
+    <h2>Meer tools ontdekken?</h2>
+    <p>Bekijk alle tools in de Tool Hub — zoek, filter en vind wat je nodig hebt.</p>
+    <a href="/tools" class="btn-primair">Bekijk alle tools</a>
   </section>
 
 {% endblock %}

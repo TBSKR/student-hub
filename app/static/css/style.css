@@ -689,6 +689,12 @@ footer {
     color: var(--hva-wit);
     padding: 5rem 2rem;
     text-align: center;
+    overflow: hidden;
+}
+
+.hva-triangle--wit {
+    background-color: var(--hva-wit);
+    opacity: 0.08;
 }
 
 .journey-hero h1 {
@@ -804,4 +810,31 @@ footer {
         width: 52px;
         height: 52px;
     }
+}
+
+.journey-cta {
+    background-color: var(--hva-marine);
+    color: var(--hva-wit);
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.journey-cta h2 {
+    color: var(--hva-wit);
+    margin-bottom: 0.5rem;
+}
+
+.journey-cta p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+.journey-cta .btn-primair {
+    display: inline-block;
+    background-color: var(--hva-wit);
+    color: var(--hva-marine);
+    width: auto;
 }
