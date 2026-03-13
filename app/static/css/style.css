@@ -676,3 +676,29 @@ footer {
     display: inline-block;
     width: auto;
 }
+
+/* Journey pagina */
+.journey-hero {
+    background-color: var(--hva-marine);
+    color: var(--hva-wit);
+    padding: 4rem 2rem;
+}
+
+.journey-hero h1 {
+    color: var(--hva-wit);
+    max-width: 600px;
+}
+
+.journey-hero-sub {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin-top: 0.75rem;
+}
+
+.journey-hero-hint {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 600px;
+    margin-top: 1rem;
+}
