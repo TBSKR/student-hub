@@ -48,10 +48,12 @@
     </div>
 
     <main>
+      {% block main %}
       {% include 'partials/hva_triangles.html' %}
       <div class="main-content">
         {% block content %}{% endblock %}
       </div>
+      {% endblock %}
     </main>
 
     <footer>
