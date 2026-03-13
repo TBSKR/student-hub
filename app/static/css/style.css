@@ -678,27 +678,130 @@ footer {
 }
 
 /* Journey pagina */
+.journey-hero,
+.journey-map {
+    position: relative;
+    z-index: 1;
+}
+
 .journey-hero {
     background-color: var(--hva-marine);
     color: var(--hva-wit);
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
+    text-align: center;
 }
 
 .journey-hero h1 {
     color: var(--hva-wit);
     max-width: 600px;
+    margin: 0 auto;
 }
 
 .journey-hero-sub {
     font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.8);
-    max-width: 600px;
-    margin-top: 0.75rem;
+    max-width: 500px;
+    margin: 0.75rem auto 0;
 }
 
 .journey-hero-hint {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.6);
-    max-width: 600px;
     margin-top: 1rem;
+}
+
+.journey-map {
+    background-color: var(--hva-grijs);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.journey-map h2 {
+    margin-bottom: 2.5rem;
+}
+
+.journey-stappen {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.journey-stap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--hva-tekst);
+    position: relative;
+}
+
+.journey-stap:hover {
+    text-decoration: none;
+}
+
+/* Lijn tussen stappen via pseudo-element */
+.journey-stap:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    width: 100%;
+    height: 3px;
+    background-color: var(--hva-border);
+}
+
+.journey-stap-icoon {
+    width: 56px;
+    height: 56px;
+    background-color: var(--hva-wit);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    border: 3px solid var(--hva-border);
+    position: relative;
+    z-index: 1;
+}
+
+.journey-stap:hover .journey-stap-icoon {
+    border-color: var(--hva-marine);
+}
+
+.journey-stap--actief .journey-stap-icoon {
+    border-color: var(--hva-marine);
+    background-color: #eef2ff;
+}
+
+.journey-stap-titel {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.journey-stap-tekst {
+    font-size: 0.75rem;
+    color: var(--hva-tekst-licht);
+    margin-top: 0.25rem;
+}
+
+@media (max-width: 768px) {
+    .journey-stappen {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 1.5rem;
+    }
+
+    .journey-stap::after {
+        display: none;
+    }
+
+    .journey-stap-tekst {
+        display: none;
+    }
+
+    .journey-stap-icoon {
+        width: 52px;
+        height: 52px;
+    }
 }
