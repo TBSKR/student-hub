@@ -71,6 +71,41 @@
     </div>
   </section>
 
+  <!-- Checklist -->
+  <section class="checklist">
+    <h2>Jouw checklist</h2>
+
+    <h3>Week 0 — Voorbereiden</h3>
+    <ul class="checklist-lijst">
+      {% for item in week0 %}
+      <li class="checklist-item">
+        <input type="checkbox" class="checklist-check" id="{{ item.id }}">
+        <label for="{{ item.id }}">{{ item.label }}</label>
+        {% if item.verplicht %}
+          <span class="badge badge--verplicht">Verplicht</span>
+        {% else %}
+          <span class="badge badge--optioneel">Optioneel</span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+
+    <h3>Week 1 — Starten</h3>
+    <ul class="checklist-lijst">
+      {% for item in week1 %}
+      <li class="checklist-item">
+        <input type="checkbox" class="checklist-check" id="{{ item.id }}">
+        <label for="{{ item.id }}">{{ item.label }}</label>
+        {% if item.verplicht %}
+          <span class="badge badge--verplicht">Verplicht</span>
+        {% else %}
+          <span class="badge badge--optioneel">Optioneel</span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
   <!-- CTA -->
   <section class="journey-cta">
     <h2>Meer tools ontdekken?</h2>
