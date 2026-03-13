@@ -75,6 +75,16 @@
   <section class="checklist">
     <h2>Jouw checklist</h2>
 
+    <div class="voortgang">
+      <div class="voortgang-kop">
+        <span class="voortgang-titel">Je voortgang</span>
+        <span class="voortgang-tekst" id="voortgang-tekst">0 van 10 stappen voltooid</span>
+      </div>
+      <div class="voortgang-balk">
+        <div class="voortgang-vulling" id="voortgang-vulling"></div>
+      </div>
+    </div>
+
     <h3>Week 0 — Voorbereiden</h3>
     <ul class="checklist-lijst">
       {% for item in week0 %}

@@ -810,6 +810,12 @@ footer {
         width: 52px;
         height: 52px;
     }
+
+    .voortgang-kop {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
 }
 
 /* Checklist */
@@ -831,6 +837,40 @@ footer {
 
 .checklist h3:first-of-type {
     margin-top: 0;
+}
+
+.voortgang {
+    margin-bottom: 2rem;
+}
+
+.voortgang-kop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.voortgang-titel {
+    font-weight: 700;
+}
+
+.voortgang-tekst {
+    font-size: 0.85rem;
+    color: var(--hva-tekst-licht);
+}
+
+.voortgang-balk {
+    width: 100%;
+    height: 10px;
+    background-color: var(--hva-border);
+    border-radius: 5px;
+}
+
+.voortgang-vulling {
+    height: 100%;
+    width: 0%;
+    background-color: var(--hva-marine);
+    border-radius: 5px;
 }
 
 .checklist-lijst {
