@@ -1,0 +1,62 @@
+[
+  {
+    "id": "cl-1",
+    "week": 0,
+    "label": "HvA-ID activeren",
+    "verplicht": true
+  },
+  {
+    "id": "cl-2",
+    "week": 0,
+    "label": "Eduroam Wi-Fi instellen",
+    "verplicht": true
+  },
+  {
+    "id": "cl-3",
+    "week": 0,
+    "label": "Microsoft 365 installeren",
+    "verplicht": true
+  },
+  {
+    "id": "cl-4",
+    "week": 0,
+    "label": "Brightspace openen",
+    "verplicht": false
+  },
+  {
+    "id": "cl-5",
+    "week": 1,
+    "label": "Rooster checken",
+    "verplicht": true
+  },
+  {
+    "id": "cl-6",
+    "week": 1,
+    "label": "Teams-groep joinen",
+    "verplicht": true
+  },
+  {
+    "id": "cl-7",
+    "week": 1,
+    "label": "Eerste opdracht bekijken",
+    "verplicht": true
+  },
+  {
+    "id": "cl-8",
+    "week": 1,
+    "label": "OneDrive mappen aanmaken",
+    "verplicht": false
+  },
+  {
+    "id": "cl-9",
+    "week": 1,
+    "label": "Studiehandleiding lezen",
+    "verplicht": false
+  },
+  {
+    "id": "cl-10",
+    "week": 1,
+    "label": "SIS-account controleren",
+    "verplicht": false
+  }
+]

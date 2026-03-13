@@ -22,3 +22,8 @@ def zoek_tool(tool_id):
 def laad_categorieen():
     with open(DATA_DIR / "category-labels.seed.json") as f:
         return json.load(f)
+
+
+def laad_checklist():
+    with open(DATA_DIR / "checklist.seed.json") as f:
+        return json.load(f)
