@@ -792,6 +792,13 @@ footer {
     margin-top: 0.25rem;
 }
 
+@media (max-width: 900px) {
+    .journey-stappen {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem 1rem;
+    }
+}
+
 @media (max-width: 768px) {
     .journey-stappen {
         grid-template-columns: repeat(2, 1fr);
@@ -809,6 +816,12 @@ footer {
     .journey-stap-icoon {
         width: 52px;
         height: 52px;
+    }
+
+    .voortgang-kop {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
     }
 }
 
@@ -831,6 +844,63 @@ footer {
 
 .checklist h3:first-of-type {
     margin-top: 0;
+}
+
+.voortgang {
+    margin-bottom: 2rem;
+    position: sticky;
+    top: 73px;
+    background-color: var(--hva-wit);
+    padding: 1rem 0;
+    z-index: 10;
+}
+
+.voortgang-kop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.voortgang-titel {
+    font-weight: 700;
+}
+
+.voortgang-tekst {
+    font-size: 0.85rem;
+    color: var(--hva-tekst-licht);
+}
+
+.voortgang-balk {
+    width: 100%;
+    height: 10px;
+    background-color: var(--hva-border);
+    border-radius: 5px;
+}
+
+.voortgang-vulling {
+    height: 100%;
+    width: 0%;
+    background-color: var(--hva-marine);
+    border-radius: 5px;
+}
+
+.voortgang-markers {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.25rem;
+}
+
+.voortgang-marker {
+    position: absolute;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    color: var(--hva-tekst-licht);
+}
+
+.voortgang-marker:last-child {
+    transform: translateX(-100%);
 }
 
 .checklist-lijst {
