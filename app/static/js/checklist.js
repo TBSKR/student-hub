@@ -16,10 +16,9 @@ function updateVoortgang() {
 
 function toonBanner(type, tekst) {
     var banner = document.getElementById('milestone-banner');
-    var bannerTekst = document.getElementById('milestone-banner-tekst');
 
     banner.className = 'milestone-banner milestone-banner--' + type;
-    bannerTekst.textContent = tekst;
+    document.getElementById('milestone-banner-tekst').textContent = tekst;
     banner.style.display = 'flex';
 
     getoondeBanners['milestone_' + type] = true;
@@ -29,24 +28,29 @@ function toonBanner(type, tekst) {
     bannerTimer = setTimeout(function () {
         banner.style.display = 'none';
     }, 6000);
-
-    banner.addEventListener('mouseenter', function () {
-        if (bannerTimer) clearTimeout(bannerTimer);
-    });
-    banner.addEventListener('mouseleave', function () {
-        bannerTimer = setTimeout(function () {
-            banner.style.display = 'none';
-        }, 3000);
-    });
 }
 
-function checkMilestone(vorigProcent, nieuwProcent) {
-    if (vorigProcent < 50 && nieuwProcent >= 50 && !getoondeBanners.milestone_50) {
-        toonBanner('50', 'Goed bezig! Je bent halverwege 🎯');
+function confetti() {
+    var laag = document.createElement('div');
+    laag.className = 'confetti-laag';
+    var kleuren = ['#02857D', '#25167A', '#351FB7', '#F35279', '#1E1649'];
+
+    for (var i = 0; i < 22; i++) {
+        var stuk = document.createElement('span');
+        stuk.className = 'confetti-stuk';
+        var hoek = (i / 22) * Math.PI * 2;
+        var afstand = 200 + Math.random() * 300;
+        stuk.style.setProperty('--x', Math.cos(hoek) * afstand + 'px');
+        stuk.style.setProperty('--y', Math.sin(hoek) * afstand - 150 + 'px');
+        stuk.style.setProperty('--r', (Math.random() * 720 - 360) + 'deg');
+        stuk.style.width = (5 + Math.random() * 5) + 'px';
+        stuk.style.height = (4 + Math.random() * 6) + 'px';
+        stuk.style.backgroundColor = kleuren[i % kleuren.length];
+        laag.appendChild(stuk);
     }
-    if (vorigProcent < 100 && nieuwProcent >= 100 && !getoondeBanners.milestone_100) {
-        toonBanner('100', 'Gefeliciteerd! Alles afgerond 🎉');
-    }
+
+    document.body.appendChild(laag);
+    setTimeout(function () { laag.remove(); }, 3000);
 }
 
 document.getElementById('milestone-banner-sluit').addEventListener('click', function () {
@@ -60,11 +64,17 @@ checkboxes.forEach(function (cb) {
     }
 
     cb.addEventListener('change', function () {
-        var vorigProcent = updateVoortgang();
         opgeslagen[cb.id] = cb.checked;
         localStorage.setItem('checklist', JSON.stringify(opgeslagen));
-        var nieuwProcent = updateVoortgang();
-        checkMilestone(vorigProcent, nieuwProcent);
+        var procent = updateVoortgang();
+
+        if (procent >= 50 && !getoondeBanners.milestone_50) {
+            toonBanner('50', 'Goed bezig! Je bent halverwege.');
+        }
+        if (procent >= 100 && !getoondeBanners.milestone_100) {
+            toonBanner('100', 'Gefeliciteerd! Alles afgerond.');
+            confetti();
+        }
     });
 });
 
