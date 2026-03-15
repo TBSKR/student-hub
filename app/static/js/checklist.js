@@ -2,7 +2,6 @@ var checkboxes = document.querySelectorAll('.checklist-check');
 var opgeslagen = JSON.parse(localStorage.getItem('checklist') || '{}');
 var getoondeBanners = JSON.parse(localStorage.getItem('beloningen') || '{}');
 var totaal = checkboxes.length;
-var bannerTimer = null;
 
 function updateVoortgang() {
     var afgevinkt = document.querySelectorAll('.checklist-check:checked').length;
@@ -12,22 +11,6 @@ function updateVoortgang() {
     document.getElementById('voortgang-vulling').style.width = procent + '%';
 
     return procent;
-}
-
-function toonBanner(type, tekst) {
-    var banner = document.getElementById('milestone-banner');
-
-    banner.className = 'milestone-banner milestone-banner--' + type;
-    document.getElementById('milestone-banner-tekst').textContent = tekst;
-    banner.style.display = 'flex';
-
-    getoondeBanners['milestone_' + type] = true;
-    localStorage.setItem('beloningen', JSON.stringify(getoondeBanners));
-
-    if (bannerTimer) clearTimeout(bannerTimer);
-    bannerTimer = setTimeout(function () {
-        banner.style.display = 'none';
-    }, 6000);
 }
 
 function confetti() {
@@ -53,11 +36,6 @@ function confetti() {
     setTimeout(function () { laag.remove(); }, 3000);
 }
 
-document.getElementById('milestone-banner-sluit').addEventListener('click', function () {
-    if (bannerTimer) clearTimeout(bannerTimer);
-    document.getElementById('milestone-banner').style.display = 'none';
-});
-
 checkboxes.forEach(function (cb) {
     if (opgeslagen[cb.id]) {
         cb.checked = true;
@@ -68,11 +46,9 @@ checkboxes.forEach(function (cb) {
         localStorage.setItem('checklist', JSON.stringify(opgeslagen));
         var procent = updateVoortgang();
 
-        if (procent >= 50 && !getoondeBanners.milestone_50) {
-            toonBanner('50', 'Goed bezig! Je bent halverwege.');
-        }
         if (procent >= 100 && !getoondeBanners.milestone_100) {
-            toonBanner('100', 'Gefeliciteerd! Alles afgerond.');
+            getoondeBanners.milestone_100 = true;
+            localStorage.setItem('beloningen', JSON.stringify(getoondeBanners));
             confetti();
         }
     });

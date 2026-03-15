@@ -980,44 +980,6 @@ footer {
     color: var(--hva-tekst-licht);
 }
 
-/* Milestone banner */
-.milestone-banner {
-    max-width: 640px;
-    margin: 0 auto 1rem;
-    padding: 1rem 1.25rem;
-    border-radius: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-.milestone-banner--50 {
-    background-color: #fff8e1;
-    border: 1px solid #ffe082;
-    color: #6d4c00;
-}
-
-.milestone-banner--100 {
-    background-color: #e8f5e9;
-    border: 1px solid #a5d6a7;
-    color: #1b5e20;
-}
-
-.milestone-banner-tekst {
-    font-weight: 700;
-}
-
-.milestone-banner-sluit {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: inherit;
-    padding: 0;
-    line-height: 1;
-}
-
 /* Confetti */
 .confetti-laag {
     position: fixed;
