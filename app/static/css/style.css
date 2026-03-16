@@ -980,6 +980,36 @@ footer {
     color: var(--hva-tekst-licht);
 }
 
+/* Confetti */
+.confetti-laag {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.confetti-stuk {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    animation: confetti-burst 1.8s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes confetti-burst {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x), var(--y)) rotate(var(--r));
+        opacity: 0;
+    }
+}
+
 .journey-cta {
     background-color: var(--hva-marine);
     color: var(--hva-wit);
