@@ -21,53 +21,33 @@
     <h2>Jouw digitale startroute</h2>
 
     <div class="journey-stappen">
-      <a href="/tools/hva-account" class="journey-stap journey-stap--actief">
-        <div class="journey-stap-icoon">
-          <img src="{{ url_for('static', filename='img/tools/hva-account.png') }}" alt="" width="28" height="28">
-        </div>
-        <span class="journey-stap-titel">1. Account activeren</span>
-        <span class="journey-stap-tekst">Je HvA-ID activeren</span>
-      </a>
+      {% set stappen = [
+        ("hva-account", "1. Account activeren", "Je HvA-ID activeren"),
+        ("eduroam", "2. Wi-Fi instellen", "Eduroam op je devices"),
+        ("brightspace", "3. Brightspace", "Vakken en materiaal"),
+        ("teams", "4. Teams", "Chat met je klas"),
+        ("onedrive", "5. OneDrive", "Bestanden in de cloud"),
+        ("rooster", "6. Rooster", "Je lesrooster bekijken"),
+      ] %}
 
-      <a href="/tools/eduroam" class="journey-stap">
-        <div class="journey-stap-icoon">
-          <img src="{{ url_for('static', filename='img/tools/eduroam.png') }}" alt="" width="28" height="28">
-        </div>
-        <span class="journey-stap-titel">2. Wi-Fi instellen</span>
-        <span class="journey-stap-tekst">Eduroam op je devices</span>
-      </a>
-
-      <a href="/tools/brightspace" class="journey-stap">
-        <div class="journey-stap-icoon">
-          <img src="{{ url_for('static', filename='img/tools/brightspace.png') }}" alt="" width="28" height="28">
-        </div>
-        <span class="journey-stap-titel">3. Brightspace</span>
-        <span class="journey-stap-tekst">Vakken en materiaal</span>
-      </a>
-
-      <a href="/tools/teams" class="journey-stap">
-        <div class="journey-stap-icoon">
-          <img src="{{ url_for('static', filename='img/tools/teams.png') }}" alt="" width="28" height="28">
-        </div>
-        <span class="journey-stap-titel">4. Teams</span>
-        <span class="journey-stap-tekst">Chat met je klas</span>
-      </a>
-
-      <a href="/tools/onedrive" class="journey-stap">
-        <div class="journey-stap-icoon">
-          <img src="{{ url_for('static', filename='img/tools/onedrive.png') }}" alt="" width="28" height="28">
-        </div>
-        <span class="journey-stap-titel">5. OneDrive</span>
-        <span class="journey-stap-tekst">Bestanden in de cloud</span>
-      </a>
-
-      <a href="/tools/rooster" class="journey-stap">
-        <div class="journey-stap-icoon">
-          <img src="{{ url_for('static', filename='img/tools/rooster.png') }}" alt="" width="28" height="28">
-        </div>
-        <span class="journey-stap-titel">6. Rooster</span>
-        <span class="journey-stap-tekst">Je lesrooster bekijken</span>
-      </a>
+      {% for tool_id, titel, tekst in stappen %}
+      <div class="journey-stap-wrapper">
+        <a href="/tools/{{ tool_id }}" class="journey-stap{% if loop.first %} journey-stap--actief{% endif %}">
+          <div class="journey-stap-icoon">
+            <img src="{{ url_for('static', filename='img/tools/' + tool_id + '.png') }}" alt="" width="28" height="28">
+          </div>
+          <span class="journey-stap-titel">{{ titel }}</span>
+          <span class="journey-stap-tekst">{{ tekst }}</span>
+        </a>
+        {% if stappen_tools.get(tool_id) %}
+        <ul class="stap-tools">
+          {% for tool in stappen_tools[tool_id] %}
+          <li><a href="/tools/{{ tool.id }}">{{ tool.name }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      {% endfor %}
     </div>
   </section>
 
