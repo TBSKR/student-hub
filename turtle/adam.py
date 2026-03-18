@@ -21,5 +21,11 @@ for i in range(2):
     t.forward(120)
     t.left(90)
 
-turtle.done()
+# dak
+t.penup()
+t.goto(-100, 20)
+t.pendown()
+t.goto(0, 100)
+t.goto(100, 20)
 
+turtle.done()
