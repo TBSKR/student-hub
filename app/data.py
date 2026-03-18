@@ -30,5 +30,5 @@ def laad_checklist():
 
 
 def laad_help_categorieen():
-    with open(DATA_DIR / "help-categories.seed.json") as f:
+    with open(DATA_DIR / "help-categories.seed.json", encoding="utf-8") as f:
         return json.load(f)

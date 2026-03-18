@@ -5,7 +5,7 @@
     "icon": "login",
     "steps": [
       {
-        "title": "Stap 1 — Waar loop je vast?",
+        "title": "Stap 1: Waar loop je vast?",
         "question": "Wat is het probleem?",
         "options": [
           "Ik kan niet inloggen (wachtwoord/gebruikersnaam)",
@@ -14,7 +14,7 @@
         ]
       },
       {
-        "title": "Stap 2 — Controleer je gegevens",
+        "title": "Stap 2: Controleer je gegevens",
         "question": "Kun je met je HvA-ID inloggen op een andere HvA-dienst?",
         "options": [
           "Ja, op andere diensten wel",
@@ -22,7 +22,7 @@
         ]
       },
       {
-        "title": "Stap 3 — Snelle oplossing",
+        "title": "Stap 3: Snelle oplossing",
         "question": "Probeer eerst dit:",
         "options": [
           "Wachtwoord resetten via de officiële reset-pagina",
@@ -31,7 +31,7 @@
         ]
       },
       {
-        "title": "Stap 4 — Hulp inschakelen",
+        "title": "Stap 4: Hulp inschakelen",
         "question": "Nog steeds niet gelukt?",
         "options": [
           "Neem contact op met de Servicedesk ICT",
@@ -46,7 +46,7 @@
     "icon": "tools",
     "steps": [
       {
-        "title": "Stap 1 — Welke tool?",
+        "title": "Stap 1: Welke tool?",
         "question": "Waar heb je hulp bij nodig?",
         "options": [
           "Teams / samenwerken",
@@ -55,7 +55,7 @@
         ]
       },
       {
-        "title": "Stap 2 — Toegang checken",
+        "title": "Stap 2: Toegang checken",
         "question": "Kun je de tool openen met je HvA-account?",
         "options": [
           "Ja, maar iets werkt niet",
@@ -63,7 +63,7 @@
         ]
       },
       {
-        "title": "Stap 3 — Basis fix",
+        "title": "Stap 3: Basis fix",
         "question": "Probeer dit:",
         "options": [
           "Log uit/in en controleer de juiste tenant/account",
@@ -72,7 +72,7 @@
         ]
       },
       {
-        "title": "Stap 4 — Escaleren",
+        "title": "Stap 4: Escaleren",
         "question": "Blijft het probleem bestaan?",
         "options": [
           "Vraag je docent/coach om toegang te bevestigen",
@@ -87,7 +87,7 @@
     "icon": "calendar",
     "steps": [
       {
-        "title": "Stap 1 — Wat zie je?",
+        "title": "Stap 1: Wat zie je?",
         "question": "Wat klopt er niet?",
         "options": [
           "Ik zie geen rooster",
@@ -96,7 +96,7 @@
         ]
       },
       {
-        "title": "Stap 2 — Gegevens check",
+        "title": "Stap 2: Gegevens check",
         "question": "Heb je de juiste opleiding/klas/groep geselecteerd?",
         "options": [
           "Ja",
@@ -104,7 +104,7 @@
         ]
       },
       {
-        "title": "Stap 3 — Sync & refresh",
+        "title": "Stap 3: Sync & refresh",
         "question": "Probeer dit:",
         "options": [
           "Ververs de pagina en wis cache",
@@ -113,7 +113,7 @@
         ]
       },
       {
-        "title": "Stap 4 — Contact",
+        "title": "Stap 4: Contact",
         "question": "Nog steeds fout?",
         "options": [
           "Neem contact op met je opleiding/roosterbureau",
@@ -128,7 +128,7 @@
     "icon": "users",
     "steps": [
       {
-        "title": "Stap 1 — Waar zit de blokkade?",
+        "title": "Stap 1: Waar zit de blokkade?",
         "question": "Wat is het issue?",
         "options": [
           "We kunnen geen afspraken maken",
@@ -137,7 +137,7 @@
         ]
       },
       {
-        "title": "Stap 2 — Afspraak over tools",
+        "title": "Stap 2: Afspraak over tools",
         "question": "Hebben jullie één centrale plek afgesproken?",
         "options": [
           "Ja (bijv. Teams/Drive/Notion)",
@@ -145,7 +145,7 @@
         ]
       },
       {
-        "title": "Stap 3 — Werkafspraken",
+        "title": "Stap 3: Werkafspraken",
         "question": "Spreek dit af:",
         "options": [
           "Rollen (voorzitter, notulist, reviewer)",
@@ -154,7 +154,7 @@
         ]
       },
       {
-        "title": "Stap 4 — Hulp vragen",
+        "title": "Stap 4: Hulp vragen",
         "question": "Kom je er niet uit?",
         "options": [
           "Vraag je docent/coach om begeleiding",
@@ -169,7 +169,7 @@
     "icon": "device",
     "steps": [
       {
-        "title": "Stap 1 — Welk device?",
+        "title": "Stap 1: Welk device?",
         "question": "Waar speelt het probleem?",
         "options": [
           "Laptop (Windows/macOS)",
@@ -178,7 +178,7 @@
         ]
       },
       {
-        "title": "Stap 2 — Netwerk & accounts",
+        "title": "Stap 2: Netwerk & accounts",
         "question": "Is je netwerk en account in orde?",
         "options": [
           "Eduroam werkt",
@@ -186,7 +186,7 @@
         ]
       },
       {
-        "title": "Stap 3 — Snelle checks",
+        "title": "Stap 3: Snelle checks",
         "question": "Probeer dit:",
         "options": [
           "Herstart device + update OS",
@@ -195,7 +195,7 @@
         ]
       },
       {
-        "title": "Stap 4 — Support",
+        "title": "Stap 4: Support",
         "question": "Nog steeds problemen?",
         "options": [
           "Neem contact op met de servicedesk",
