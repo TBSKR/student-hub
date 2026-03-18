@@ -91,8 +91,37 @@
           <a href="{{ tool.openUrl }}" class="btn-primair">Openen</a>
           <a href="{{ tool.guideUrl }}" class="btn-secundair">Handleiding</a>
         </div>
+
+        <section class="tool-feedback" aria-label="Was dit nuttig?" data-tool-feedback="{{ tool.id }}">
+          <h2>Was dit nuttig?</h2>
+          <p class="tool-feedback-subtitle">Help ons de app te verbeteren.</p>
+
+          <div class="tool-feedback-actions" data-feedback-actions>
+            <button
+              type="button"
+              class="btn-feedback"
+              data-feedback-value="yes"
+            >
+              Ja
+            </button>
+            <button
+              type="button"
+              class="btn-feedback"
+              data-feedback-value="no"
+            >
+              Nee
+            </button>
+          </div>
+
+          <p class="tool-feedback-thanks" data-feedback-thanks hidden>
+            Bedankt!
+          </p>
+        </section>
+
         <a href="{{ url_for('tools.index') }}" class="terug-link">← Terug naar tools</a>
       </aside>
     </div>
   </div>
+
+  <script src="{{ url_for('static', filename='js/helpful.js') }}"></script>
 {% endblock %}
