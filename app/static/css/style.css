@@ -588,6 +588,68 @@ footer {
     margin-bottom: 1.25rem;
 }
 
+.tool-feedback {
+    margin-bottom: 1.25rem;
+    padding: 1rem;
+    border: 1px solid var(--hva-border);
+    border-radius: 0.75rem;
+    background-color: var(--hva-wit);
+}
+
+.tool-feedback h2 {
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+}
+
+.tool-feedback-subtitle {
+    color: var(--hva-tekst-licht);
+    margin-bottom: 0.75rem;
+}
+
+.tool-feedback-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.btn-feedback {
+    display: block;
+    padding: 0.75rem 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: 800;
+    font-size: 0.95rem;
+    border: 2px solid var(--hva-marine);
+    background: var(--hva-wit);
+    color: var(--hva-marine);
+    cursor: pointer;
+}
+
+.btn-feedback.is-selected {
+    background: var(--hva-marine);
+    color: var(--hva-wit);
+}
+
+.btn-feedback.is-selected:hover {
+    background: var(--hva-paars);
+    text-decoration: none;
+}
+
+.btn-feedback:hover {
+    background: #eef2ff;
+    text-decoration: none;
+}
+
+.btn-feedback:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.tool-feedback-thanks {
+    color: var(--hva-marine);
+    font-weight: 900;
+}
+
 .btn-primair {
     display: block;
     background-color: var(--hva-marine);
@@ -635,6 +697,12 @@ footer {
     .tool-detail-side {
         order: -1;
         position: static;
+    }
+}
+
+@media (max-width: 420px) {
+    .tool-feedback-actions {
+        grid-template-columns: 1fr;
     }
 }
 
