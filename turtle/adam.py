@@ -28,4 +28,30 @@ t.pendown()
 t.goto(0, 100)
 t.goto(100, 20)
 
+# deur
+t.penup()
+t.goto(-20, -100)
+t.pendown()
+for i in range(2):
+    t.forward(40)
+    t.left(90)
+    t.forward(70)
+    t.left(90)
+
+# linker raam
+t.penup()
+t.goto(-75, -20)
+t.pendown()
+for i in range(4):
+    t.forward(30)
+    t.left(90)
+
+# rechter raam
+t.penup()
+t.goto(45, -20)
+t.pendown()
+for i in range(4):
+    t.forward(30)
+    t.left(90)
+
 turtle.done()
