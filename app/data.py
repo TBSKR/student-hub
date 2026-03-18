@@ -27,3 +27,8 @@ def laad_categorieen():
 def laad_checklist():
     with open(DATA_DIR / "checklist.seed.json") as f:
         return json.load(f)
+
+
+def laad_help_categorieen():
+    with open(DATA_DIR / "help-categories.seed.json") as f:
+        return json.load(f)

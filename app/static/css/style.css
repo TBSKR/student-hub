@@ -1019,6 +1019,118 @@ footer {
     z-index: 1;
 }
 
+/* Help pagina */
+.help-hero {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.help-subtitle {
+    color: var(--hva-tekst-licht);
+    max-width: 70ch;
+}
+
+.help-categories {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.help-category {
+    border: 1px solid var(--hva-border);
+    border-radius: 1rem;
+    background: var(--hva-wit);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(30, 22, 73, 0.06);
+}
+
+.help-category-button {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1rem;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    text-align: left;
+    min-height: 56px;
+}
+
+.help-category-button:focus-visible {
+    outline: 3px solid rgba(1, 70, 253, 0.35);
+    outline-offset: 2px;
+}
+
+.help-category-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    background: #eef2ff;
+    color: var(--hva-marine);
+    flex-shrink: 0;
+}
+
+.help-category-title {
+    font-weight: 800;
+    color: var(--hva-deep-sea);
+}
+
+.help-category-chevron {
+    transition: transform 160ms ease;
+    color: var(--hva-tekst-licht);
+}
+
+.help-category.is-open .help-category-chevron {
+    transform: rotate(180deg);
+}
+
+.help-category-panel {
+    border-top: 1px solid var(--hva-border);
+    padding: 1rem 1rem 1.25rem;
+    background: #fbfcff;
+}
+
+.help-steps {
+    display: grid;
+    gap: 1rem;
+    padding-left: 1.25rem;
+}
+
+.help-step-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.help-step-question {
+    color: var(--hva-tekst-licht);
+    margin-bottom: 0.5rem;
+}
+
+.help-step-options {
+    display: grid;
+    gap: 0.35rem;
+    padding-left: 1rem;
+}
+
+.help-step-options li {
+    color: var(--hva-tekst);
+}
+
+@media (min-width: 900px) {
+    .help-categories {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .help-category {
+        align-self: start;
+    }
+}
+
 .journey-cta h2 {
     color: var(--hva-wit);
     margin-bottom: 0.5rem;

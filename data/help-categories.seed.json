@@ -1,0 +1,208 @@
+[
+  {
+    "id": "login-toegang",
+    "title": "Login/Toegang",
+    "icon": "login",
+    "steps": [
+      {
+        "title": "Stap 1 — Waar loop je vast?",
+        "question": "Wat is het probleem?",
+        "options": [
+          "Ik kan niet inloggen (wachtwoord/gebruikersnaam)",
+          "Ik krijg een foutmelding (MFA/verificatie)",
+          "Mijn account is geblokkeerd of werkt niet"
+        ]
+      },
+      {
+        "title": "Stap 2 — Controleer je gegevens",
+        "question": "Kun je met je HvA-ID inloggen op een andere HvA-dienst?",
+        "options": [
+          "Ja, op andere diensten wel",
+          "Nee, nergens"
+        ]
+      },
+      {
+        "title": "Stap 3 — Snelle oplossing",
+        "question": "Probeer eerst dit:",
+        "options": [
+          "Wachtwoord resetten via de officiële reset-pagina",
+          "Controleer of je tweede factor (MFA) goed staat",
+          "Probeer incognito of een andere browser"
+        ]
+      },
+      {
+        "title": "Stap 4 — Hulp inschakelen",
+        "question": "Nog steeds niet gelukt?",
+        "options": [
+          "Neem contact op met de Servicedesk ICT",
+          "Ga langs bij de balie (met studentenkaart/ID)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tools",
+    "title": "Tools",
+    "icon": "tools",
+    "steps": [
+      {
+        "title": "Stap 1 — Welke tool?",
+        "question": "Waar heb je hulp bij nodig?",
+        "options": [
+          "Teams / samenwerken",
+          "Brightspace / lesmateriaal",
+          "Microsoft 365 / Office"
+        ]
+      },
+      {
+        "title": "Stap 2 — Toegang checken",
+        "question": "Kun je de tool openen met je HvA-account?",
+        "options": [
+          "Ja, maar iets werkt niet",
+          "Nee, ik kom er niet in"
+        ]
+      },
+      {
+        "title": "Stap 3 — Basis fix",
+        "question": "Probeer dit:",
+        "options": [
+          "Log uit/in en controleer de juiste tenant/account",
+          "Update de app of gebruik de webversie",
+          "Controleer permissies (bijv. team/channel toegang)"
+        ]
+      },
+      {
+        "title": "Stap 4 — Escaleren",
+        "question": "Blijft het probleem bestaan?",
+        "options": [
+          "Vraag je docent/coach om toegang te bevestigen",
+          "Neem contact op met de ICT servicedesk"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rooster",
+    "title": "Rooster",
+    "icon": "calendar",
+    "steps": [
+      {
+        "title": "Stap 1 — Wat zie je?",
+        "question": "Wat klopt er niet?",
+        "options": [
+          "Ik zie geen rooster",
+          "Ik zie een leeg of verkeerd rooster",
+          "Het rooster verandert steeds"
+        ]
+      },
+      {
+        "title": "Stap 2 — Gegevens check",
+        "question": "Heb je de juiste opleiding/klas/groep geselecteerd?",
+        "options": [
+          "Ja",
+          "Nee / niet zeker"
+        ]
+      },
+      {
+        "title": "Stap 3 — Sync & refresh",
+        "question": "Probeer dit:",
+        "options": [
+          "Ververs de pagina en wis cache",
+          "Check of je week/datum correct staat",
+          "Koppel opnieuw als je kalender-sync gebruikt"
+        ]
+      },
+      {
+        "title": "Stap 4 — Contact",
+        "question": "Nog steeds fout?",
+        "options": [
+          "Neem contact op met je opleiding/roosterbureau",
+          "Vraag je klas/coach of er wijzigingen zijn"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "groepswerk",
+    "title": "Groepswerk",
+    "icon": "users",
+    "steps": [
+      {
+        "title": "Stap 1 — Waar zit de blokkade?",
+        "question": "Wat is het issue?",
+        "options": [
+          "We kunnen geen afspraken maken",
+          "Bestanden/links raken kwijt",
+          "Onenigheid over taakverdeling"
+        ]
+      },
+      {
+        "title": "Stap 2 — Afspraak over tools",
+        "question": "Hebben jullie één centrale plek afgesproken?",
+        "options": [
+          "Ja (bijv. Teams/Drive/Notion)",
+          "Nee"
+        ]
+      },
+      {
+        "title": "Stap 3 — Werkafspraken",
+        "question": "Spreek dit af:",
+        "options": [
+          "Rollen (voorzitter, notulist, reviewer)",
+          "Deadline + check-in momenten",
+          "Versiebeheer (één eigenaar per document)"
+        ]
+      },
+      {
+        "title": "Stap 4 — Hulp vragen",
+        "question": "Kom je er niet uit?",
+        "options": [
+          "Vraag je docent/coach om begeleiding",
+          "Gebruik een retro: wat gaat goed/kan beter?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "devices",
+    "title": "Devices",
+    "icon": "device",
+    "steps": [
+      {
+        "title": "Stap 1 — Welk device?",
+        "question": "Waar speelt het probleem?",
+        "options": [
+          "Laptop (Windows/macOS)",
+          "Telefoon/tablet",
+          "Campus PC / lab"
+        ]
+      },
+      {
+        "title": "Stap 2 — Netwerk & accounts",
+        "question": "Is je netwerk en account in orde?",
+        "options": [
+          "Eduroam werkt",
+          "Eduroam werkt niet"
+        ]
+      },
+      {
+        "title": "Stap 3 — Snelle checks",
+        "question": "Probeer dit:",
+        "options": [
+          "Herstart device + update OS",
+          "Installeer vereiste apps (Teams, Authenticator)",
+          "Controleer opslagruimte en rechten"
+        ]
+      },
+      {
+        "title": "Stap 4 — Support",
+        "question": "Nog steeds problemen?",
+        "options": [
+          "Neem contact op met de servicedesk",
+          "Ga langs met je device (indien mogelijk)"
+        ]
+      }
+    ]
+  }
+]
+
