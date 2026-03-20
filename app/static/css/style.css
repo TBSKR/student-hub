@@ -588,6 +588,68 @@ footer {
     margin-bottom: 1.25rem;
 }
 
+.tool-feedback {
+    margin-bottom: 1.25rem;
+    padding: 1rem;
+    border: 1px solid var(--hva-border);
+    border-radius: 0.75rem;
+    background-color: var(--hva-wit);
+}
+
+.tool-feedback h2 {
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+}
+
+.tool-feedback-subtitle {
+    color: var(--hva-tekst-licht);
+    margin-bottom: 0.75rem;
+}
+
+.tool-feedback-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.btn-feedback {
+    display: block;
+    padding: 0.75rem 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: 800;
+    font-size: 0.95rem;
+    border: 2px solid var(--hva-marine);
+    background: var(--hva-wit);
+    color: var(--hva-marine);
+    cursor: pointer;
+}
+
+.btn-feedback.is-selected {
+    background: var(--hva-marine);
+    color: var(--hva-wit);
+}
+
+.btn-feedback.is-selected:hover {
+    background: var(--hva-paars);
+    text-decoration: none;
+}
+
+.btn-feedback:hover {
+    background: #eef2ff;
+    text-decoration: none;
+}
+
+.btn-feedback:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.tool-feedback-thanks {
+    color: var(--hva-marine);
+    font-weight: 900;
+}
+
 .btn-primair {
     display: block;
     background-color: var(--hva-marine);
@@ -635,6 +697,12 @@ footer {
     .tool-detail-side {
         order: -1;
         position: static;
+    }
+}
+
+@media (max-width: 420px) {
+    .tool-feedback-actions {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -793,6 +861,52 @@ footer {
     margin-top: 0.25rem;
 }
 
+.journey-stap-link {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.journey-step-tools {
+    width: 100%;
+    padding: 0 0.25rem;
+    margin-top: 0.75rem;
+}
+
+.journey-step-tools-label {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--hva-tekst-licht);
+    margin-bottom: 0.35rem;
+}
+
+.journey-step-tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem;
+}
+
+.journey-step-tool-link {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--hva-marine);
+    background-color: #eef2ff;
+    border: 1px solid var(--hva-border);
+    border-radius: 999px;
+    padding: 0.25rem 0.6rem;
+    text-decoration: none;
+}
+
+.journey-step-tool-link:hover {
+    background-color: #dde3ff;
+    text-decoration: none;
+}
+
 @media (max-width: 900px) {
     .journey-stappen {
         grid-template-columns: repeat(3, 1fr);
@@ -817,6 +931,19 @@ footer {
     .journey-stap-icoon {
         width: 52px;
         height: 52px;
+    }
+
+    .journey-step-tools {
+        margin-top: 0.45rem;
+    }
+
+    .journey-step-tools-label {
+        display: none;
+    }
+
+    .journey-step-tool-link {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.55rem;
     }
 
     .voortgang-kop {
@@ -1050,6 +1177,118 @@ footer {
     z-index: 1;
 }
 
+/* Help pagina */
+.help-hero {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.help-subtitle {
+    color: var(--hva-tekst-licht);
+    max-width: 70ch;
+}
+
+.help-categories {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.help-category {
+    border: 1px solid var(--hva-border);
+    border-radius: 1rem;
+    background: var(--hva-wit);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(30, 22, 73, 0.06);
+}
+
+.help-category-button {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1rem;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    text-align: left;
+    min-height: 56px;
+}
+
+.help-category-button:focus-visible {
+    outline: 3px solid rgba(1, 70, 253, 0.35);
+    outline-offset: 2px;
+}
+
+.help-category-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    background: #eef2ff;
+    color: var(--hva-marine);
+    flex-shrink: 0;
+}
+
+.help-category-title {
+    font-weight: 800;
+    color: var(--hva-deep-sea);
+}
+
+.help-category-chevron {
+    transition: transform 160ms ease;
+    color: var(--hva-tekst-licht);
+}
+
+.help-category.is-open .help-category-chevron {
+    transform: rotate(180deg);
+}
+
+.help-category-panel {
+    border-top: 1px solid var(--hva-border);
+    padding: 1rem 1rem 1.25rem;
+    background: #fbfcff;
+}
+
+.help-steps {
+    display: grid;
+    gap: 1rem;
+    padding-left: 1.25rem;
+}
+
+.help-step-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.help-step-question {
+    color: var(--hva-tekst-licht);
+    margin-bottom: 0.5rem;
+}
+
+.help-step-options {
+    display: grid;
+    gap: 0.35rem;
+    padding-left: 1rem;
+}
+
+.help-step-options li {
+    color: var(--hva-tekst);
+}
+
+@media (min-width: 900px) {
+    .help-categories {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .help-category {
+        align-self: start;
+    }
+}
+
 .journey-cta h2 {
     color: var(--hva-wit);
     margin-bottom: 0.5rem;
@@ -1066,4 +1305,41 @@ footer {
     background-color: var(--hva-wit);
     color: var(--hva-marine);
     width: auto;
+}
+
+/* Help floating action button */
+.help-fab {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 45;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--hva-marine);
+    color: var(--hva-wit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 14px 40px rgba(30, 22, 73, 0.18);
+    text-decoration: none;
+}
+
+.help-fab:hover {
+    background-color: var(--hva-paars);
+    text-decoration: none;
+}
+
+.help-fab:focus-visible {
+    outline: 3px solid rgba(1, 70, 253, 0.35);
+    outline-offset: 3px;
+}
+
+@media (max-width: 420px) {
+    .help-fab {
+        right: 16px;
+        bottom: 16px;
+        width: 50px;
+        height: 50px;
+    }
 }

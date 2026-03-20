@@ -21,31 +21,28 @@
     <h2>Jouw digitale startroute</h2>
 
     <div class="journey-stappen">
-      {% set stappen = [
-        ("hva-account", "1. Account activeren", "Je HvA-ID activeren"),
-        ("eduroam", "2. Wi-Fi instellen", "Eduroam op je devices"),
-        ("brightspace", "3. Brightspace", "Vakken en materiaal"),
-        ("teams", "4. Teams", "Chat met je klas"),
-        ("onedrive", "5. OneDrive", "Bestanden in de cloud"),
-        ("rooster", "6. Rooster", "Je lesrooster bekijken"),
-      ] %}
-
-      {% for tool_id, titel, tekst in stappen %}
-      <div class="journey-stap-wrapper">
-        <a href="/tools/{{ tool_id }}" class="journey-stap{% if loop.first %} journey-stap--actief{% endif %}">
+      {% for step in journey_steps %}
+      <div class="journey-stap{% if loop.first %} journey-stap--actief{% endif %}">
+        <a href="{{ url_for('tools.detail', tool_id=step.tool_id) }}" class="journey-stap-link">
           <div class="journey-stap-icoon">
-            <img src="{{ url_for('static', filename='img/tools/' + tool_id + '.png') }}" alt="" width="28" height="28">
+            <img src="{{ url_for('static', filename='img/tools/' + step.tool_id + '.png') }}" alt="" width="28" height="28">
           </div>
-          <span class="journey-stap-titel">{{ titel }}</span>
-          <span class="journey-stap-tekst">{{ tekst }}</span>
+          <span class="journey-stap-titel">{{ step.title }}</span>
+          <span class="journey-stap-tekst">{{ step.subtitle }}</span>
         </a>
-        {% if stappen_tools.get(tool_id) %}
-        <ul class="stap-tools">
-          {% for tool in stappen_tools[tool_id] %}
-          <li><a href="/tools/{{ tool.id }}">{{ tool.name }}</a></li>
-          {% endfor %}
-        </ul>
-        {% endif %}
+
+        <div class="journey-step-tools" aria-label="Tools bij stap {{ loop.index }}">
+          <span class="journey-step-tools-label">Benodigde tools:</span>
+          <div class="journey-step-tools-list">
+            {% for tid in step.tool_links %}
+              {% if tid in tool_map %}
+                <a href="{{ url_for('tools.detail', tool_id=tid) }}" class="journey-step-tool-link">
+                  {{ tool_map[tid].name }}
+                </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
       </div>
       {% endfor %}
     </div>
