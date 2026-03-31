@@ -61,13 +61,15 @@
           <ol class="help-steps">
             {% for step in cat.steps %}
               <li class="help-step">
-                <h3 class="help-step-title">{{ step.title }}</h3>
-                <p class="help-step-question">{{ step.question }}</p>
-                <ul class="help-step-options">
-                  {% for opt in step.options %}
-                    <li>{{ opt }}</li>
-                  {% endfor %}
-                </ul>
+                <span class="help-step-number">{{ loop.index }}</span>
+                <div class="help-step-content">
+                  <p>{{ step.text }}</p>
+                  {% if step.tool_link %}
+                    <a href="{{ url_for('tools.detail', tool_id=step.tool_link) }}" class="help-tool-link">
+                      Bekijk {{ step.tool_link }} →
+                    </a>
+                  {% endif %}
+                </div>
               </li>
             {% endfor %}
           </ol>
