@@ -1216,11 +1216,6 @@ footer {
     min-height: 56px;
 }
 
-.help-category-button:focus-visible {
-    outline: 3px solid rgba(1, 70, 253, 0.35);
-    outline-offset: 2px;
-}
-
 .help-category-icon {
     width: 42px;
     height: 42px;
@@ -1328,11 +1323,6 @@ footer {
 .help-fab:hover {
     background-color: var(--hva-paars);
     text-decoration: none;
-}
-
-.help-fab:focus-visible {
-    outline: 3px solid rgba(1, 70, 253, 0.35);
-    outline-offset: 3px;
 }
 
 @media (max-width: 420px) {
