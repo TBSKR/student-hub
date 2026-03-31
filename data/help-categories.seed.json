@@ -5,38 +5,17 @@
     "icon": "login",
     "steps": [
       {
-        "title": "Stap 1: Waar loop je vast?",
-        "question": "Wat is het probleem?",
-        "options": [
-          "Ik kan niet inloggen (wachtwoord/gebruikersnaam)",
-          "Ik krijg een foutmelding (MFA/verificatie)",
-          "Mijn account is geblokkeerd of werkt niet"
-        ]
+        "text": "Ga naar mijn.hva.nl en klik op \"Wachtwoord vergeten\" om je wachtwoord te resetten.",
+        "tool_link": "hva-account"
       },
       {
-        "title": "Stap 2: Controleer je gegevens",
-        "question": "Kun je met je HvA-ID inloggen op een andere HvA-dienst?",
-        "options": [
-          "Ja, op andere diensten wel",
-          "Nee, nergens"
-        ]
+        "text": "Volg de stappen om je wachtwoord te resetten via je privé e-mail. Gebruik altijd je volledige HvA-mail (voornaam.achternaam@hva.nl)."
       },
       {
-        "title": "Stap 3: Snelle oplossing",
-        "question": "Probeer eerst dit:",
-        "options": [
-          "Wachtwoord resetten via de officiële reset-pagina",
-          "Controleer of je tweede factor (MFA) goed staat",
-          "Probeer incognito of een andere browser"
-        ]
+        "text": "Werkt MFA/verificatie niet? Open de Microsoft Authenticator app en controleer of je HvA-account eraan gekoppeld is."
       },
       {
-        "title": "Stap 4: Hulp inschakelen",
-        "question": "Nog steeds niet gelukt?",
-        "options": [
-          "Neem contact op met de Servicedesk ICT",
-          "Ga langs bij de balie (met studentenkaart/ID)"
-        ]
+        "text": "Lukt het nog steeds niet? Bel de ICT Servicedesk: 020 595 1402, of ga langs bij de balie met je studentenkaart."
       }
     ]
   },
@@ -46,38 +25,18 @@
     "icon": "tools",
     "steps": [
       {
-        "title": "Stap 1: Welke tool?",
-        "question": "Waar heb je hulp bij nodig?",
-        "options": [
-          "Teams / samenwerken",
-          "Brightspace / lesmateriaal",
-          "Microsoft 365 / Office"
-        ]
+        "text": "Bekijk de tool-pagina in de Student HUB voor uitleg en stappen per tool.",
+        "tool_link": "brightspace"
       },
       {
-        "title": "Stap 2: Toegang checken",
-        "question": "Kun je de tool openen met je HvA-account?",
-        "options": [
-          "Ja, maar iets werkt niet",
-          "Nee, ik kom er niet in"
-        ]
+        "text": "Kun je een tool niet openen? Log uit en weer in met je HvA-account, of probeer de webversie.",
+        "tool_link": "teams"
       },
       {
-        "title": "Stap 3: Basis fix",
-        "question": "Probeer dit:",
-        "options": [
-          "Log uit/in en controleer de juiste tenant/account",
-          "Update de app of gebruik de webversie",
-          "Controleer permissies (bijv. team/channel toegang)"
-        ]
+        "text": "Zoek op ask.hva.nl naar veelgestelde vragen over HvA-tools en software."
       },
       {
-        "title": "Stap 4: Escaleren",
-        "question": "Blijft het probleem bestaan?",
-        "options": [
-          "Vraag je docent/coach om toegang te bevestigen",
-          "Neem contact op met de ICT servicedesk"
-        ]
+        "text": "Kom je er niet uit? Vraag je docent of studiecoach om hulp, of neem contact op met de ICT Servicedesk."
       }
     ]
   },
@@ -87,38 +46,18 @@
     "icon": "calendar",
     "steps": [
       {
-        "title": "Stap 1: Wat zie je?",
-        "question": "Wat klopt er niet?",
-        "options": [
-          "Ik zie geen rooster",
-          "Ik zie een leeg of verkeerd rooster",
-          "Het rooster verandert steeds"
-        ]
+        "text": "Ga naar rooster.hva.nl (MyTimetable) en log in met je HvA-account.",
+        "tool_link": "rooster"
       },
       {
-        "title": "Stap 2: Gegevens check",
-        "question": "Heb je de juiste opleiding/klas/groep geselecteerd?",
-        "options": [
-          "Ja",
-          "Nee / niet zeker"
-        ]
+        "text": "Controleer in SIS of je ingeschreven staat voor de juiste vakken en groepen.",
+        "tool_link": "sis"
       },
       {
-        "title": "Stap 3: Sync & refresh",
-        "question": "Probeer dit:",
-        "options": [
-          "Ververs de pagina en wis cache",
-          "Check of je week/datum correct staat",
-          "Koppel opnieuw als je kalender-sync gebruikt"
-        ]
+        "text": "Klopt je rooster niet? Neem contact op met het onderwijsbureau van je opleiding."
       },
       {
-        "title": "Stap 4: Contact",
-        "question": "Nog steeds fout?",
-        "options": [
-          "Neem contact op met je opleiding/roosterbureau",
-          "Vraag je klas/coach of er wijzigingen zijn"
-        ]
+        "text": "Tip: koppel je rooster aan je telefoon via de sync-optie in MyTimetable, zodat je altijd je actuele rooster bij je hebt."
       }
     ]
   },
@@ -128,38 +67,18 @@
     "icon": "users",
     "steps": [
       {
-        "title": "Stap 1: Waar zit de blokkade?",
-        "question": "Wat is het issue?",
-        "options": [
-          "We kunnen geen afspraken maken",
-          "Bestanden/links raken kwijt",
-          "Onenigheid over taakverdeling"
-        ]
+        "text": "Maak een Teams-groep aan of vraag je docent om er een aan te maken voor je projectgroep.",
+        "tool_link": "teams"
       },
       {
-        "title": "Stap 2: Afspraak over tools",
-        "question": "Hebben jullie één centrale plek afgesproken?",
-        "options": [
-          "Ja (bijv. Teams/Drive/Notion)",
-          "Nee"
-        ]
+        "text": "Deel bestanden via OneDrive of SharePoint, niet via privé e-mail. Zo heeft iedereen altijd de laatste versie.",
+        "tool_link": "onedrive"
       },
       {
-        "title": "Stap 3: Werkafspraken",
-        "question": "Spreek dit af:",
-        "options": [
-          "Rollen (voorzitter, notulist, reviewer)",
-          "Deadline + check-in momenten",
-          "Versiebeheer (één eigenaar per document)"
-        ]
+        "text": "Gebruik gedeelde mappen zodat iedereen bij de bestanden kan. Spreek af wie welk document beheert."
       },
       {
-        "title": "Stap 4: Hulp vragen",
-        "question": "Kom je er niet uit?",
-        "options": [
-          "Vraag je docent/coach om begeleiding",
-          "Gebruik een retro: wat gaat goed/kan beter?"
-        ]
+        "text": "Tip: gebruik Teams-kanalen om afspraken en taken op één plek te bewaren. Zo raakt er niks kwijt."
       }
     ]
   },
@@ -169,40 +88,19 @@
     "icon": "device",
     "steps": [
       {
-        "title": "Stap 1: Welk device?",
-        "question": "Waar speelt het probleem?",
-        "options": [
-          "Laptop (Windows/macOS)",
-          "Telefoon/tablet",
-          "Campus PC / lab"
-        ]
+        "text": "Installeer software via apps.hva.nl — daar vind je alle programma's die je nodig hebt voor je opleiding.",
+        "tool_link": "apps-hva"
       },
       {
-        "title": "Stap 2: Netwerk & accounts",
-        "question": "Is je netwerk en account in orde?",
-        "options": [
-          "Eduroam werkt",
-          "Eduroam werkt niet"
-        ]
+        "text": "Wi-Fi instellen? Ga naar cat.eduroam.org en download de installer voor Eduroam.",
+        "tool_link": "eduroam"
       },
       {
-        "title": "Stap 3: Snelle checks",
-        "question": "Probeer dit:",
-        "options": [
-          "Herstart device + update OS",
-          "Installeer vereiste apps (Teams, Authenticator)",
-          "Controleer opslagruimte en rechten"
-        ]
+        "text": "Printer instellen: ga naar print.hva.nl en volg de instructies om de HvA-printer toe te voegen."
       },
       {
-        "title": "Stap 4: Support",
-        "question": "Nog steeds problemen?",
-        "options": [
-          "Neem contact op met de servicedesk",
-          "Ga langs met je device (indien mogelijk)"
-        ]
+        "text": "Andere problemen? Bezoek de ICT Servicedesk op locatie of bel 020 595 1402."
       }
     ]
   }
 ]
-
