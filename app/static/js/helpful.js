@@ -13,7 +13,6 @@ function applyFeedbackState(container, toolId) {
     buttons.forEach(function (btn) {
         btn.disabled = false;
         btn.classList.remove("is-selected");
-        btn.setAttribute("aria-pressed", "false");
     });
 
     if (thanks) thanks.hidden = true;
@@ -22,7 +21,6 @@ function applyFeedbackState(container, toolId) {
         var selected = container.querySelector('[data-feedback-value="' + saved + '"]');
         if (selected) {
             selected.classList.add("is-selected");
-            selected.setAttribute("aria-pressed", "true");
         }
         if (thanks) thanks.hidden = false;
     }
@@ -53,9 +51,7 @@ function initToolFeedback() {
 
                 // UI update direct na wijziging
                 buttons.forEach(function (b) {
-                    var isSelected = b === btn;
-                    b.classList.toggle("is-selected", isSelected);
-                    b.setAttribute("aria-pressed", isSelected ? "true" : "false");
+                    b.classList.toggle("is-selected", b === btn);
                 });
 
                 if (thanks) thanks.hidden = false;

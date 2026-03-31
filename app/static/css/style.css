@@ -816,7 +816,7 @@ footer {
 }
 
 /* Lijn tussen stappen via pseudo-element */
-.journey-stap:not(:last-child)::after {
+.journey-stap-wrapper:not(:last-child)::after {
     content: "";
     position: absolute;
     top: 28px;
@@ -824,6 +824,7 @@ footer {
     width: 100%;
     height: 3px;
     background-color: var(--hva-border);
+    z-index: 0;
 }
 
 .journey-stap-icoon {
@@ -919,7 +920,7 @@ footer {
         gap: 2rem 1.5rem;
     }
 
-    .journey-stap::after {
+    .journey-stap-wrapper::after {
         display: none;
     }
 
@@ -1137,6 +1138,36 @@ footer {
     }
 }
 
+/* Gerelateerde tools per stap */
+.journey-stap-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.stap-tools {
+    list-style: none;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.stap-tools li {
+    margin-bottom: 0.25rem;
+}
+
+.stap-tools a {
+    font-size: 0.75rem;
+    color: var(--hva-marine);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .stap-tools {
+        display: none;
+    }
+}
+
 .journey-cta {
     background-color: var(--hva-marine);
     color: var(--hva-wit);
@@ -1183,11 +1214,6 @@ footer {
     cursor: pointer;
     text-align: left;
     min-height: 56px;
-}
-
-.help-category-button:focus-visible {
-    outline: 3px solid rgba(1, 70, 253, 0.35);
-    outline-offset: 2px;
 }
 
 .help-category-icon {
@@ -1297,11 +1323,6 @@ footer {
 .help-fab:hover {
     background-color: var(--hva-paars);
     text-decoration: none;
-}
-
-.help-fab:focus-visible {
-    outline: 3px solid rgba(1, 70, 253, 0.35);
-    outline-offset: 3px;
 }
 
 @media (max-width: 420px) {
