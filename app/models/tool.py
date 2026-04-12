@@ -19,3 +19,11 @@ class Tool:
     recommended: bool = False
     openUrl: str = "#"
     guideUrl: str = "#"
+    favoriet: bool = False
+
+    @property
+    def omschrijving(self):
+        return self.whatExtended or self.what
+
+    def heeft_gerelateerde_tools(self):
+        return bool(self.relatedTools)
