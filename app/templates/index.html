@@ -76,9 +76,25 @@
     </div>
   </section>
 
-  <section class="home-quick-access">
-    <h2>Veelgebruikte tools</h2>
-    <div class="quick-access-grid">
+  <section class="home-opleiding" aria-labelledby="opleiding-heading">
+    <h2 id="opleiding-heading" class="home-opleiding-title">Jouw opleiding</h2>
+    <p class="home-opleiding-intro">
+      Kies je opleiding om tool-aanbevelingen te zien die bij je studie passen.
+    </p>
+    <div class="home-opleiding-field">
+      <label class="opleiding-label" for="opleiding-select">Opleiding</label>
+      <select id="opleiding-select" class="opleiding-select" name="opleiding" autocomplete="off">
+        {% for o in hub_client_config.opleidingen %}
+        <option value="{{ o.id }}">{{ o.label }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </section>
+
+  <section class="home-quick-access" aria-labelledby="aanbevelingen-heading">
+    <h2 id="aanbevelingen-heading">Aanbevolen voor jouw opleiding</h2>
+    <p class="home-aanbevelingen-sub" id="home-aanbevelingen-sub" hidden></p>
+    <div class="quick-access-grid" id="home-aanbevelingen-grid">
       {% for tool in aanbevolen %}
       <a href="{{ url_for('tools.detail', tool_id=tool.id) }}" class="tool-card">
         <div class="tool-card-icon">
@@ -92,5 +108,9 @@
       {% endfor %}
     </div>
   </section>
+
+  <script type="application/json" id="hub-opleiding-config">{{ hub_client_config | tojson }}</script>
+  <script src="{{ url_for('static', filename='js/userState.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/opleiding.js') }}"></script>
 
 {% endblock %}

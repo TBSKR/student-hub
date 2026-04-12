@@ -1,0 +1,18 @@
+{
+  "opleidingen": [
+    { "id": "cmd", "label": "CMD" },
+    { "id": "informatica", "label": "Informatica" },
+    { "id": "bedrijfskunde", "label": "Bedrijfskunde" },
+    { "id": "communicatie", "label": "Communicatie" },
+    { "id": "techniek", "label": "Techniek" },
+    { "id": "anders", "label": "Anders" }
+  ],
+  "aanbevelingenPerOpleiding": {
+    "cmd": ["figma", "brightspace", "teams", "onedrive", "gitlab", "portflow"],
+    "informatica": ["gitlab", "brightspace", "teams", "onedrive", "excel", "office365"],
+    "bedrijfskunde": ["excel", "powerbi", "teams", "brightspace", "outlook", "onedrive"],
+    "communicatie": ["teams", "brightspace", "onedrive", "figma", "office365", "outlook"],
+    "techniek": ["gitlab", "excel", "brightspace", "teams", "onedrive", "spss"],
+    "anders": ["brightspace", "teams", "hva-account", "outlook", "onedrive", "sis"]
+  }
+}

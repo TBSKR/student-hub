@@ -35,8 +35,13 @@ class DataLoader:
     def laad_help_categorieen(self):
         return self._laad_json("help-categories.seed.json")
 
+    def laad_opleiding_config(self):
+        return self._laad_json("opleidingen.seed.json")
+
 
 data_loader = DataLoader(DATA_DIR)
+
+DEFAULT_OPLEIDING_ID = "anders"
 
 
 def laad_tools():
@@ -57,3 +62,20 @@ def laad_checklist():
 
 def laad_help_categorieen():
     return data_loader.laad_help_categorieen()
+
+
+def laad_opleiding_config():
+    return data_loader.laad_opleiding_config()
+
+
+def tools_voor_opleiding_aanbevelingen(opleiding_id: str):
+    """Geeft Tool-objecten terug in de volgorde van de seed, ontbrekende id's worden overgeslagen."""
+    cfg = laad_opleiding_config()
+    mapping = cfg.get("aanbevelingenPerOpleiding") or {}
+    ids = mapping.get(opleiding_id) or mapping.get(DEFAULT_OPLEIDING_ID) or []
+    by_id = {t.id: t for t in laad_tools()}
+    return [by_id[i] for i in ids if i in by_id]
+
+
+def tools_meta_dict():
+    return {t.id: {"id": t.id, "name": t.name, "category": t.category} for t in laad_tools()}

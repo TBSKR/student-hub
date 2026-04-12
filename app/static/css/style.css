@@ -1476,6 +1476,74 @@ footer {
     }
 }
 
+/* Homepage opleiding selector */
+.home-opleiding {
+    padding: 2.5rem 2rem 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.home-opleiding-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.home-opleiding-intro {
+    color: var(--hva-tekst-licht);
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+    max-width: 36rem;
+}
+
+.home-opleiding-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    max-width: 22rem;
+}
+
+.opleiding-label {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--hva-deep-sea);
+}
+
+.opleiding-select {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.65rem 2rem 0.65rem 0.75rem;
+    border: 2px solid var(--hva-border);
+    border-radius: 0.5rem;
+    background-color: var(--hva-wit);
+    color: var(--hva-tekst);
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%234f5b73' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.65rem center;
+}
+
+.opleiding-select:hover {
+    border-color: var(--hva-marine);
+}
+
+.opleiding-select:focus {
+    outline: none;
+    border-color: var(--hva-marine);
+    box-shadow: 0 0 0 3px rgba(53, 31, 183, 0.2);
+}
+
+.home-aanbevelingen-sub {
+    color: var(--hva-tekst-licht);
+    font-size: 0.95rem;
+    margin: -0.75rem 0 1.25rem;
+    max-width: 40rem;
+}
+
+.home-aanbevelingen-sub[hidden] {
+    display: none;
+}
+
 /* Homepage quick-access grid */
 .home-quick-access {
     padding: 3rem 2rem;
