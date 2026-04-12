@@ -683,6 +683,30 @@ footer {
     text-decoration: none;
 }
 
+.favoriet-btn {
+    display: block;
+    width: 100%;
+    background-color: var(--hva-wit);
+    color: var(--hva-tekst-licht);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--hva-border);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+.favoriet-btn:hover {
+    color: var(--hva-marine);
+    border-color: var(--hva-marine);
+}
+
+.favoriet-btn.actief {
+    color: var(--hva-marine);
+    border-color: var(--hva-marine);
+}
+
 .terug-link {
     font-size: 0.875rem;
     font-weight: 600;
