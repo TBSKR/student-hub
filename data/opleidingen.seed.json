@@ -1,7 +1,7 @@
 {
   "opleidingen": [
     { "id": "cmd", "label": "CMD" },
-    { "id": "informatica", "label": "Informatica" },
+    { "id": "informatica", "label": "HBO-ICT" },
     { "id": "bedrijfskunde", "label": "Bedrijfskunde" },
     { "id": "communicatie", "label": "Communicatie" },
     { "id": "techniek", "label": "Techniek" },

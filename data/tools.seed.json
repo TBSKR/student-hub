@@ -383,8 +383,8 @@
     "category": "dev",
     "icon": "git-branch",
     "what": "Code opslaan, versiebeheer en samenwerken aan software.",
-    "when": "Bij programmeerprojecten (Informatica, HBO-ICT).",
-    "whatExtended": "GitLab is het versiebeheerplatform van de HvA. Op gitlab.fdmci.hva.nl sla je je programmacode op, houd je wijzigingen bij en werk je samen met medestudenten aan softwareprojecten. Je logt in met je HvA-account. GitLab wordt gebruikt bij technische opleidingen zoals HBO-ICT, Informatica en Technische Informatica.",
+    "when": "Bij programmeerprojecten (HBO-ICT).",
+    "whatExtended": "GitLab is het versiebeheerplatform van de HvA. Op gitlab.fdmci.hva.nl sla je je programmacode op, houd je wijzigingen bij en werk je samen met medestudenten aan softwareprojecten. Je logt in met je HvA-account. GitLab wordt gebruikt bij technische opleidingen zoals HBO-ICT en Technische Informatica.",
     "gettingStarted": [
       "Ga naar gitlab.fdmci.hva.nl en log in met je HvA-account.",
       "Installeer Git op je laptop via git-scm.com.",
