@@ -816,7 +816,7 @@ footer {
 }
 
 /* Lijn tussen stappen via pseudo-element */
-.journey-stap-wrapper:not(:last-child)::after {
+.journey-stap:not(:last-child)::after {
     content: "";
     position: absolute;
     top: 28px;
@@ -883,7 +883,7 @@ footer {
         gap: 2rem 1.5rem;
     }
 
-    .journey-stap-wrapper::after {
+    .journey-stap::after {
         display: none;
     }
 
@@ -1088,13 +1088,6 @@ footer {
     }
 }
 
-/* Gerelateerde tools per stap */
-.journey-stap-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
 
 .stap-tools {
     list-style: none;
