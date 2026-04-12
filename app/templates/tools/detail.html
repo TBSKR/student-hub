@@ -27,7 +27,7 @@
       <div class="tool-detail-main">
         <section class="tool-sectie">
           <h2>Wat is dit?</h2>
-          <p>{{ tool.whatExtended or tool.what }}</p>
+          <p>{{ tool.omschrijving }}</p>
         </section>
 
         <section class="tool-sectie">
@@ -90,6 +90,7 @@
         <div class="tool-acties">
           <a href="{{ tool.openUrl }}" class="btn-primair">Openen</a>
           <a href="{{ tool.guideUrl }}" class="btn-secundair">Handleiding</a>
+          <button type="button" class="favoriet-btn" data-tool-id="{{ tool.id }}">☆ Favoriet</button>
         </div>
 
         <section class="tool-feedback" data-tool-feedback="{{ tool.id }}">
@@ -124,4 +125,5 @@
   </div>
 
   <script src="{{ url_for('static', filename='js/helpful.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/favoriet.js') }}"></script>
 {% endblock %}

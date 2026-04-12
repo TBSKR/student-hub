@@ -1,12 +1,12 @@
 from flask import render_template
 
-from app.data import laad_checklist
+from app.data import data_loader
 from app.journey import bp
 
 
 @bp.route("/journey")
 def index():
-    checklist = laad_checklist()
+    checklist = data_loader.laad_checklist()
     week0 = [item for item in checklist if item["week"] == 0]
     week1 = [item for item in checklist if item["week"] == 1]
 
