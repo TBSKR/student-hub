@@ -1248,6 +1248,113 @@ footer {
     }
 }
 
+.help-contact {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--hva-border);
+}
+
+.help-contact h2 {
+    margin-bottom: 0.25rem;
+}
+
+.help-contact-intro {
+    color: var(--hva-tekst-licht);
+    margin-bottom: 1.5rem;
+}
+
+.help-contact-grid {
+    display: grid;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.help-contact-card {
+    border: 1px solid var(--hva-border);
+    border-radius: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--hva-wit);
+    box-shadow: 0 10px 30px rgba(30, 22, 73, 0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+.help-contact-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    background: #eef2ff;
+    color: var(--hva-marine);
+    margin-bottom: 0.75rem;
+    flex-shrink: 0;
+}
+
+.help-contact-card h3 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--hva-deep-sea);
+    margin-bottom: 0.1rem;
+}
+
+.help-contact-desc {
+    font-size: 0.875rem;
+    color: var(--hva-tekst-licht);
+}
+
+.help-contact-bottom {
+    margin-top: auto;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.help-contact-tel {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--hva-marine);
+    text-decoration: none;
+}
+
+.help-contact-tel:hover {
+    text-decoration: underline;
+}
+
+.help-contact-cta {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--hva-marine);
+    text-decoration: none;
+}
+
+.help-contact-cta:hover {
+    text-decoration: underline;
+}
+
+.help-contact-hours {
+    font-size: 0.8rem;
+    color: var(--hva-tekst-licht);
+}
+
+.help-contact-secondary {
+    font-size: 0.875rem;
+    color: var(--hva-marine);
+    text-decoration: none;
+    margin-top: 0.25rem;
+}
+
+.help-contact-secondary:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 900px) {
+    .help-contact-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 .journey-cta h2 {
     color: var(--hva-wit);
     margin-bottom: 0.5rem;
