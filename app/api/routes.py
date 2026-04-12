@@ -3,7 +3,7 @@ from dataclasses import asdict
 from flask import jsonify
 
 from app.api import bp
-from app.data import laad_tools, zoek_tool, laad_categorieen
+from app.data import data_loader
 
 
 @bp.route("/api/health")
@@ -13,7 +13,7 @@ def health():
 
 @bp.route("/api/tools")
 def tools_lijst():
-    tools = laad_tools()
+    tools = data_loader.laad_tools()
     return jsonify({
         "count": len(tools),
         "items": [asdict(t) for t in tools]
@@ -22,7 +22,7 @@ def tools_lijst():
 
 @bp.route("/api/tools/<tool_id>")
 def tool_detail(tool_id):
-    tool = zoek_tool(tool_id)
+    tool = data_loader.zoek_tool(tool_id)
     if not tool:
         return jsonify({"error": "Tool niet gevonden"}), 404
     return jsonify(asdict(tool))
@@ -30,4 +30,4 @@ def tool_detail(tool_id):
 
 @bp.route("/api/tool-categories")
 def tool_categorieen():
-    return jsonify(laad_categorieen())
+    return jsonify(data_loader.laad_categorieen())
