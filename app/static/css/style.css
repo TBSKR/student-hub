@@ -1476,12 +1476,29 @@ footer {
     }
 }
 
-/* Homepage favorieten (koppeling met toolpagina Favoriet-knop) */
-.home-favorieten {
-    padding: 2.5rem 2rem;
+/* Favorieten + opleiding naast elkaar (op desktop) */
+.home-persoonlijk-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 2.5rem;
+    align-items: start;
     max-width: 900px;
     margin: 0 auto;
+    padding: 2.5rem 2rem 2rem;
     border-top: 1px solid var(--hva-border);
+}
+
+@media (max-width: 768px) {
+    .home-persoonlijk-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Homepage favorieten (koppeling met toolpagina Favoriet-knop) */
+.home-favorieten {
+    margin: 0;
+    padding: 0;
+    min-width: 0;
 }
 
 .home-favorieten h2 {
@@ -1507,11 +1524,15 @@ footer {
     display: none;
 }
 
+.home-favorieten .quick-access-grid {
+    grid-template-columns: 1fr;
+}
+
 /* Homepage opleiding selector */
 .home-opleiding {
-    padding: 2.5rem 2rem 0;
-    max-width: 900px;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
 }
 
 .home-opleiding-title {

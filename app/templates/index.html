@@ -76,35 +76,37 @@
     </div>
   </section>
 
-  <section class="home-favorieten" aria-labelledby="favorieten-heading">
-    <h2 id="favorieten-heading">Mijn favorieten</h2>
-    <p class="home-favorieten-intro">
-      Tools die je op een toolpagina als favoriet hebt gemarkeerd (knop <strong>Favoriet</strong>), verschijnen hier.
-    </p>
-    <p class="home-favorieten-leeg" id="home-favorieten-leeg">
-      Nog geen favorieten. Open een tool en tik op <strong>☆ Favoriet</strong> om die hier te tonen.
-    </p>
-    <div class="quick-access-grid home-favorieten-grid" id="home-favorieten-grid" hidden></div>
-  </section>
+  <div class="home-persoonlijk-row">
+    <section class="home-favorieten" aria-labelledby="favorieten-heading">
+      <h2 id="favorieten-heading">Mijn favorieten</h2>
+      <p class="home-favorieten-intro">
+        Tools die je op een toolpagina als favoriet hebt gemarkeerd (knop <strong>Favoriet</strong>), verschijnen hier.
+      </p>
+      <p class="home-favorieten-leeg" id="home-favorieten-leeg">
+        Nog geen favorieten. Open een tool en tik op <strong>☆ Favoriet</strong> om die hier te tonen.
+      </p>
+      <div class="quick-access-grid home-favorieten-grid" id="home-favorieten-grid" hidden></div>
+    </section>
 
-  <section class="home-opleiding" id="opleiding-section" aria-labelledby="opleiding-heading">
-    <h2 id="opleiding-heading" class="home-opleiding-title">Jouw opleiding</h2>
-    <p class="home-opleiding-intro">
-      Kies je opleiding om tool-aanbevelingen te zien die bij je studie passen.
-    </p>
-    <div class="home-opleiding-field">
-      <label class="opleiding-label" for="opleiding-select">Opleiding</label>
-      <select id="opleiding-select" class="opleiding-select" name="opleiding" autocomplete="off">
-        <option value="">— Kies je opleiding —</option>
-        {% for o in hub_client_config.opleidingen %}
-        <option value="{{ o.id }}">{{ o.label }}</option>
-        {% endfor %}
-      </select>
-    </div>
-  </section>
+    <section class="home-opleiding" id="opleiding-section" aria-labelledby="opleiding-heading">
+      <h2 id="opleiding-heading" class="home-opleiding-title">Mijn opleiding</h2>
+      <p class="home-opleiding-intro">
+        Kies je opleiding om tool-aanbevelingen te zien die bij je studie passen.
+      </p>
+      <div class="home-opleiding-field">
+        <label class="opleiding-label" for="opleiding-select">Opleiding</label>
+        <select id="opleiding-select" class="opleiding-select" name="opleiding" autocomplete="off">
+          <option value="">— Kies je opleiding —</option>
+          {% for o in hub_client_config.opleidingen %}
+          <option value="{{ o.id }}">{{ o.label }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </section>
+  </div>
 
   <section class="home-quick-access" aria-labelledby="aanbevelingen-heading">
-    <h2 id="aanbevelingen-heading">Aanbevolen voor jouw opleiding</h2>
+    <h2 id="aanbevelingen-heading">Aanbevolen voor mijn opleiding</h2>
     <p class="home-aanbevelingen-sub" id="home-aanbevelingen-sub" hidden></p>
     <div
       class="home-aanbevelingen-empty"
