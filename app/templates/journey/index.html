@@ -28,21 +28,7 @@
             <img src="{{ url_for('static', filename='img/tools/' + step.tool_id + '.png') }}" alt="" width="28" height="28">
           </div>
           <span class="journey-stap-titel">{{ step.title }}</span>
-          <span class="journey-stap-tekst">{{ step.subtitle }}</span>
         </a>
-
-        <div class="journey-step-tools" aria-label="Tools bij stap {{ loop.index }}">
-          <span class="journey-step-tools-label">Benodigde tools:</span>
-          <div class="journey-step-tools-list">
-            {% for tid in step.tool_links %}
-              {% if tid in tool_map %}
-                <a href="{{ url_for('tools.detail', tool_id=tid) }}" class="journey-step-tool-link">
-                  {{ tool_map[tid].name }}
-                </a>
-              {% endif %}
-            {% endfor %}
-          </div>
-        </div>
       </div>
       {% endfor %}
     </div>
