@@ -1,6 +1,24 @@
 {% extends "base.html" %}
 {% block title %}Home{% endblock %}
-{% block content %}
-  <h1>Student HUB</h1>
-  <p>Welkom bij de Student Hub van de Hogeschool van Amsterdam.</p>
+{% block main %}
+
+  <section class="home-hero">
+    <div class="hva-triangles">
+      <div class="hva-triangle hva-triangle--groot hva-triangle--wit"
+           style="top: -50px; left: -40px;"></div>
+      <div class="hva-triangle hva-triangle--midden hva-triangle--links hva-triangle--wit"
+           style="bottom: 10%; right: 8%;"></div>
+      <div class="hva-triangle hva-triangle--klein hva-triangle--wit"
+           style="top: 15%; right: 20%;"></div>
+    </div>
+    <div class="home-hero-content">
+      <h1>Welkom bij de HvA</h1>
+      <p class="home-hero-sub">Alles wat je nodig hebt om digitaal te starten bij de Hogeschool van Amsterdam, op één plek.</p>
+      <div class="home-hero-knoppen">
+        <a href="/journey" class="btn-primair">Start je Journey →</a>
+        <a href="/tools" class="btn-outline">Bekijk alle tools →</a>
+      </div>
+    </div>
+  </section>
+
 {% endblock %}
