@@ -2,11 +2,6 @@
 {% block title %}Home{% endblock %}
 {% block main %}
 
-  <div class="welcome-banner" id="welcome-banner">
-    <p>Welkom! Dit is de Student Hub — jouw startpunt voor alle digitale tools bij de HvA.</p>
-    <button type="button" id="banner-sluiten">Begrepen</button>
-  </div>
-
   <section class="home-hero">
     <div class="hva-triangles">
       <div class="hva-triangle hva-triangle--groot hva-triangle--wit"
@@ -26,5 +21,4 @@
     </div>
   </section>
 
-  <script src="{{ url_for('static', filename='js/banner.js') }}"></script>
 {% endblock %}
