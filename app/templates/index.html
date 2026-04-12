@@ -76,7 +76,7 @@
     </div>
   </section>
 
-  <section class="home-opleiding" aria-labelledby="opleiding-heading">
+  <section class="home-opleiding" id="opleiding-section" aria-labelledby="opleiding-heading">
     <h2 id="opleiding-heading" class="home-opleiding-title">Jouw opleiding</h2>
     <p class="home-opleiding-intro">
       Kies je opleiding om tool-aanbevelingen te zien die bij je studie passen.
@@ -84,6 +84,7 @@
     <div class="home-opleiding-field">
       <label class="opleiding-label" for="opleiding-select">Opleiding</label>
       <select id="opleiding-select" class="opleiding-select" name="opleiding" autocomplete="off">
+        <option value="">— Kies je opleiding —</option>
         {% for o in hub_client_config.opleidingen %}
         <option value="{{ o.id }}">{{ o.label }}</option>
         {% endfor %}
@@ -94,19 +95,22 @@
   <section class="home-quick-access" aria-labelledby="aanbevelingen-heading">
     <h2 id="aanbevelingen-heading">Aanbevolen voor jouw opleiding</h2>
     <p class="home-aanbevelingen-sub" id="home-aanbevelingen-sub" hidden></p>
-    <div class="quick-access-grid" id="home-aanbevelingen-grid">
-      {% for tool in aanbevolen %}
-      <a href="{{ url_for('tools.detail', tool_id=tool.id) }}" class="tool-card">
-        <div class="tool-card-icon">
-          <img src="{{ url_for('static', filename='img/tools/' + tool.id + '.png') }}" alt="{{ tool.name }}">
-        </div>
-        <div class="tool-card-info">
-          <h3>{{ tool.name }}</h3>
-          <span class="tool-card-categorie">{{ categorieen.get(tool.category, tool.category) }}</span>
-        </div>
-      </a>
-      {% endfor %}
+    <div
+      class="home-aanbevelingen-empty"
+      id="home-aanbevelingen-empty"
+      role="region"
+      aria-labelledby="aanbevelingen-empty-title"
+    >
+      <h3 id="aanbevelingen-empty-title" class="home-aanbevelingen-empty-title">Nog geen persoonlijke aanbevelingen</h3>
+      <p class="home-aanbevelingen-empty-text">
+        Je hebt nog geen opleiding gekozen. Daarom tonen we hier nog geen tools op maat van je studie.
+        Zodra je een opleiding selecteert hierboven, verschijnen hier aanbevelingen die bij jouw richting passen.
+      </p>
+      <button type="button" class="btn-opleiding-cta" id="cta-kies-opleiding">
+        Kies je opleiding
+      </button>
     </div>
+    <div class="quick-access-grid" id="home-aanbevelingen-grid" hidden></div>
   </section>
 
   <script type="application/json" id="hub-opleiding-config">{{ hub_client_config | tojson }}</script>

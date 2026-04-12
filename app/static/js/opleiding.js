@@ -1,6 +1,7 @@
 /**
  * Opleidingsselector + aanbevelingen op de homepage.
- * Dispatch: document CustomEvent 'hva:opleiding-changed' met detail { opleiding, label }.
+ * Zonder gekozen opleiding: neutrale lege staat met uitleg en CTA.
+ * Dispatch: document CustomEvent 'hva:opleiding-changed' met detail { opleiding, label } (lege keuze: null / "").
  */
 (function () {
     function parseConfig() {
@@ -18,29 +19,31 @@
         var select = document.getElementById("opleiding-select");
         var grid = document.getElementById("home-aanbevelingen-grid");
         var sub = document.getElementById("home-aanbevelingen-sub");
+        var emptyBox = document.getElementById("home-aanbevelingen-empty");
+        var cta = document.getElementById("cta-kies-opleiding");
+        var opleidingSection = document.getElementById("opleiding-section");
         if (!config || !select || !grid) return;
 
-        var opleidingen = config.opleidingen || [];
         var aanbevelingen = config.aanbevelingen || {};
         var tools = config.tools || {};
         var categorieLabels = config.categorieLabels || {};
-        var defaultId = config.defaultOpleiding || "anders";
+        var defaultId = "anders";
 
         var labelById = {};
-        opleidingen.forEach(function (o) {
+        (config.opleidingen || []).forEach(function (o) {
             if (o && o.id) labelById[o.id] = o.label || o.id;
         });
 
         function geldigeOpleiding(id) {
-            return labelById[id] != null;
+            return id && labelById[id] != null;
         }
 
-        function huidigeOpleidingId() {
-            var opgeslagen = window.hvaUserState && window.hvaUserState.get(window.hvaUserState.keys.OPLEIDING);
-            if (typeof opgeslagen === "string" && geldigeOpleiding(opgeslagen)) {
-                return opgeslagen;
+        function opgeslagenOpleidingId() {
+            var raw = window.hvaUserState && window.hvaUserState.get(window.hvaUserState.keys.OPLEIDING);
+            if (typeof raw === "string" && geldigeOpleiding(raw)) {
+                return raw;
             }
-            return defaultId;
+            return "";
         }
 
         function toolIdsVoor(opleidingId) {
@@ -101,16 +104,35 @@
             }
         }
 
+        function toonLegeStaat(toon) {
+            if (emptyBox) {
+                emptyBox.hidden = !toon;
+            }
+            grid.hidden = toon;
+        }
+
         function pasUiAan(opleidingId, dispatchEvent) {
-            select.value = opleidingId;
-            bouwGrid(opleidingId);
-            zetSubtekst(opleidingId);
+            var id = geldigeOpleiding(opleidingId) ? opleidingId : "";
+            select.value = id;
+
+            if (!id) {
+                while (grid.firstChild) {
+                    grid.removeChild(grid.firstChild);
+                }
+                toonLegeStaat(true);
+                zetSubtekst("");
+            } else {
+                toonLegeStaat(false);
+                bouwGrid(id);
+                zetSubtekst(id);
+            }
+
             if (dispatchEvent) {
                 var evt = new CustomEvent("hva:opleiding-changed", {
                     bubbles: true,
                     detail: {
-                        opleiding: opleidingId,
-                        label: labelById[opleidingId] || "",
+                        opleiding: id || null,
+                        label: id ? labelById[id] || "" : "",
                     },
                 });
                 document.dispatchEvent(evt);
@@ -118,15 +140,16 @@
         }
 
         function resolveStartId() {
-            var opgeslagen =
-                window.hvaUserState && window.hvaUserState.get(window.hvaUserState.keys.OPLEIDING);
-            if (typeof opgeslagen === "string" && geldigeOpleiding(opgeslagen)) {
-                return opgeslagen;
-            }
-            if (window.hvaUserState) {
-                window.hvaUserState.set(window.hvaUserState.keys.OPLEIDING, defaultId);
-            }
-            return defaultId;
+            return opgeslagenOpleidingId();
+        }
+
+        if (cta && opleidingSection && select) {
+            cta.addEventListener("click", function () {
+                opleidingSection.scrollIntoView({ behavior: "smooth", block: "center" });
+                window.setTimeout(function () {
+                    select.focus();
+                }, 350);
+            });
         }
 
         var startId = resolveStartId();
@@ -134,6 +157,13 @@
 
         select.addEventListener("change", function () {
             var id = select.value;
+            if (id === "") {
+                if (window.hvaUserState) {
+                    window.hvaUserState.remove(window.hvaUserState.keys.OPLEIDING);
+                }
+                pasUiAan("", true);
+                return;
+            }
             if (!geldigeOpleiding(id)) return;
             if (window.hvaUserState) {
                 window.hvaUserState.set(window.hvaUserState.keys.OPLEIDING, id);
@@ -145,8 +175,8 @@
             if (!window.hvaUserState) return;
             var expected = "hva:hub:" + window.hvaUserState.keys.OPLEIDING;
             if (ev.key !== expected) return;
-            var id = huidigeOpleidingId();
-            if (id !== select.value) {
+            var id = opgeslagenOpleidingId();
+            if (id !== (select.value || "")) {
                 pasUiAan(id, false);
             }
         });

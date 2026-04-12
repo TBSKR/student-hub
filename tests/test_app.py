@@ -3,6 +3,15 @@ def test_app_starts(client):
     assert response.status_code == 200
 
 
+def test_home_toont_lege_aanbevelingen_staat(client):
+    response = client.get("/")
+    assert response.status_code == 200
+    html = response.data.decode("utf-8")
+    assert "Nog geen persoonlijke aanbevelingen" in html
+    assert "cta-kies-opleiding" in html
+    assert "— Kies je opleiding —" in html
+
+
 def test_tools_route(client):
     response = client.get("/tools")
     assert response.status_code == 200

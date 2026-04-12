@@ -1544,6 +1544,56 @@ footer {
     display: none;
 }
 
+/* Lege staat: nog geen opleiding gekozen */
+.home-aanbevelingen-empty {
+    background: var(--hva-grijs);
+    border: 1px solid var(--hva-border);
+    border-radius: 0.75rem;
+    padding: 1.5rem 1.25rem;
+    max-width: 40rem;
+}
+
+.home-aanbevelingen-empty[hidden] {
+    display: none;
+}
+
+.home-aanbevelingen-empty-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--hva-deep-sea);
+    margin-bottom: 0.75rem;
+}
+
+.home-aanbevelingen-empty-text {
+    color: var(--hva-tekst-licht);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+}
+
+.btn-opleiding-cta {
+    display: inline-block;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--hva-wit);
+    background-color: var(--hva-marine);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.65rem 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.btn-opleiding-cta:hover {
+    background-color: var(--hva-paars);
+}
+
+.btn-opleiding-cta:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(53, 31, 183, 0.35);
+}
+
 /* Homepage quick-access grid */
 .home-quick-access {
     padding: 3rem 2rem;
