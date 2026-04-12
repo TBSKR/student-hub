@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 {% block title %}Help{% endblock %}
 {% block content %}
-  <section class="help-hero">
+  <div class="help-main-layout">
+  <div class="help-col help-col--left">
+  <header class="help-hero">
     <h1>Help</h1>
     <p class="help-subtitle">Kies een categorie en volg de stappen om snel de juiste hulp te vinden.</p>
-  </section>
+  </header>
 
-  <section class="help-categories">
+  <section class="help-categories" aria-label="Stappen per categorie">
     {% for cat in categorieen %}
       {% set panel_id = "help-panel-" ~ cat.id %}
       {% set button_id = "help-button-" ~ cat.id %}
@@ -77,8 +79,10 @@
       </article>
     {% endfor %}
   </section>
+  </div>
 
-  <section class="help-faq" aria-labelledby="help-faq-heading">
+  <div class="help-col help-col--right">
+  <section class="help-faq" aria-labelledby="help-faq-heading" id="veelgestelde-vragen">
     <h2 id="help-faq-heading">Veelgestelde vragen</h2>
     <p class="help-faq-intro">
       Snel antwoord op veelvoorkomende vragen — zonder meteen de helpdesk te bellen.
@@ -94,6 +98,8 @@
       {% endfor %}
     </div>
   </section>
+  </div>
+  </div>
 
   <section class="help-contact">
     <h2>Kom je er niet uit?</h2>

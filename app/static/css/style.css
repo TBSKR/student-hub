@@ -1259,21 +1259,53 @@ footer {
     z-index: 1;
 }
 
-/* Help pagina */
+/* Help pagina: twee kolommen, koppen Help / Veelgestelde vragen op dezelfde hoogte */
+.help-main-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto 2.5rem;
+    padding: 0 1rem;
+    align-items: start;
+}
+
+@media (min-width: 900px) {
+    .help-main-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem 2.25rem;
+    }
+}
+
+.help-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    min-width: 0;
+}
+
 .help-hero {
     display: grid;
     gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin: 0;
+}
+
+.help-hero h1 {
+    margin: 0;
+    line-height: 1.15;
 }
 
 .help-subtitle {
     color: var(--hva-tekst-licht);
     max-width: 70ch;
+    margin: 0;
 }
 
 .help-categories {
     display: grid;
+    grid-template-columns: 1fr;
     gap: 0.75rem;
+    min-width: 0;
 }
 
 .help-category {
@@ -1374,34 +1406,28 @@ footer {
     text-decoration: underline;
 }
 
-@media (min-width: 900px) {
-    .help-categories {
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-
-    .help-category {
-        align-self: start;
-    }
-}
-
-/* FAQ (onder beslisboom, boven contact) */
+/* FAQ (rechts naast beslisboom op desktop) */
 .help-faq {
-    max-width: 720px;
-    margin: 0 auto 3rem;
-    padding: 0 1rem;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .help-faq h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    margin: 0;
+    line-height: 1.15;
     color: var(--hva-deep-sea);
 }
 
 .help-faq-intro {
     color: var(--hva-tekst-licht);
     font-size: 0.95rem;
-    margin-bottom: 1.25rem;
+    margin: 0 0 0.75rem;
     line-height: 1.5;
 }
 
@@ -1469,12 +1495,6 @@ footer {
     font-size: 0.9rem;
     line-height: 1.55;
     color: var(--hva-tekst);
-}
-
-@media (min-width: 768px) {
-    .help-faq h2 {
-        font-size: 1.75rem;
-    }
 }
 
 .help-contact {
