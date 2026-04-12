@@ -6,29 +6,54 @@ from app.models.tool import Tool
 DATA_DIR = Path(__file__).parent.parent / "data"
 
 
+class DataLoader:
+    def __init__(self, data_dir):
+        self.data_dir = Path(data_dir)
+        self._cache = {}
+
+    def _laad_json(self, bestand):
+        if bestand not in self._cache:
+            with open(self.data_dir / bestand, encoding="utf-8") as f:
+                self._cache[bestand] = json.load(f)
+        return self._cache[bestand]
+
+    def laad_tools(self):
+        if "tools" not in self._cache:
+            data = self._laad_json("tools.seed.json")
+            self._cache["tools"] = [Tool(**item) for item in data]
+        return self._cache["tools"]
+
+    def zoek_tool(self, tool_id):
+        return next((t for t in self.laad_tools() if t.id == tool_id), None)
+
+    def laad_categorieen(self):
+        return self._laad_json("category-labels.seed.json")
+
+    def laad_checklist(self):
+        return self._laad_json("checklist.seed.json")
+
+    def laad_help_categorieen(self):
+        return self._laad_json("help-categories.seed.json")
+
+
+data_loader = DataLoader(DATA_DIR)
+
+
 def laad_tools():
-    with open(DATA_DIR / "tools.seed.json", encoding="utf-8") as f:
-        data = json.load(f)
-    return [Tool(**item) for item in data]
+    return data_loader.laad_tools()
 
 
 def zoek_tool(tool_id):
-    for tool in laad_tools():
-        if tool.id == tool_id:
-            return tool
-    return None
+    return data_loader.zoek_tool(tool_id)
 
 
 def laad_categorieen():
-    with open(DATA_DIR / "category-labels.seed.json", encoding="utf-8") as f:
-        return json.load(f)
+    return data_loader.laad_categorieen()
 
 
 def laad_checklist():
-    with open(DATA_DIR / "checklist.seed.json", encoding="utf-8") as f:
-        return json.load(f)
+    return data_loader.laad_checklist()
 
 
 def laad_help_categorieen():
-    with open(DATA_DIR / "help-categories.seed.json", encoding="utf-8") as f:
-        return json.load(f)
+    return data_loader.laad_help_categorieen()
