@@ -6,7 +6,7 @@
     "icon": "key-round",
     "what": "Je persoonlijke HvA-ID waarmee je overal inlogt.",
     "when": "Eenmalig — activeer voor je eerste dag.",
-    "whatExtended": "Je HvA-account is de sleutel tot alle digitale systemen van de Hogeschool van Amsterdam. Met dit account log je in op Brightspace, Teams, Outlook, SIS en alle andere tools. Het werkt via Single Sign-On (SSO): je hoeft maar een keer in te loggen en hebt daarna overal toegang. Je HvA-ID bestaat uit je studentnummer en een wachtwoord dat je zelf instelt.",
+    "whatExtended": "Je HvA-account is de sleutel tot alle digitale systemen van de Hogeschool van Amsterdam. Met dit account log je in op de Digitale Leeromgeving, Teams, Outlook, SIS en alle andere tools. Het werkt via Single Sign-On (SSO): je hoeft maar een keer in te loggen en hebt daarna overal toegang. Je HvA-ID bestaat uit je studentnummer en een wachtwoord dat je zelf instelt.",
     "gettingStarted": [
       "Open je browser en ga naar mijnhva.nl/student.",
       "Klik op 'Account activeren' en vul je studentnummer in (staat in je toelatingsbericht).",
@@ -55,21 +55,21 @@
   },
   {
     "id": "brightspace",
-    "name": "Brightspace",
+    "name": "Digitale Leeromgeving",
     "category": "schrijven",
     "icon": "book-open",
     "what": "Centrale leeromgeving voor materiaal, opdrachten en deadlines.",
     "when": "Dagelijks — voor al je vakken en opdrachten.",
-    "whatExtended": "Brightspace is de digitale leeromgeving van de HvA waar al je vakken, studiemateriaal, opdrachten en deadlines te vinden zijn. Docenten plaatsen hier colleges, readers, video's en aankondigingen. Je levert hier ook opdrachten in en bekijkt je feedback en cijfers. Het is de belangrijkste tool die je dagelijks zult gebruiken.",
+    "whatExtended": "De Digitale Leeromgeving is het centrale platform van de HvA waar al je vakken, studiemateriaal, opdrachten en deadlines te vinden zijn. Docenten plaatsen hier colleges, readers, video's en aankondigingen. Je levert hier ook opdrachten in en bekijkt je feedback en cijfers. Het is de belangrijkste tool die je dagelijks zult gebruiken.",
     "gettingStarted": [
-      "Ga naar brightspace.hva.nl en log in met je HvA-account.",
+      "Ga naar de Digitale Leeromgeving op brightspace.hva.nl en log in met je HvA-account.",
       "Controleer of je vakken zichtbaar zijn op je dashboard (My Courses).",
       "Open een vak en bekijk de 'Content' tab voor materiaal en de 'Assignments' tab voor opdrachten.",
       "Stel notificaties in zodat je geen deadlines mist (via Settings > Notifications)."
     ],
     "tips": [
-      "Check Brightspace elke dag — docenten posten regelmatig updates en aankondigingen.",
-      "Gebruik de Brightspace Pulse app op je telefoon voor meldingen onderweg.",
+      "Check de Digitale Leeromgeving elke dag — docenten posten regelmatig updates en aankondigingen.",
+      "Gebruik de Pulse-app op je telefoon voor meldingen van de Digitale Leeromgeving onderweg.",
       "Lever opdrachten altijd ruim voor de deadline in — technische problemen op het laatste moment worden niet geaccepteerd."
     ],
     "relatedTools": ["teams", "onedrive", "office365"],
@@ -151,7 +151,7 @@
     "tips": [
       "Stel een e-mailhandtekening in met je naam, studentnummer en opleiding.",
       "Gebruik de Outlook-app op je telefoon zodat je belangrijke berichten direct ziet.",
-      "Stuur nooit opdrachten via e-mail in tenzij een docent dit expliciet vraagt — gebruik Brightspace."
+      "Stuur nooit opdrachten via e-mail in tenzij een docent dit expliciet vraagt — gebruik de Digitale Leeromgeving."
     ],
     "relatedTools": ["teams", "hva-account", "rooster"],
     "platform": ["web", "ios", "android"],
@@ -438,9 +438,9 @@
     "icon": "folder-heart",
     "what": "Digitaal portfolio voor je studieloopbaan.",
     "when": "Doorlopend — verzamel bewijs van je ontwikkeling.",
-    "whatExtended": "Portflow is het digitale portfolioplatform van de HvA. Je verzamelt hier bewijs van je ontwikkeling, zoals opdrachten, reflecties en feedback van docenten. Het portfolio groeit mee gedurende je hele studie en wordt gebruikt bij beoordelingen en voortgangsgesprekken. Portflow is gekoppeld aan Brightspace.",
+    "whatExtended": "Portflow is het digitale portfolioplatform van de HvA. Je verzamelt hier bewijs van je ontwikkeling, zoals opdrachten, reflecties en feedback van docenten. Het portfolio groeit mee gedurende je hele studie en wordt gebruikt bij beoordelingen en voortgangsgesprekken. Portflow is gekoppeld aan de Digitale Leeromgeving.",
     "gettingStarted": [
-      "Open Portflow via Brightspace of ga rechtstreeks naar portflow.com.",
+      "Open Portflow via de Digitale Leeromgeving of ga rechtstreeks naar portflow.com.",
       "Log in met je HvA-account.",
       "Maak je eerste portfolio aan en voeg een item toe (bijv. een opdracht of reflectie).",
       "Vraag feedback aan je docent of medestudent via de feedbackfunctie."

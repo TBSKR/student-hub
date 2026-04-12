@@ -13,7 +13,7 @@ def index():
     journey_steps = [
         {"tool_id": "hva-account", "title": "1. Account activeren", "subtitle": "Je HvA-ID activeren"},
         {"tool_id": "eduroam", "title": "2. Wi-Fi instellen", "subtitle": "Eduroam op je devices"},
-        {"tool_id": "brightspace", "title": "3. Brightspace", "subtitle": "Vakken en materiaal"},
+        {"tool_id": "brightspace", "title": "3. Digitale Leeromgeving", "subtitle": "Vakken en materiaal"},
         {"tool_id": "teams", "title": "4. Teams", "subtitle": "Chat met je klas"},
         {"tool_id": "onedrive", "title": "5. OneDrive", "subtitle": "Bestanden in de cloud"},
         {"tool_id": "rooster", "title": "6. Rooster", "subtitle": "Je lesrooster bekijken"},
