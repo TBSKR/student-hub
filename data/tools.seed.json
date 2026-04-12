@@ -157,7 +157,7 @@
     "platform": ["web", "ios", "android"],
     "required": true,
     "week1": true,
-    "recommended": false,
+    "recommended": true,
     "openUrl": "#",
     "guideUrl": "#"
   },

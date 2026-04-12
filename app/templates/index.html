@@ -21,4 +21,76 @@
     </div>
   </section>
 
+  <section class="home-feature-cards">
+    <div class="feature-cards-container">
+      <h2>Hoe wil je beginnen?</h2>
+      <p class="feature-cards-sub">Kies wat het best bij je past.</p>
+      <div class="feature-cards-grid">
+
+        <a href="/journey" class="feature-card feature-card--marine">
+          <div class="feature-card-header">
+            <svg class="feature-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 11 12 14 22 4"/>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+            </svg>
+          </div>
+          <div class="feature-card-body">
+            <h3>Stap-voor-stap Journey</h3>
+            <p>Volg de checklist en weet in 10 minuten hoe alles werkt. Ideaal als je net begint.</p>
+            <span class="feature-card-link feature-card-link--marine">Start je journey →</span>
+          </div>
+        </a>
+
+        <a href="/tools" class="feature-card feature-card--fresh">
+          <div class="feature-card-header">
+            <svg class="feature-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+              <rect x="3" y="3" width="7" height="7"/>
+              <rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/>
+            </svg>
+          </div>
+          <div class="feature-card-body">
+            <h3>Tool Catalogus</h3>
+            <p>Zoek, filter en ontdek alle tools die je tijdens je studie gebruikt.</p>
+            <span class="feature-card-link feature-card-link--fresh">Bekijk alle tools →</span>
+          </div>
+        </a>
+
+        <a href="/help" class="feature-card feature-card--sweet">
+          <div class="feature-card-header">
+            <svg class="feature-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <circle cx="12" cy="17" r="0.5" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="feature-card-body">
+            <h3>Hulp nodig?</h3>
+            <p>Loop je vast? Gebruik de hulpgids om stap voor stap je probleem op te lossen.</p>
+            <span class="feature-card-link feature-card-link--sweet">Ga naar help →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="home-quick-access">
+    <h2>Veelgebruikte tools</h2>
+    <div class="quick-access-grid">
+      {% for tool in aanbevolen %}
+      <a href="{{ url_for('tools.detail', tool_id=tool.id) }}" class="tool-card">
+        <div class="tool-card-icon">
+          <img src="{{ url_for('static', filename='img/tools/' + tool.id + '.png') }}" alt="{{ tool.name }}">
+        </div>
+        <div class="tool-card-info">
+          <h3>{{ tool.name }}</h3>
+          <span class="tool-card-categorie">{{ categorieen.get(tool.category, tool.category) }}</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
 {% endblock %}
