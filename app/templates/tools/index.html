@@ -48,8 +48,9 @@
   </section>
   {% endfor %}
 
-  <div id="geen-resultaten" class="geen-resultaten" style="display: none;">
-    <p>Geen tools gevonden voor deze zoekopdracht.</p>
+  <div id="geen-resultaten" class="geen-resultaten" style="display: none;" aria-live="polite">
+    <p id="geen-resultaten-titel" class="geen-resultaten-titel"></p>
+    <p id="geen-resultaten-suggestie" class="geen-resultaten-suggestie" hidden></p>
     <p class="geen-resultaten-hint">Probeer een andere zoekterm of gebruik de filters hierboven.</p>
   </div>
 

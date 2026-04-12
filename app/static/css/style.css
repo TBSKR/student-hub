@@ -373,11 +373,39 @@ footer {
     color: var(--hva-tekst-licht);
 }
 
-.geen-resultaten p:first-child {
+.geen-resultaten-titel {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--hva-tekst);
     margin-bottom: 0.5rem;
+}
+
+.geen-resultaten-suggestie {
+    font-size: 1rem;
+    color: var(--hva-tekst);
+    margin: 0.35rem 0 0.75rem;
+}
+
+.geen-resultaten-suggestie[hidden] {
+    display: none;
+}
+
+.geen-resultaten-suggestie-btn {
+    display: inline;
+    font: inherit;
+    font-weight: 700;
+    color: var(--hva-marine);
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 0.15rem;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.geen-resultaten-suggestie-btn:hover {
+    color: var(--hva-paars);
 }
 
 .tools-categorie {
