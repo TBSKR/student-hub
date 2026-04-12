@@ -78,6 +78,23 @@
     {% endfor %}
   </section>
 
+  <section class="help-faq" aria-labelledby="help-faq-heading">
+    <h2 id="help-faq-heading">Veelgestelde vragen</h2>
+    <p class="help-faq-intro">
+      Snel antwoord op veelvoorkomende vragen — zonder meteen de helpdesk te bellen.
+    </p>
+    <div class="help-faq-list">
+      {% for item in faq %}
+      <details class="help-faq-item" id="faq-{{ item.id }}">
+        <summary class="help-faq-question">{{ item.question }}</summary>
+        <div class="help-faq-answer">
+          <p>{{ item.answer }}</p>
+        </div>
+      </details>
+      {% endfor %}
+    </div>
+  </section>
+
   <section class="help-contact">
     <h2>Kom je er niet uit?</h2>
     <p class="help-contact-intro">Neem contact op met een van deze helpdesks.</p>

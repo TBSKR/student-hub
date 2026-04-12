@@ -7,4 +7,10 @@ from app.data import data_loader
 @bp.route("/help")
 def index():
     categorieen = data_loader.laad_help_categorieen()
-    return render_template("help/index.html", active_page="help", categorieen=categorieen)
+    faq = data_loader.laad_faq()
+    return render_template(
+        "help/index.html",
+        active_page="help",
+        categorieen=categorieen,
+        faq=faq,
+    )

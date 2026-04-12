@@ -1,0 +1,42 @@
+[
+  {
+    "id": "hva-account",
+    "question": "Hoe activeer ik mijn HvA-account?",
+    "answer": "Ga naar mijn.hva.nl/student en kies Account activeren. Vul je studentnummer in (staat in je toelatingsmail), stel een sterk wachtwoord in en volg de stappen. Daarna log je overal in met je volledige HvA-mailadres (voornaam.achternaam@hva.nl)."
+  },
+  {
+    "id": "wachtwoord",
+    "question": "Ik ben mijn wachtwoord vergeten. Wat nu?",
+    "answer": "Ga naar mijn.hva.nl en klik op Wachtwoord vergeten. Je resetlink gaat naar je privé-e-mailadres. Gebruik je volledige HvA-mail (voornaam.achternaam@hva.nl) om in te loggen. Werkt MFA niet? Controleer de Microsoft Authenticator-app op je telefoon."
+  },
+  {
+    "id": "wifi",
+    "question": "Hoe verbind ik met Wi-Fi (Eduroam) op de HvA?",
+    "answer": "Ga naar cat.eduroam.org, kies Hogeschool van Amsterdam en download het profiel voor je apparaat. Log in met je HvA-mailadres en wachtwoord. Na eenmalige instelling verbind je automatisch op alle HvA-locaties en op veel andere hogescholen."
+  },
+  {
+    "id": "digitale-leeromgeving",
+    "question": "Waar vind ik mijn vakken en opdrachten in de Digitale Leeromgeving?",
+    "answer": "Log in op brightspace.hva.nl met je HvA-account. Op je dashboard zie je My Courses met al je vakken. Per vak vind je onder Content het materiaal en onder Assignments de opdrachten en deadlines. Stel notificaties in zodat je niets mist."
+  },
+  {
+    "id": "office365",
+    "question": "Hoe krijg ik toegang tot Microsoft Office 365?",
+    "answer": "Als HvA-student heb je Office 365 inbegrepen. Ga naar office.com en log in met je HvA-account. Je kunt Word, Excel, PowerPoint en Teams online in de browser gebruiken en de apps op je laptop installeren. OneDrive is je cloudopslag voor je bestanden."
+  },
+  {
+    "id": "rooster",
+    "question": "Waar vind ik mijn rooster?",
+    "answer": "Open rooster.hva.nl (MyTimetable) en log in met je HvA-account. Controleer in SIS of je voor de juiste vakken en groepen bent ingeschreven — een verkeerde inschrijving kan je rooster beïnvloeden. Je kunt je rooster vaak synchroniseren met je agenda op je telefoon."
+  },
+  {
+    "id": "software",
+    "question": "Hoe installeer ik studie-software op mijn laptop?",
+    "answer": "Veel software is via Microsoft 365 of de apps-portal van de HvA beschikbaar. Sommige pakketten zijn alleen op HvA-computers te gebruiken. Controleer in je vakken welke software je nodig hebt en installeer die tijdig, niet op het laatste moment vóór een deadline."
+  },
+  {
+    "id": "tentamen",
+    "question": "Hoe schrijf ik me in voor een tentamen?",
+    "answer": "Ga naar sis.hva.nl en log in. Schrijf je onder Tentamens in binnen de officiële inschrijfperiode (meestal tot enkele weken voor het tentamen). Zonder inschrijving mag je niet deelnemen. Bij twijfel over vakken of groepen, neem contact op met het onderwijsbureau van je opleiding."
+  }
+]

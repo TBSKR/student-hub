@@ -35,6 +35,9 @@ class DataLoader:
     def laad_help_categorieen(self):
         return self._laad_json("help-categories.seed.json")
 
+    def laad_faq(self):
+        return self._laad_json("faq.seed.json")
+
     def laad_opleiding_config(self):
         return self._laad_json("opleidingen.seed.json")
 
@@ -62,6 +65,10 @@ def laad_checklist():
 
 def laad_help_categorieen():
     return data_loader.laad_help_categorieen()
+
+
+def laad_faq():
+    return data_loader.laad_faq()
 
 
 def laad_opleiding_config():
