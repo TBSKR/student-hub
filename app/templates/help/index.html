@@ -78,5 +78,59 @@
     {% endfor %}
   </section>
 
+  <section class="help-contact">
+    <h2>Kom je er niet uit?</h2>
+    <p class="help-contact-intro">Neem contact op met een van deze helpdesks.</p>
+
+    <div class="help-contact-grid">
+      <div class="help-contact-card">
+        <div class="help-contact-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+            <path d="M8 21h8M12 17v4"></path>
+          </svg>
+        </div>
+        <h3>ICT Servicedesk</h3>
+        <p class="help-contact-desc">Technische problemen, inloggen, software</p>
+        <div class="help-contact-bottom">
+          <a href="tel:0205951402" class="help-contact-tel">020 595 1402</a>
+          <p class="help-contact-hours">Ma-vr 8:00–18:00</p>
+          <a href="mailto:servicedesk-ICTS@hva.nl" class="help-contact-secondary">servicedesk-ICTS@hva.nl</a>
+        </div>
+      </div>
+
+      <div class="help-contact-card">
+        <div class="help-contact-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <h3>Student Info</h3>
+        <p class="help-contact-desc">Inschrijving, administratie, algemene vragen</p>
+        <div class="help-contact-bottom">
+          <a href="tel:0205951400" class="help-contact-tel">020 595 1400</a>
+          <p class="help-contact-hours">Ma-vr 8:30–17:30</p>
+          <a href="https://wa.me/31628533546" class="help-contact-secondary">WhatsApp: 06 28 53 35 46</a>
+        </div>
+      </div>
+
+      <div class="help-contact-card">
+        <div class="help-contact-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
+        </div>
+        <h3>Studiecoach</h3>
+        <p class="help-contact-desc">Studievoortgang, persoonlijke begeleiding</p>
+        <div class="help-contact-bottom">
+          <a href="https://brightspace.hva.nl" class="help-contact-cta">Plan een afspraak →</a>
+          <p class="help-contact-hours">Beschikbaar via Digitale Leeromgeving</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <script src="{{ url_for('static', filename='js/help.js') }}"></script>
 {% endblock %}
