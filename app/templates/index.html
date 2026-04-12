@@ -21,4 +21,21 @@
     </div>
   </section>
 
+  <section class="home-quick-access">
+    <h2>Veelgebruikte tools</h2>
+    <div class="quick-access-grid">
+      {% for tool in aanbevolen %}
+      <a href="{{ url_for('tools.detail', tool_id=tool.id) }}" class="tool-card">
+        <div class="tool-card-icon">
+          <img src="{{ url_for('static', filename='img/tools/' + tool.id + '.png') }}" alt="{{ tool.name }}">
+        </div>
+        <div class="tool-card-info">
+          <h3>{{ tool.name }}</h3>
+          <span class="tool-card-categorie">{{ categorieen.get(tool.category, tool.category) }}</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
 {% endblock %}

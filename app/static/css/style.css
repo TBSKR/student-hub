@@ -421,7 +421,12 @@ footer {
 
 .tool-card:hover {
     border-color: var(--hva-marine);
+    background-color: var(--hva-grijs);
     text-decoration: none;
+}
+
+.tool-card:hover .tool-card-icon {
+    background-color: var(--hva-wit);
 }
 
 .tool-card-icon {
@@ -1468,5 +1473,28 @@ footer {
     .home-hero-knoppen .btn-primair,
     .home-hero-knoppen .btn-outline {
         text-align: center;
+    }
+}
+
+/* Homepage quick-access grid */
+.home-quick-access {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.home-quick-access h2 {
+    margin-bottom: 1.5rem;
+}
+
+.quick-access-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 600px) {
+    .quick-access-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
