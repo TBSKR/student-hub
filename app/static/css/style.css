@@ -1476,6 +1476,37 @@ footer {
     }
 }
 
+/* Homepage favorieten (koppeling met toolpagina Favoriet-knop) */
+.home-favorieten {
+    padding: 2.5rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    border-top: 1px solid var(--hva-border);
+}
+
+.home-favorieten h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.home-favorieten-intro {
+    color: var(--hva-tekst-licht);
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+    max-width: 40rem;
+}
+
+.home-favorieten-leeg {
+    color: var(--hva-tekst-licht);
+    font-size: 0.95rem;
+    max-width: 40rem;
+    margin-bottom: 0;
+}
+
+.home-favorieten-leeg[hidden] {
+    display: none;
+}
+
 /* Homepage opleiding selector */
 .home-opleiding {
     padding: 2.5rem 2rem 0;

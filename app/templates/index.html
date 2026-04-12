@@ -76,6 +76,17 @@
     </div>
   </section>
 
+  <section class="home-favorieten" aria-labelledby="favorieten-heading">
+    <h2 id="favorieten-heading">Mijn favorieten</h2>
+    <p class="home-favorieten-intro">
+      Tools die je op een toolpagina als favoriet hebt gemarkeerd (knop <strong>Favoriet</strong>), verschijnen hier.
+    </p>
+    <p class="home-favorieten-leeg" id="home-favorieten-leeg">
+      Nog geen favorieten. Open een tool en tik op <strong>☆ Favoriet</strong> om die hier te tonen.
+    </p>
+    <div class="quick-access-grid home-favorieten-grid" id="home-favorieten-grid" hidden></div>
+  </section>
+
   <section class="home-opleiding" id="opleiding-section" aria-labelledby="opleiding-heading">
     <h2 id="opleiding-heading" class="home-opleiding-title">Jouw opleiding</h2>
     <p class="home-opleiding-intro">
@@ -115,6 +126,7 @@
 
   <script type="application/json" id="hub-opleiding-config">{{ hub_client_config | tojson }}</script>
   <script src="{{ url_for('static', filename='js/userState.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/favoriet.js') }}"></script>
   <script src="{{ url_for('static', filename='js/opleiding.js') }}"></script>
 
 {% endblock %}

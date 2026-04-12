@@ -33,6 +33,8 @@
     /** Vaste sleutels voor consistente opslag door de app. */
     var keys = {
         OPLEIDING: "opleiding",
+        /** Lijst van tool-id's (strings), opgeslagen als JSON-array. */
+        FAVORIETEN: "favorieten",
     };
 
     global.hvaUserState = {

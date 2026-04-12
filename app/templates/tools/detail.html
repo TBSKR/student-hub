@@ -90,7 +90,7 @@
         <div class="tool-acties">
           <a href="{{ tool.openUrl }}" class="btn-primair">Openen</a>
           <a href="{{ tool.guideUrl }}" class="btn-secundair">Handleiding</a>
-          <button type="button" class="favoriet-btn" data-tool-id="{{ tool.id }}">☆ Favoriet</button>
+          <button type="button" class="favoriet-btn" data-tool-id="{{ tool.id }}" aria-pressed="false">☆ Favoriet</button>
         </div>
 
         <section class="tool-feedback" data-tool-feedback="{{ tool.id }}">
@@ -125,5 +125,6 @@
   </div>
 
   <script src="{{ url_for('static', filename='js/helpful.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/userState.js') }}"></script>
   <script src="{{ url_for('static', filename='js/favoriet.js') }}"></script>
 {% endblock %}
