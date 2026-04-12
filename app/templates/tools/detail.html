@@ -71,15 +71,26 @@
           <h2>Gerelateerde tools</h2>
           <div class="gerelateerde-grid">
             {% for rel in gerelateerde %}
-            <a href="{{ url_for('tools.detail', tool_id=rel.id) }}" class="tool-card">
-              <div class="tool-card-icon">
-                <img src="{{ url_for('static', filename='img/tools/' + rel.id + '.png') }}" alt="{{ rel.name }}">
-              </div>
-              <div class="tool-card-info">
-                <h3>{{ rel.name }}</h3>
-                <span class="tool-card-categorie">{{ categorieen.get(rel.category, rel.category) }}</span>
-              </div>
-            </a>
+            <div class="tool-card">
+              <a class="tool-card-link" href="{{ url_for('tools.detail', tool_id=rel.id) }}">
+                <div class="tool-card-icon">
+                  <img src="{{ url_for('static', filename='img/tools/' + rel.id + '.png') }}" alt="{{ rel.name }}">
+                </div>
+                <div class="tool-card-info">
+                  <h3>{{ rel.name }}</h3>
+                  <span class="tool-card-categorie">{{ categorieen.get(rel.category, rel.category) }}</span>
+                </div>
+              </a>
+              <details class="tool-card-accordion">
+                <summary class="tool-card-accordion-summary">Beschrijving</summary>
+                <div class="tool-card-accordion-panel">
+                  <p class="tool-card-accordion-label">Waarvoor</p>
+                  <p class="tool-card-what">{{ rel.what }}</p>
+                  <p class="tool-card-accordion-label tool-card-accordion-label--when">Wanneer</p>
+                  <p class="tool-card-when">{{ rel.when }}</p>
+                </div>
+              </details>
+            </div>
             {% endfor %}
           </div>
         </section>

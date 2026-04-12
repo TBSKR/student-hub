@@ -23,15 +23,26 @@
     <h2>{{ categorieen.get(categorie_key, categorie_key) }}</h2>
     <div class="tools-grid">
       {% for tool in categorie_tools %}
-      <a href="{{ url_for('tools.detail', tool_id=tool.id) }}" class="tool-card" data-naam="{{ tool.name|lower }}" data-categorie="{{ categorieen.get(tool.category, tool.category)|lower }}" data-required="{{ 'true' if tool.required else 'false' }}">
-        <div class="tool-card-icon">
-          <img src="{{ url_for('static', filename='img/tools/' + tool.id + '.png') }}" alt="{{ tool.name }}">
-        </div>
-        <div class="tool-card-info">
-          <h3>{{ tool.name }}</h3>
-          <span class="tool-card-categorie">{{ categorieen.get(tool.category, tool.category) }}</span>
-        </div>
-      </a>
+      <div class="tool-card" data-naam="{{ tool.name|lower }}" data-categorie="{{ categorieen.get(tool.category, tool.category)|lower }}" data-required="{{ 'true' if tool.required else 'false' }}" data-zoek="{{ (tool.name ~ ' ' ~ tool.what ~ ' ' ~ tool.when)|lower }}">
+        <a class="tool-card-link" href="{{ url_for('tools.detail', tool_id=tool.id) }}">
+          <div class="tool-card-icon">
+            <img src="{{ url_for('static', filename='img/tools/' + tool.id + '.png') }}" alt="{{ tool.name }}">
+          </div>
+          <div class="tool-card-info">
+            <h3>{{ tool.name }}</h3>
+            <span class="tool-card-categorie">{{ categorieen.get(tool.category, tool.category) }}</span>
+          </div>
+        </a>
+        <details class="tool-card-accordion">
+          <summary class="tool-card-accordion-summary">Beschrijving</summary>
+          <div class="tool-card-accordion-panel">
+            <p class="tool-card-accordion-label">Waarvoor</p>
+            <p class="tool-card-what">{{ tool.what }}</p>
+            <p class="tool-card-accordion-label tool-card-accordion-label--when">Wanneer</p>
+            <p class="tool-card-when">{{ tool.when }}</p>
+          </div>
+        </details>
+      </div>
       {% endfor %}
     </div>
   </section>

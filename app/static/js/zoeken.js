@@ -16,7 +16,8 @@ function filterTools() {
     toolCards.forEach(function(card) {
         var naam = card.getAttribute('data-naam');
         var categorie = card.getAttribute('data-categorie');
-        var matchZoek = !zoekterm || naam.includes(zoekterm) || categorie.includes(zoekterm);
+        var zoekBron = card.getAttribute('data-zoek') || (naam + ' ' + categorie);
+        var matchZoek = !zoekterm || zoekBron.includes(zoekterm);
         var matchCategorie = actieveCategorie === 'alle' || categorie === actieveCategorie;
         var matchVerplicht = !verplichtActief || card.getAttribute('data-required') === 'true';
         card.style.display = (matchZoek && matchCategorie && matchVerplicht) ? '' : 'none';

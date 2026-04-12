@@ -62,30 +62,11 @@
                 if (!t) return;
 
                 var catLabel = categorieLabels[t.category] || t.category;
-                var a = document.createElement("a");
-                a.href = "/tools/" + encodeURIComponent(t.id);
-                a.className = "tool-card";
-
-                var iconWrap = document.createElement("div");
-                iconWrap.className = "tool-card-icon";
-                var img = document.createElement("img");
-                img.src = "/static/img/tools/" + encodeURIComponent(t.id) + ".png";
-                img.alt = t.name || "";
-                iconWrap.appendChild(img);
-
-                var info = document.createElement("div");
-                info.className = "tool-card-info";
-                var h3 = document.createElement("h3");
-                h3.textContent = t.name || "";
-                var span = document.createElement("span");
-                span.className = "tool-card-categorie";
-                span.textContent = catLabel;
-                info.appendChild(h3);
-                info.appendChild(span);
-
-                a.appendChild(iconWrap);
-                a.appendChild(info);
-                grid.appendChild(a);
+                var card =
+                    typeof window.hvaBuildToolCard === "function"
+                        ? window.hvaBuildToolCard(t, catLabel)
+                        : null;
+                if (card) grid.appendChild(card);
             });
         }
 

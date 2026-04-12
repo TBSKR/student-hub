@@ -409,23 +409,36 @@ footer {
 
 .tool-card {
     display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
     border: 1px solid var(--hva-border);
     border-radius: 0.5rem;
     background: var(--hva-wit);
     color: var(--hva-tekst);
-    text-decoration: none;
+    overflow: hidden;
 }
 
 .tool-card:hover {
     border-color: var(--hva-marine);
+}
+
+.tool-card-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: inherit;
+    min-width: 0;
+}
+
+.tool-card-link:hover {
     background-color: var(--hva-grijs);
     text-decoration: none;
 }
 
-.tool-card:hover .tool-card-icon {
+.tool-card-link:hover .tool-card-icon {
     background-color: var(--hva-wit);
 }
 
@@ -447,6 +460,11 @@ footer {
     object-fit: contain;
 }
 
+.tool-card-info {
+    flex: 1;
+    min-width: 0;
+}
+
 .tool-card-info h3 {
     font-size: 0.95rem;
     margin-bottom: 0.1rem;
@@ -455,6 +473,92 @@ footer {
 .tool-card-categorie {
     font-size: 0.8rem;
     color: var(--hva-tekst-licht);
+}
+
+/* Accordion: beschrijving (what / when) op tool-kaarten */
+.tool-card-accordion {
+    border-top: 1px solid var(--hva-border);
+    background: linear-gradient(to bottom, rgba(241, 243, 248, 0.35), rgba(241, 243, 248, 0.85));
+}
+
+.tool-card-accordion-summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.55rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--hva-marine);
+    cursor: pointer;
+    user-select: none;
+}
+
+.tool-card-accordion-summary::-webkit-details-marker {
+    display: none;
+}
+
+.tool-card-accordion-summary::after {
+    content: "";
+    width: 0.45rem;
+    height: 0.45rem;
+    border-right: 2px solid var(--hva-marine);
+    border-bottom: 2px solid var(--hva-marine);
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+    margin-top: -0.12rem;
+}
+
+.tool-card-accordion[open] .tool-card-accordion-summary::after {
+    transform: rotate(-135deg);
+    margin-top: 0.12rem;
+}
+
+.tool-card-accordion-summary:hover {
+    background: rgba(53, 31, 183, 0.07);
+}
+
+.tool-card-accordion-panel {
+    padding: 0 1rem 0.9rem;
+}
+
+.tool-card-accordion-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--hva-tekst-licht);
+    margin: 0.45rem 0 0.12rem;
+}
+
+.tool-card-accordion-label:first-child {
+    margin-top: 0;
+}
+
+.tool-card-accordion-label--when {
+    margin-top: 0.6rem;
+}
+
+.tool-card-what,
+.tool-card-when {
+    font-size: 0.8rem;
+    line-height: 1.45;
+    margin: 0;
+}
+
+.tool-card-what {
+    color: var(--hva-tekst);
+}
+
+.tool-card-when {
+    color: var(--hva-tekst-licht);
+}
+
+.tool-card-what:empty,
+.tool-card-when:empty {
+    display: none;
 }
 
 /* Tool detail pagina */

@@ -78,4 +78,13 @@ def tools_voor_opleiding_aanbevelingen(opleiding_id: str):
 
 
 def tools_meta_dict():
-    return {t.id: {"id": t.id, "name": t.name, "category": t.category} for t in laad_tools()}
+    return {
+        t.id: {
+            "id": t.id,
+            "name": t.name,
+            "category": t.category,
+            "what": t.what,
+            "when": t.when,
+        }
+        for t in laad_tools()
+    }
