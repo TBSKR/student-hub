@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: student-hub
+    runtime: docker
+    region: frankfurt
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: API_URL
+        value: https://api.hbo-ict.cloud
+      - key: API_KEY
+        sync: false
+      - key: DATABASE
+        sync: false
