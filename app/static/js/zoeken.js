@@ -125,7 +125,7 @@ function updateGeenResultatenTekst(zoekterm, aantalZichtbaar) {
         if (sug && geenResultatenSuggestie) {
             geenResultatenSuggestie.hidden = false;
             var intro = document.createElement("span");
-            intro.textContent = "Bedoelt u ";
+            intro.textContent = "Bedoel je ";
             geenResultatenSuggestie.appendChild(intro);
 
             var btn = document.createElement("button");
