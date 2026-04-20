@@ -20,6 +20,7 @@ class Tool:
     openUrl: str = "#"
     guideUrl: str = "#"
     favoriet: bool = False
+    socialProof: str = ""
 
     @property
     def omschrijving(self):

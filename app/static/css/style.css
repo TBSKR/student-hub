@@ -503,6 +503,14 @@ footer {
     color: var(--hva-tekst-licht);
 }
 
+.tool-card-social-proof {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--hva-tekst-licht);
+    margin-top: 4px;
+    font-style: italic;
+}
+
 /* Accordion: beschrijving (what / when) op tool-kaarten */
 .tool-card-accordion {
     border-top: 1px solid var(--hva-border);
