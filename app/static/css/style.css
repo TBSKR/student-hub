@@ -100,6 +100,34 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Offline banner */
+.offline-banner {
+    background-color: #fef2f2;
+    border-bottom: 1px solid #fca5a5;
+    color: #991b1b;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.offline-banner[hidden] {
+    display: none;
+}
+
+.offline-banner button {
+    background: none;
+    border: 1px solid #991b1b;
+    color: #991b1b;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.85rem;
+}
+
 /* Navigatie */
 nav {
     background-color: var(--hva-wit);
