@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, session
 
 from app.data import laad_categorieen, laad_opleiding_config, tools_meta_dict
 from app.main import bp
@@ -22,4 +22,5 @@ def index():
         aanbevolen=[],
         categorieen=categorieen,
         hub_client_config=hub_client_config,
+        naam=session.get("naam", ""),
     )

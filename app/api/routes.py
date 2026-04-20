@@ -60,3 +60,10 @@ def update_opleiding():
     service = UserStateService(session)
     service.sla_opleiding_op(request.json.get("opleiding", ""))
     return jsonify({"ok": True})
+
+
+@bp.route("/api/state/naam", methods=["PUT"])
+def update_naam():
+    service = UserStateService(session)
+    service.sla_naam_op(request.json.get("naam", ""))
+    return jsonify({"ok": True})

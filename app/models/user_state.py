@@ -6,6 +6,7 @@ class UserState:
     favorieten: list = field(default_factory=list)
     checklist: dict = field(default_factory=dict)
     opleiding: str = ""
+    naam: str = ""
 
     def heeft_favorieten(self):
         return len(self.favorieten) > 0

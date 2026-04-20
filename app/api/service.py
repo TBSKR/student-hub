@@ -10,6 +10,7 @@ class UserStateService:
             favorieten=self.session.get("favorieten", []),
             checklist=self.session.get("checklist", {}),
             opleiding=self.session.get("opleiding", ""),
+            naam=self.session.get("naam", ""),
         )
 
     def sla_favorieten_op(self, favorieten):
@@ -20,3 +21,6 @@ class UserStateService:
 
     def sla_opleiding_op(self, opleiding):
         self.session["opleiding"] = opleiding
+
+    def sla_naam_op(self, naam):
+        self.session["naam"] = naam.strip()

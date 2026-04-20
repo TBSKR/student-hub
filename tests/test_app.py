@@ -44,3 +44,19 @@ def test_offline_banner_in_html(client):
     html = response.data.decode("utf-8")
     assert "offline-banner" in html
     assert "Geen internetverbinding" in html
+
+
+def test_naam_opslaan_via_api(client):
+    response = client.put(
+        "/api/state/naam",
+        json={"naam": "Tije"},
+        content_type="application/json",
+    )
+    assert response.status_code == 200
+    assert response.json["ok"] is True
+
+
+def test_homepage_toont_naam_uit_sessie(client):
+    client.put("/api/state/naam", json={"naam": "Tije"}, content_type="application/json")
+    response = client.get("/")
+    assert response.status_code == 200
