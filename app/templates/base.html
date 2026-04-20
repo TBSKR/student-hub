@@ -47,6 +47,11 @@
       </ul>
     </div>
 
+    <div id="offline-banner" class="offline-banner" hidden>
+      <span>Geen internetverbinding. Controleer je verbinding en probeer het opnieuw.</span>
+      <button onclick="location.reload()">Opnieuw proberen</button>
+    </div>
+
     <main>
       {% block main %}
       {% include 'partials/hva_triangles.html' %}
@@ -62,5 +67,6 @@
 
     {% include 'partials/help_fab.html' %}
     <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/offline.js') }}"></script>
   </body>
 </html>
