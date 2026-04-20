@@ -70,3 +70,11 @@ def test_tool_model_werkt():
         tool = Tool(**data)
         assert tool.id == data["id"]
         assert tool.name == data["name"]
+
+
+def test_social_proof_is_string():
+    tools = load_tools()
+    for tool in tools:
+        if "socialProof" in tool:
+            assert isinstance(tool["socialProof"], str), \
+                f"socialProof bij '{tool['id']}' moet een string zijn"

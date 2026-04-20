@@ -24,7 +24,8 @@
     "week1": true,
     "recommended": false,
     "openUrl": "#",
-    "guideUrl": "#"
+    "guideUrl": "#",
+    "socialProof": "Bijna alle eerstejaars activeren dit als allereerste stap"
   },
   {
     "id": "eduroam",
@@ -51,7 +52,8 @@
     "week1": true,
     "recommended": false,
     "openUrl": "#",
-    "guideUrl": "#"
+    "guideUrl": "#",
+    "socialProof": "De meeste studenten stellen dit in op hun eerste dag op de HvA"
   },
   {
     "id": "brightspace",
@@ -78,7 +80,8 @@
     "week1": true,
     "recommended": true,
     "openUrl": "#",
-    "guideUrl": "#"
+    "guideUrl": "#",
+    "socialProof": "Alle studenten gebruiken dit dagelijks voor vakken en deadlines"
   },
   {
     "id": "teams",
@@ -105,7 +108,8 @@
     "week1": true,
     "recommended": true,
     "openUrl": "#",
-    "guideUrl": "#"
+    "guideUrl": "#",
+    "socialProof": "9 op de 10 eerstejaars sturen hun eerste bericht via Teams in week 1"
   },
   {
     "id": "onedrive",
@@ -132,7 +136,8 @@
     "week1": true,
     "recommended": true,
     "openUrl": "#",
-    "guideUrl": "#"
+    "guideUrl": "#",
+    "socialProof": "De meeste studenten slaan hier al hun studiebestanden op"
   },
   {
     "id": "outlook",
@@ -159,7 +164,8 @@
     "week1": true,
     "recommended": true,
     "openUrl": "#",
-    "guideUrl": "#"
+    "guideUrl": "#",
+    "socialProof": "Elke HvA-student ontvangt hiervia officiele berichten van de school"
   },
   {
     "id": "sis",
@@ -186,7 +192,8 @@
     "week1": true,
     "recommended": false,
     "openUrl": "#",
-    "guideUrl": "#"
+    "guideUrl": "#",
+    "socialProof": "Studenten die zich op tijd inschrijven voor tentamens missen nooit een kans"
   },
   {
     "id": "rooster",
@@ -213,7 +220,8 @@
     "week1": true,
     "recommended": false,
     "openUrl": "#",
-    "guideUrl": "#"
+    "guideUrl": "#",
+    "socialProof": "De meeste eerstejaars checken hun rooster elke ochtend voor ze naar school gaan"
   },
   {
     "id": "office365",

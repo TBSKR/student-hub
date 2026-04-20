@@ -31,6 +31,9 @@
           <div class="tool-card-info">
             <h3>{{ tool.name }}</h3>
             <span class="tool-card-categorie">{{ categorieen.get(tool.category, tool.category) }}</span>
+            {% if tool.socialProof %}
+            <span class="tool-card-social-proof">{{ tool.socialProof }}</span>
+            {% endif %}
           </div>
         </a>
         <details class="tool-card-accordion">
