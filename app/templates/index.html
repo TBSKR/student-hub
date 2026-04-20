@@ -12,11 +12,19 @@
            style="top: 15%; right: 20%;"></div>
     </div>
     <div class="home-hero-content">
+      {% if naam %}
+      <h1>Welkom, {{ naam }}!</h1>
+      {% else %}
       <h1>Welkom bij de HvA</h1>
+      {% endif %}
       <p class="home-hero-sub">Alles wat je nodig hebt om digitaal te starten bij de Hogeschool van Amsterdam, op één plek.</p>
       <div class="home-hero-knoppen">
         <a href="/journey" class="btn-primair">Start je Journey →</a>
         <a href="/tools" class="btn-outline">Bekijk alle tools →</a>
+      </div>
+      <div class="hero-naam-form">
+        <input type="text" id="naam-input" class="naam-input" placeholder="Wat is je naam?" maxlength="50" value="{{ naam }}">
+        <button id="naam-opslaan" class="naam-opslaan-knop">Opslaan</button>
       </div>
     </div>
   </section>
@@ -131,5 +139,6 @@
   <script src="{{ url_for('static', filename='js/toolCard.js') }}"></script>
   <script src="{{ url_for('static', filename='js/favoriet.js') }}"></script>
   <script src="{{ url_for('static', filename='js/opleiding.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/naam.js') }}"></script>
 
 {% endblock %}

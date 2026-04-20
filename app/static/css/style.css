@@ -1720,6 +1720,50 @@ footer {
     }
 }
 
+/* Naam formulier in hero */
+.hero-naam-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.naam-input {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--hva-wit);
+    font: inherit;
+    font-size: 0.9rem;
+    width: 200px;
+}
+
+.naam-input::placeholder {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.naam-input:focus {
+    outline: none;
+    border-color: var(--hva-wit);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.naam-opslaan-knop {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--hva-wit);
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.naam-opslaan-knop:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
 /* Favorieten + opleiding naast elkaar (op desktop) */
 .home-persoonlijk-row {
     display: grid;
