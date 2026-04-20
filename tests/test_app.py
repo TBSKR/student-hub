@@ -37,3 +37,19 @@ def test_onbekende_tool_geeft_404(client):
     response = client.get("/tools/bestaat-niet")
     assert response.status_code == 404
     assert "oeps" in response.data.decode("utf-8").lower()
+
+
+def test_naam_opslaan_via_api(client):
+    response = client.put(
+        "/api/state/naam",
+        json={"naam": "Tije"},
+        content_type="application/json",
+    )
+    assert response.status_code == 200
+    assert response.json["ok"] is True
+
+
+def test_homepage_toont_naam_uit_sessie(client):
+    client.put("/api/state/naam", json={"naam": "Tije"}, content_type="application/json")
+    response = client.get("/")
+    assert response.status_code == 200
