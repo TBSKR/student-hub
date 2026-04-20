@@ -1,6 +1,6 @@
 from dataclasses import asdict
 
-from flask import jsonify, session
+from flask import jsonify, request, session
 
 from app.api import bp
 from app.api.service import UserStateService
@@ -39,3 +39,24 @@ def state_ophalen():
     service = UserStateService(session)
     staat = service.haal_op()
     return jsonify(asdict(staat))
+
+
+@bp.route("/api/state/favorites", methods=["PUT"])
+def update_favorieten():
+    service = UserStateService(session)
+    service.sla_favorieten_op(request.json.get("favorieten", []))
+    return jsonify({"ok": True})
+
+
+@bp.route("/api/state/checklist", methods=["PUT"])
+def update_checklist():
+    service = UserStateService(session)
+    service.sla_checklist_op(request.json.get("checklist", {}))
+    return jsonify({"ok": True})
+
+
+@bp.route("/api/state/opleiding", methods=["PUT"])
+def update_opleiding():
+    service = UserStateService(session)
+    service.sla_opleiding_op(request.json.get("opleiding", ""))
+    return jsonify({"ok": True})

@@ -11,3 +11,12 @@ class UserStateService:
             checklist=self.session.get("checklist", {}),
             opleiding=self.session.get("opleiding", ""),
         )
+
+    def sla_favorieten_op(self, favorieten):
+        self.session["favorieten"] = favorieten
+
+    def sla_checklist_op(self, checklist):
+        self.session["checklist"] = checklist
+
+    def sla_opleiding_op(self, opleiding):
+        self.session["opleiding"] = opleiding
