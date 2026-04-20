@@ -37,3 +37,10 @@ def test_onbekende_tool_geeft_404(client):
     response = client.get("/tools/bestaat-niet")
     assert response.status_code == 404
     assert "oeps" in response.data.decode("utf-8").lower()
+
+
+def test_offline_banner_in_html(client):
+    response = client.get("/")
+    html = response.data.decode("utf-8")
+    assert "offline-banner" in html
+    assert "Geen internetverbinding" in html
